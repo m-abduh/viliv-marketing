@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{font-family:'Satoshi';src:url('./fonts/Satoshi-Variable.ttf')format('truetype');font-weight:300 900}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px;overflow:hidden}
+  :root{--ink:#141414;--accent:#c9a227;--brand:#141414}
+  body{font-family:'Satoshi','Segoe UI',system-ui,-apple-system,sans-serif;background:#fff}
+  #root{position:relative;width:1080px;height:1350px;overflow:hidden;display:flex;flex-direction:column}
+  .imghold{position:relative;margin:70px 70px 0;height:620px;border-radius:36px;overflow:hidden;background:#eee;flex-shrink:0;box-shadow:0 18px 50px rgba(0,0,0,.14)}
+  .img{position:absolute;inset:0;background-size:cover;background-position:center}
+  .badge{position:absolute;top:26px;left:26px;background:rgba(0,0,0,.55);color:#fff;font-size:22px;font-weight:700;padding:10px 22px;border-radius:999px;letter-spacing:1px}
+  .body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:50px 70px 30px}
+  .title{font-size:70px;font-weight:900;line-height:1.12;letter-spacing:-1px;color:var(--ink)}
+  .index{font-size:24px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:18px}
+  .link{display:inline-flex;align-items:center;gap:12px;margin-top:36px;background:var(--ink);color:#fff;font-size:26px;font-weight:700;padding:18px 30px;border-radius:999px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .link .arrow{font-size:24px}
+  .footer{display:flex;align-items:center;gap:12px;padding:26px 70px 60px;border-top:1px solid #e8e2d0}
+  .footer .word{font-size:30px;font-weight:900;letter-spacing:2px;color:var(--brand)}
+  .footer .dots{margin-left:auto;color:#cfc7b4;font-size:24px;letter-spacing:4px}
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="imghold">
+    <div class="img" style="background-image:url('{{img}}')"></div>
+    <div class="badge">{{badge}}</div>
+  </div>
+  <div class="body">
+    <div class="index">{{index}}</div>
+    <div class="title">{{title}}</div>
+    <div class="link"><span>{{link}}</span><span class="arrow">&#8599;</span></div>
+  </div>
+  <div class="footer">
+    <span class="word">viliv</span>
+    <span class="dots">&#9679; &#9679; &#9679;</span>
+  </div>
+</div>
+</body>
+</html>

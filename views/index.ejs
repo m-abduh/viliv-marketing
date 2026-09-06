@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viliv Manager</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f0f11;color:#e4e4e7;min-height:100vh}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:300px;background:#16161a;border-right:1px solid #26262b;padding:1.25rem;overflow-y:auto;flex-shrink:0}
+.main{flex:1;padding:1.5rem 2rem;overflow-y:auto}
+h1{font-size:1.25rem;font-weight:600}
+h2{font-size:1.05rem;font-weight:600;margin-bottom:.75rem}
+.sub{color:#82828b;font-size:.8rem;margin:.15rem 0 1rem}
+.card{background:#1a1a1e;border:1px solid #27272b;border-radius:10px;padding:1.1rem;margin-bottom:1.1rem}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+label{font-size:.75rem;color:#9a9aa3;display:block;margin-bottom:.3rem}
+input,select,textarea{background:#212127;border:1px solid #3a3a42;color:#e4e4e7;border-radius:7px;padding:.5rem .6rem;font-size:.85rem;width:100%}
+textarea{resize:vertical;min-height:90px;font-family:monospace}
+button{background:#2b2b33;border:1px solid #3a3a42;color:#e4e4e7;padding:.5rem .9rem;border-radius:7px;cursor:pointer;font-size:.82rem}
+button:hover{background:#383842}
+.btn-primary{background:#3b82f6;border-color:#3b82f6;color:#fff}
+.btn-primary:hover{background:#2563eb}
+.btn-danger{background:#ef4444;border-color:#ef4444;color:#fff}
+.btn-danger:hover{background:#dc2626}
+.btn-sm{padding:.3rem .6rem;font-size:.75rem}
+.acc{display:flex;justify-content:space-between;align-items:center;background:#212127;border:1px solid #36363e;border-radius:8px;padding:.6rem .8rem;margin-bottom:.5rem;cursor:pointer}
+.acc.active{border-color:#3b82f6;background:#252b3a}
+.acc .name{font-weight:600;font-size:.88rem}
+.acc .del{color:#ef4444;background:none;border:none;cursor:pointer;font-size:.85rem}
+.acc .acts{display:flex;align-items:center;gap:.4rem}
+.acc .acts .btn-sm{color:var(--accent,#8ab4f8);background:none;border:none;cursor:pointer;font-size:.8rem;padding:0}
+.muted{color:#9a9aa3;font-size:.8rem}
+.section-title{margin:1.2rem 0 .6rem;font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;color:#a9a9b2}
+.theme{display:flex;justify-content:space-between;align-items:center;background:#1d1d22;border:1px solid #2e2e35;border-radius:8px;padding:.5rem .8rem;margin-bottom:.45rem;font-size:.85rem}
+.pill{background:#26262e;border-radius:999px;padding:.2rem .6rem;font-size:.72rem;color:#aaaab3;border:1px solid #383840}
+.pill.ok{color:#4ade80;border-color:#2f6b45}
+.pill.bad{color:#f87171;border-color:#7f1d1d}
+.pitem{display:flex;align-items:center;gap:1rem;background:#212127;border:1px solid #36363e;border-radius:8px;padding:.7rem .9rem;margin-bottom:.5rem}
+.pitem .meta{flex:1;min-width:0}
+.pitem .t{font-weight:600;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pitem .d{font-size:.75rem;color:#9a9aa3;margin-top:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pitem .acts{display:flex;gap:.4rem;flex-shrink:0}
+.thumbs{display:flex;gap:.3rem;flex-shrink:0}
+.thumbs img{width:44px;height:55px;object-fit:cover;border-radius:4px;border:1px solid #36363e;display:block}
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;background:#22c55e;color:#fff;padding:.8rem 1.1rem;border-radius:8px;font-size:.85rem;opacity:0;transition:.3s;pointer-events:none;z-index:50}
+.toast.err{background:#ef4444}
+.toast.show{opacity:1}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:40}
+.overlay.show{display:flex}
+.modal{background:#1d1d22;border:1px solid #36363e;border-radius:12px;width:420px;max-width:92vw;padding:1.4rem}
+.modal h3{font-size:1rem;margin-bottom:1rem}
+.empty{color:#7d7d86;font-size:.85rem;padding:1rem 0;text-align:center}
+.flex{display:flex;gap:.6rem}
+.grow{flex:1}
+.mt{margin-top:.6rem}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-right:.4rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:820px){
+  .layout{flex-direction:column}
+  .sidebar{width:100%;border-right:none;border-bottom:1px solid #26262b;max-height:45vh;overflow-y:auto}
+  .main{padding:1rem 1rem 2rem}
+  .pitem{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Viliv Manager</h1>
+    <p class="sub">Multi-account Buffer carousel generator</p>
+
+    <div class="section-title">Accounts</div>
+    <div id="accountList"></div>
+    <button class="btn-primary grow" onclick="openAddAccount()" style="width:100%">+ Add Buffer Account</button>
+
+    <div class="section-title">General Settings</div>
+    <div class="card">
+      <label>Posts per day</label>
+      <input type="number" id="set_ppd" min="0" max="24">
+      <div class="mt"><label>Scheduling window (24h)</label>
+        <div class="row">
+          <input type="time" id="set_ws">
+          <input type="time" id="set_we">
+        </div>
+      </div>
+      <div class="mt"><label>Timezone</label><input type="text" id="set_tz"></div>
+      <div class="mt"><label>Generated run times (preview)</label><div id="set_sched" class="muted"></div></div>
+      <button class="btn-primary mt" onclick="saveSettings()" style="width:100%">Save Settings</button>
+    </div>
+
+    <div class="section-title">Categories (from viliv)</div>
+    <div id="categoryList"></div>
+    <p class="muted" style="margin-top:.4rem">Data managed in viliv — read-only here.</p>
+    <div class="section-title">Products</div>
+    <div id="productList"></div>
+    <p class="muted" style="margin-top:.4rem">Data managed in viliv — read-only here.</p>
+  </aside>
+
+  <main class="main">
+    <div class="card" style="display:flex;align-items:center;gap:1rem">
+      <div class="grow">
+        <div style="font-weight:600;font-size:.95rem">Generate a post now</div>
+        <div class="muted" id="genInfo">Runs the next account in rotation → AI copy → render carousel (Playwright) → post to Buffer</div>
+      </div>
+      <button class="btn-primary" id="genNowBtn" onclick="generateNow()" style="padding:.7rem 1.4rem;font-size:.95rem;white-space:nowrap">▶ Generate Now</button>
+    </div>
+
+    <h2 id="panelTitle">Select an account</h2>
+    <p class="sub" id="panelSub">Choose a Buffer account to manage its carousel posts.</p>
+
+    <div id="accountPanel" style="display:none">
+      <div class="section-title">Carousel Posts</div>
+      <div id="postList"></div>
+    </div>
+  </main>
+</div>
+
+<div class="overlay" id="accModal">
+  <div class="modal">
+    <h3 id="accModalTitle">Add Buffer Account</h3>
+    <label>Account name</label><input type="text" id="acc_name" placeholder="e.g. viliv.lifestyle">
+    <div class="mt"><label>Buffer API token</label><input type="text" id="acc_token" placeholder="buffer access token"></div>
+    <div class="row mt"><button class="btn-primary grow" onclick="saveAccount()">Save</button><button onclick="closeAccModal()">Cancel</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const state = { accounts: [], categories: [], products: [], selectedId: null };
+
+function toast(msg, err) { const t = document.getElementById('toast'); t.textContent = msg; t.className = 'toast' + (err ? ' err' : '') + ' show'; setTimeout(() => t.classList.remove('show'), 3200); }
+async function api(path, opts) { const r = await fetch(path, Object.assign({ headers: { 'Content-Type': 'application/json' } }, opts)); const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.error || r.statusText); return j; }
+
+async function refreshAll() {
+  state.accounts = await api('/api/accounts');
+  state.categories = await api('/api/categories');
+  state.products = await api('/api/products');
+  renderAccounts(); renderCategories(); renderProducts(); renderSettings(); renderPanel();
+}
+
+function renderAccounts() {
+  const el = document.getElementById('accountList');
+  el.innerHTML = state.accounts.length ? '' : '<div class="empty">No accounts yet</div>';
+  state.accounts.forEach(a => {
+    const d = document.createElement('div');
+    d.className = 'acc' + (a.id === state.selectedId ? ' active' : '');
+    d.innerHTML = `<div class="name">${escapeHtml(a.name)}</div><div class="acts"><button class="btn-sm" title="Edit">Edit</button><button class="del" title="Delete">✕</button></div>`;
+    d.onclick = (e) => { if (e.target.closest('button')) return; state.selectedId = a.id; renderAccounts(); renderPanel(); };
+    d.querySelector('button.btn-sm').onclick = (e) => { e.stopPropagation(); openEditAccount(a); };
+    d.querySelector('.del').onclick = async (e) => { e.stopPropagation(); if (!confirm('Delete account?')) return; await api('/api/accounts/' + a.id, { method: 'DELETE' }); state.selectedId = null; refreshAll(); };
+    el.appendChild(d);
+  });
+}
+
+function renderCategories() {
+  const el = document.getElementById('categoryList');
+  el.innerHTML = state.categories.length ? '' : '<div class="empty">No categories</div>';
+  state.categories.forEach(cat => {
+    const count = state.products.filter(p => p.category && p.category.id === cat.id).length;
+    const d = document.createElement('div');
+    d.className = 'acc';
+    d.innerHTML = `<span class="name">${escapeHtml(cat.name)}</span><span class="pill">${count} prod</span>`;
+    el.appendChild(d);
+  });
+}
+
+function renderProducts() {
+  const el = document.getElementById('productList');
+  el.innerHTML = state.products.length ? '' : '<div class="empty">No products</div>';
+  state.products.slice(0, 30).forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'acc';
+    const catName = p.category ? p.category.name : '—';
+    d.innerHTML = `<div class="name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(p.name)} <span class="muted" style="font-weight:400">· ${escapeHtml(catName)}</span></div>`;
+    el.appendChild(d);
+  });
+}
+
+async function renderPanel() {
+  const panel = document.getElementById('accountPanel');
+  if (!state.selectedId) { panel.style.display = 'none'; document.getElementById('panelTitle').textContent = 'Select an account'; document.getElementById('panelSub').textContent = 'Choose a Buffer account to manage its carousel posts.'; return; }
+  const acc = state.accounts.find(a => a.id === state.selectedId);
+  panel.style.display = 'block';
+  document.getElementById('panelTitle').textContent = acc ? acc.name : '';
+  document.getElementById('panelSub').textContent = 'Manage carousel posts for this account.';
+  renderPosts();
+}
+
+async function renderPosts() {
+  const el = document.getElementById('postList');
+  const posts = await api('/api/posts?account_id=' + state.selectedId);
+  if (!posts.length) { el.innerHTML = '<div class="empty">No carousel posts for this account</div>'; return; }
+  el.innerHTML = '';
+  posts.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'pitem';
+    d.dataset.id = p.id;
+    const st = p.status === 'success' ? 'pill ok' : p.status === 'failed' ? 'pill bad' : 'pill';
+    let slides = [];
+    try { slides = JSON.parse(p.image_files || '[]'); } catch {}
+    const thumbs = slides.map(f => `<img src="/carousel/${encodeURIComponent(f)}" loading="lazy">`).join('');
+    d.innerHTML = `
+      <div class="meta">
+        <div class="t">#${p.id} — ${escapeHtml(p.theme || '')} · <span class="${st}">${p.status}</span>${p.attempts > 1 ? ' (' + p.attempts + 'x)' : ''}</div>
+        <div class="d">${escapeHtml(p.hook || '')}</div>
+        <div class="d">${escapeHtml((p.caption || '').slice(0, 90)) || '—'}</div>
+        ${p.last_error ? `<div class="d" style="color:#f87171">${escapeHtml(p.last_error)}</div>` : ''}
+      </div>
+      <div class="thumbs">${thumbs}</div>
+      <div class="acts">
+        ${p.status !== 'success' ? `<button class="btn-sm btn-primary" onclick="retry(${p.id})">Retry</button>` : ''}
+        <button class="btn-sm btn-danger" onclick="delPost(${p.id})">Delete</button>
+      </div>`;
+    el.appendChild(d);
+  });
+}
+
+async function retry(id) { await api('/api/posts/' + id + '/retry', { method: 'POST' }); toast('Retry done'); renderPosts(); }
+async function delPost(id) { if (!confirm('Delete carousel post?')) return; await api('/api/posts/' + id, { method: 'DELETE' }); renderPosts(); }
+
+async function generateNow() {
+  const btn = document.getElementById('genNowBtn');
+  const info = document.getElementById('genInfo');
+  btn.disabled = true;
+  const original = btn.textContent;
+  btn.innerHTML = '<span class="spinner"></span>Generating… (can take ~30s)';
+  info.textContent = 'AI copy → render carousel images → post to Buffer. Working, please wait…';
+  try {
+    const r = await api('/api/generate', { method: 'POST' });
+    const p = r.post;
+    const status = p ? p.status : (r.result?.error ? 'failed' : 'done');
+
+    if (p && p.status === 'success') {
+      toast('Carousel generated & posted!');
+      info.textContent = 'Done → post #' + p.id + ' posted.';
+    } else if (p && p.status === 'failed') {
+      toast('Carousel generated but upload failed', true);
+      info.textContent = 'Carousel generated, upload failed: ' + (p.last_error || '').slice(0, 160);
+    } else if (p && p.status === 'pending') {
+      toast('Carousel generated', true);
+      info.textContent = 'Generated, but still pending: ' + (r.result?.error || '').slice(0, 160);
+    } else if (r.result?.error) {
+      toast(r.result.error, true);
+      info.textContent = 'Failed: ' + r.result.error;
+    } else {
+      toast('Done');
+      info.textContent = 'Done';
+    }
+
+    if (p && p.account_id) {
+      state.selectedId = p.account_id;
+      await refreshAll();
+      renderPosts();
+      scrollToPost(p.id);
+    } else {
+      await refreshAll();
+    }
+  } catch (e) {
+    toast(e.message, true);
+    info.textContent = 'Failed: ' + e.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+}
+
+function scrollToPost(id) {
+  setTimeout(() => {
+    const item = document.querySelector('.pitem[data-id="' + id + '"]');
+    if (item) {
+      item.style.outline = '2px solid #3b82f6';
+      item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => { item.style.outline = ''; }, 2500);
+    }
+  }, 200);
+}
+
+function renderSettings() {
+  api('/api/settings').then(s => {
+    document.getElementById('set_ppd').value = s.posts_per_day;
+    document.getElementById('set_ws').value = s.window_start;
+    document.getElementById('set_we').value = s.window_end;
+    document.getElementById('set_tz').value = s.tz;
+    document.getElementById('set_sched').textContent = s.schedules.join('  ') || '(disabled)';
+  });
+}
+
+async function saveSettings() {
+  await api('/api/settings', { method: 'PUT', body: JSON.stringify({
+    posts_per_day: document.getElementById('set_ppd').value,
+    window_start: document.getElementById('set_ws').value,
+    window_end: document.getElementById('set_we').value,
+    tz: document.getElementById('set_tz').value,
+  }) });
+  toast('Settings saved');
+  renderSettings();
+}
+
+function openAddAccount() { document.getElementById('acc_name').value = ''; document.getElementById('acc_token').value = ''; window.__editAcc = null; document.getElementById('accModalTitle').textContent = 'Add Buffer Account'; document.getElementById('accModal').classList.add('show'); }
+async function openEditAccount(a) { const acc = await api('/api/accounts/' + a.id); document.getElementById('acc_name').value = acc.name; document.getElementById('acc_token').value = acc.buffer_token || ''; window.__editAcc = a.id; document.getElementById('accModalTitle').textContent = 'Edit Buffer Account'; document.getElementById('accModal').classList.add('show'); }
+function closeAccModal() { document.getElementById('accModal').classList.remove('show'); }
+async function saveAccount() {
+  const name = document.getElementById('acc_name').value.trim();
+  const token = document.getElementById('acc_token').value.trim();
+  if (!name || !token) return toast('Fill all fields', true);
+  const editId = window.__editAcc;
+  try {
+    if (editId != null) { await api('/api/accounts/' + editId, { method: 'PUT', body: JSON.stringify({ name, buffer_token: token }) }); }
+    else { await api('/api/accounts', { method: 'POST', body: JSON.stringify({ name, buffer_token: token }) }); }
+    closeAccModal(); refreshAll();
+  } catch (e) { toast(e.message, true); }
+}
+document.getElementById('accModal').onclick = (e) => { if (e.target.id === 'accModal') closeAccModal(); };
+
+function escapeHtml(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+refreshAll();
+</script>
+</body>
+</html>

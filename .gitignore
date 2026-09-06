@@ -1,0 +1,7 @@
+node_modules/
+db.sqlite*
+output/
+builder/_cover.html
+builder/_slide_*.html
+.env
+*.log

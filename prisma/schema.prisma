@@ -1,0 +1,72 @@
+// Prisma schema for viliv-marketing (Prisma Postgres)
+// Mirrors the real viliv project data model: Category + Product (curated
+// affiliate catalog), plus the marketing-side accounts/posts/settings tables.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model settings {
+  key   String @id
+  value String
+}
+
+model accounts {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  buffer_token String
+  position     Int      @default(0)
+  created_at   DateTime @default(now())
+  posts        posts[]
+
+  @@map("accounts")
+}
+
+model posts {
+  id           Int       @id @default(autoincrement())
+  account_id   Int
+  account_name String    @default("")
+  theme        String    @default("")
+  hook         String?
+  slides       String? // JSON array of {title, image, link, productId}
+  caption      String?
+  content_json String?
+  images_dir   String? // folder holding rendered slide PNGs
+  image_files  String? // JSON array of relative slide file names
+  status       String    @default("pending") // pending | success | failed
+  attempts     Int       @default(0)
+  last_error   String?
+  created_at   DateTime  @default(now())
+  posted_at    DateTime?
+  account      accounts  @relation(fields: [account_id], references: [id], onDelete: Cascade)
+
+  @@map("posts")
+}
+
+// ---- Curated catalog (shared with the viliv project — identical schema) ----
+model Category {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  slug      String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  products  Product[]
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  name         String
+  slug         Int      @unique
+  imageUrl     String
+  affiliateUrl String
+  categoryId   String
+  category     Category @relation(fields: [categoryId], references: [id])
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

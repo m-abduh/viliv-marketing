@@ -1,0 +1,26 @@
+{
+  "name": "viliv-marketing",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Multi-account carousel generator for Viliv. AI writes hook + slides, Playwright renders PNG images, published to Buffer (no YouTube).",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
+    "seed": "node -e \"import('./db.mjs').then(m=>{console.log('categories:', m.store.listCategories().length)})\"",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^6.0.1",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.63.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^6.19.0"
+  }
+}
