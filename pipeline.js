@@ -54,10 +54,10 @@ async function generateAndPost(post, { account }) {
   if (!categories.length) throw new Error("No categories seeded — run seed first");
   const catalog = [];
   for (const c of categories) {
-    const products = await store.listActiveProductsByCategory(c.id);
+    const products = (await store.listActiveProductsByCategory(c.id)).filter((p) => p.imageUrl);
     if (products.length) catalog.push({ id: c.id, name: c.name, slug: c.slug, products });
   }
-  if (!catalog.length) throw new Error("No active products in any category — run seed first");
+  if (!catalog.length) throw new Error("No active products with images in any category — run seed first");
 
   const gen = await generatePost({ accountName: account.name, categories: catalog });
 

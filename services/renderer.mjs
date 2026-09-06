@@ -2,12 +2,60 @@ import { chromium } from "playwright";
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { get as httpsGet } from "https";
+import { get as httpGet } from "http";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BUILDER = join(__dirname, "..", "builder");
 const OUT_ROOT = join(__dirname, "..", "output");
 
 if (!existsSync(OUT_ROOT)) mkdirSync(OUT_ROOT, { recursive: true });
+
+const IMAGE_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
+
+// Resolve remote image URLs (following redirects) into embedded data URIs so
+// Playwright never waits on / fails to load cross-origin images in file:// pages.
+// Family 4 is forced: IPv6 Happy-Eyeballs resolution fails on this host.
+const imageCache = new Map();
+function dataUriFor(url) {
+  if (!url || !url.trim()) return Promise.resolve("");
+  return new Promise((resolve) => {
+    const key = url.trim();
+    if (imageCache.has(key)) return resolve(imageCache.get(key));
+
+    const download = (u, redirectsLeft) => {
+      const isHttps = u.startsWith("https://");
+      const get = isHttps ? httpsGet : httpGet;
+      get(u, { family: 4, headers: { "User-Agent": IMAGE_UA } }, (res) => {
+          if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location && redirectsLeft > 0) {
+            res.resume();
+            const next = new URL(res.headers.location, u).toString();
+            return download(next, redirectsLeft - 1);
+          }
+          if (!res.statusCode || res.statusCode < 200 || res.statusCode >= 300) {
+            res.resume();
+            console.warn(`[renderer] image failed (${u}): HTTP ${res.statusCode}`);
+            imageCache.set(key, "");
+            return resolve("");
+          }
+          const chunks = [];
+          res.on("data", (c) => chunks.push(c));
+          res.on("end", () => {
+            const buf = Buffer.concat(chunks);
+            const ct = (res.headers["content-type"] || "image/jpeg").split(";")[0].trim();
+            const data = `data:${ct};base64,${buf.toString("base64")}`;
+            imageCache.set(key, data);
+            resolve(data);
+          });
+        }).on("error", (e) => {
+          console.warn(`[renderer] image fetch error (${u}): ${e.message}`);
+          imageCache.set(key, "");
+          resolve("");
+        });
+    };
+    download(key, 5);
+  });
+}
 
 // Themed placeholder gradients (dummy image source until real product images land).
 const PLACEHOLDERS = [
@@ -41,9 +89,11 @@ function placeholderCSS(index) {
   return escapeAttr(g);
 }
 
-function bgCSS(image, index) {
+async function bgCSS(image, index) {
   if (image && image.trim()) {
-    return escapeAttr(`url('${image.trim()}')`);
+    const data = await dataUriFor(image);
+    if (data) return escapeAttr(`url('${data}')`);
+    console.warn(`[renderer] using placeholder for missing image: ${image}`);
   }
   return placeholderCSS(index);
 }
@@ -77,22 +127,22 @@ export async function renderCarousel({ hook, slides, theme, account }, outDir) {
     let coverHtml = renderTemplate(coverTpl, {
       kicker: theme || "Curated by",
       hook: escapeAttr(hook || ""),
-      bg: bgCSS(coverBg, 0),
+      bg: await bgCSS(coverBg, 0),
     });
     htmls.push(coverHtml);
 
     // Slides 2+: content
-    list.forEach((s, i) => {
+    for (const [i, s] of list.entries()) {
       const idx = i + 1;
       let h = renderTemplate(slideTpl, {
-        img: bgCSS(s.image, idx),
+        img: await bgCSS(s.image, idx),
         badge: idx === 1 ? "Viliv Pick" : "",
         index: `${idx}`,
         title: escapeAttr(s.title || ""),
         link: escapeAttr(s.link || "Shop now"),
       });
       htmls.push(h);
-    });
+    }
 
     for (let i = 0; i < htmls.length; i++) {
       const file = `${i + 1}.png`;
