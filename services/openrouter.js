@@ -4,7 +4,7 @@ const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a lifestyle brand
 
 Your job:
 1. Choose ONE lifestyle category from the catalog that makes the most compelling, scroll-stopping story.
-2. Pick 3-7 products from that category that fit the story best (use their EXACT names from the catalog — never invent).
+2. Pick 3 to 6 products from that category that fit the story best (use their EXACT names from the catalog — never invent). Pick at least 3, no more than 6.
 3. Write a short, punchy carousel post around them.
 
 Return ONLY valid JSON matching EXACTLY this shape:
@@ -130,7 +130,21 @@ ${DEFAULT_PROMPT}`;
         .map((x) => x.p)
         .filter((p) => pickNames.includes(p.name))
     : pool;
-  const used = (ordered.length ? ordered : pool).slice(0, 10);
+  const MIN_SLIDES = 3;
+  const MAX_SLIDES = 6;
+  const used = (ordered.length ? ordered : pool).slice(0, MAX_SLIDES);
+
+  // Top-up from other categories so we always have at least MIN_SLIDES.
+  if (used.length < MIN_SLIDES) {
+    const all = (categories || []).flatMap((c) => c.products || []);
+    const seen = new Set(used.map((p) => p.id));
+    for (const p of all) {
+      if (used.length >= MIN_SLIDES) break;
+      if (seen.has(p.id)) continue;
+      used.push(p);
+      seen.add(p.id);
+    }
+  }
 
   const slides = used.map((p) => ({
     productId: p.id,
