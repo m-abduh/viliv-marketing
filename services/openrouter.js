@@ -2,19 +2,19 @@ import { productPageUrl } from "./links.js";
 
 const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-super-120b-a12b:free";
 
-const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a lifestyle brand and sharp curator. Below is a curated catalog of products grouped by lifestyle category — these are the SOLUTIONS to a lifestyle problem.
+const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a lifestyle brand and sharp curator. Below is the full catalog of products grouped by lifestyle category — these are the SOLUTIONS to a lifestyle problem.
 
 Your job:
-1. Choose ONE lifestyle category from the catalog that makes the most compelling, scroll-stopping story.
-2. Pick 3 to 6 products from that category that fit the story best (use their EXACT names from the catalog — never invent). Pick at least 3, no more than 6.
+1. Choose ONE lifestyle story / theme. Pick a primary category name to signal the theme, but you are FREE to pick products from ANY category in the catalog if they support the same story.
+2. Pick 3 to 6 products — from anywhere in the catalog — that best serve that single lifestyle story (use their EXACT names from the catalog, never invent). Pick at least 3, no more than 6. Vary your picks between generates so posts are not always the same products.
 3. Write a short, punchy carousel post around them.
 
 IMPORTANT: VILIV is NOT a "best products" affiliate account. It is a curator with taste. Frame each product as the ANSWER to a lifestyle tip, not as an item to buy. The social caption leads with the lifestyle outcome, not a sales pitch.
 
 Return ONLY valid JSON matching EXACTLY this shape:
 {
-  "category": "exact category name chosen from the catalog",
-  "products": ["exact product names you picked from that category (use the names as listed)"],
+  "category": "primary theme category name — use an exact category name from the catalog",
+  "products": ["exact product names you picked (use the names as listed in the catalog — may span multiple categories)"],
   "hook": "a short lifestyle headline that frames the problem or curiosity (e.g. \\"Your Desk Is Making Work Harder\\" or \\"Make Your Small Space Feel Bigger\\"), NOT a product list",
   "tips": [
     { "title": "short tip header (e.g. \\"Raise your monitor\\")",
@@ -25,11 +25,12 @@ Return ONLY valid JSON matching EXACTLY this shape:
 }
 
 Rules:
-- "tips" must have the SAME length and ORDER as "products": tips[i] describes product i's lifestyle tip.
+- "products" lists the exact product names you chose. "tips" must have the SAME length and ORDER as "products": tips[i] describes product i's lifestyle tip.
 - Each "tips[i].title" is the tip headline on the slide; the product is shown below it as the answer.
 - The hook leads with the lifestyle outcome, never a brand/product name.
 - Do NOT add hashtags inside the caption. Keep it personal and useful.
-- No emojis. Factual, practical, no hype.`;
+- No emojis. Factual, practical, no hype.
+- Vary the chosen products and hook across different generations.`;
 
 function isRetryable(e) {
   const m = String((e && e.message) || "");
@@ -123,30 +124,40 @@ ${DEFAULT_PROMPT}`;
   const text = await askAI(userPrompt);
   const parsed = extractJSON(text);
 
-  // Resolve a category: prefer one the AI explicitly chose, else first with products.
-  const chunkName = parsed.category || parsed.category_name;
-  let chosen = (categories || []).find((c) => c.name === chunkName || c.slug === chunkName);
-  if (!chosen || !(chosen.products || []).length) {
-    chosen = (categories || []).find((c) => (c.products || []).length) || (categories || [])[0] || null;
-  }
-  const pool = (chosen && chosen.products) || [];
-
-  // AI picks which products from the chosen category fit the story (by name/order).
-  const pickNames = Array.isArray(parsed.products) ? parsed.products.map((p) => (typeof p === "string" ? p : p.name || p.title)) : [];
-  const ordered = pickNames.length
-    ? pool
-        .map((p, i) => ({ p, i }))
-        .sort((a, b) => (pickNames.indexOf(a.p.name) === -1 ? 1 : 0) - (pickNames.indexOf(b.p.name) === -1 ? 1 : 0) || a.i - b.i)
-        .map((x) => x.p)
-        .filter((p) => pickNames.includes(p.name))
-    : pool;
   const MIN_SLIDES = 3;
   const MAX_SLIDES = 6;
-  const used = (ordered.length ? ordered : pool).slice(0, MAX_SLIDES);
 
-  // Top-up from other categories so we always have at least MIN_SLIDES.
+  // The AI may pick products from ANY category. Build one flat pool across the
+  // whole catalog plus a lookup of each product's category slug.
+  const productCat = new Map(); // id -> { slug, name }
+  const all = (categories || []).flatMap((c) =>
+    (c.products || []).map((p) => {
+      productCat.set(p.id, { slug: c.slug, name: c.name });
+      return { ...p, categorySlug: c.slug, categoryName: c.name };
+    })
+  );
+
+  // Resolve a "chosen" category for the footer/metadata (best effort from AI,
+  // else the first category that has products).
+  const chunkName = parsed.category || parsed.category_name;
+  let chosen =
+    (categories || []).find((c) => c.name === chunkName || c.slug === chunkName) ||
+    (categories || []).find((c) => (c.products || []).length) ||
+    (categories || [])[0] ||
+    null;
+
+  // AI picks which products (by exact name) fit the story — from the whole pool.
+  const pickNames = Array.isArray(parsed.products)
+    ? parsed.products.map((p) => (typeof p === "string" ? p : p.name || p.title))
+    : [];
+  const nameIndex = new Set(pickNames.map((n) => n.toLowerCase()));
+  const picked = pickNames.length
+    ? all.filter((p) => nameIndex.has(String(p.name).toLowerCase())).slice(0, MAX_SLIDES)
+    : [];
+  const used = (picked.length ? picked : []).slice(0, MAX_SLIDES);
+
+  // Top-up from the whole pool so we always have at least MIN_SLIDES.
   if (used.length < MIN_SLIDES) {
-    const all = (categories || []).flatMap((c) => c.products || []);
     const seen = new Set(used.map((p) => p.id));
     for (const p of all) {
       if (used.length >= MIN_SLIDES) break;
@@ -160,6 +171,7 @@ ${DEFAULT_PROMPT}`;
 
   const slides = used.map((p, i) => {
     const t = tips[i] || {};
+    const cat = productCat.get(p.id) || { slug: "", name: "" };
     return {
       productId: p.id,
       product: p.name,
@@ -167,7 +179,7 @@ ${DEFAULT_PROMPT}`;
       subtitle: String(t.subtitle || ""),
       image: p.imageUrl || "",
       link: productPageUrl(p.slug, siteBase),
-      category: chosen ? chosen.name : "",
+      category: cat.name || "",
       index: i + 1,
     };
   });

@@ -115,47 +115,41 @@ async function generateAndPost(post, { account, useAI }) {
   return uploadWithRetry(post, files);
 }
 
-// Reservoir-sampling style shuffle (deterministic-ish, no global state).
+// Fisher–Yates shuffle (random each call so consecutive generates vary).
 function shuffle(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(((i + 1) * (Date.now() + i)) % a.length);
+    const j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
 }
 
-// Build a carousel post locally, without any AI call. Picks one category,
-// fills 3..MAX_SLIDES products from the DB, assigns each product a lifestyle
-// tip from the copybook (the product is the "answer"), picks a hook + outro.
+// Build a carousel post locally, without any AI call. Pulls products from the
+// ENTIRE catalog (all categories), shuffles them, picks 3..MAX_SLIDES, and
+// assigns each product a lifestyle tip from the copybook (the product is the
+// "answer"). Hook + outro are drawn from pools so output varies per generate.
 export function generateLocalPost(categories, siteBase = "viliv.store") {
-  const withProducts = (categories || []).filter((c) => (c.products || []).length);
-  const pool = (withProducts[0] && withProducts[0].products) || [];
-  const used = pool.slice(0, MAX_SLIDES);
-
   // Map product id -> category slug so each product gets tips matched to its
   // own category (products may come from different categories after top-up).
   const productCat = new Map();
-  for (const c of categories || []) for (const p of c.products || []) productCat.set(p.id, c.slug);
-
-  if (used.length < MIN_SLIDES) {
-    const all = (categories || []).flatMap((c) => c.products || []);
-    const seen = new Set(used.map((p) => p.id));
-    for (const p of all) {
-      if (used.length >= MIN_SLIDES) break;
-      if (seen.has(p.id)) continue;
-      used.push(p);
-      seen.add(p.id);
+  const all = [];
+  for (const c of categories || []) {
+    for (const p of c.products || []) {
+      productCat.set(p.id, c.slug);
+      all.push(p);
     }
   }
 
-  const chosen = withProducts[0] || (categories || [])[0] || null;
+  const used = shuffle(all).slice(0, Math.min(MAX_SLIDES, all.length));
+
+  const chosen = (categories || []).find((c) => (c.products || []).length) || (categories || [])[0] || null;
   const products = used.slice(0, Math.max(MIN_SLIDES, Math.min(MAX_SLIDES, used.length)));
 
   const usedTips = new Map();
   const slides = products.map((p, i) => {
-    const tipPool = tipPoolFor(productCat.get(p.id) || (chosen ? chosen.slug : ""));
     const key = productCat.get(p.id) || (chosen ? chosen.slug : "");
+    const tipPool = tipPoolFor(key);
     const offset = usedTips.get(key) || 0;
     usedTips.set(key, offset + 1);
     const tip = tipPool[offset % tipPool.length] || { title: p.name, sub: "", productHint: "" };
@@ -166,7 +160,7 @@ export function generateLocalPost(categories, siteBase = "viliv.store") {
       subtitle: tip.sub || "",
       image: p.imageUrl || "",
       link: productPageUrl(p.slug, siteBase),
-      category: chosen ? chosen.name : "",
+      category: (categories || []).find((c) => c.slug === key)?.name || "",
       index: i + 1,
     };
   });
