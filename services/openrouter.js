@@ -27,7 +27,13 @@ Return ONLY valid JSON matching EXACTLY this shape:
 Rules:
 - "products" lists the exact product names you chose. "tips" must have the SAME length and ORDER as "products": tips[i] describes product i's lifestyle tip.
 - Each "tips[i].title" is the tip headline on the slide; the product is shown below it as the answer.
-- The hook leads with the lifestyle outcome, never a brand/product name.
+- "hooks" lead with a specific, relatable lifestyle situation — NOT a tagline. Write like Viliv understands a particular moment in someone's life. Examples of the RIGHT voice:
+  - "Your kitchen counter is wasting more space than you think."
+  - "What I'd pack for a 7-hour flight."
+  - "If you travel with one bag, make room for these."
+  - "Things that make a picnic way less messy."
+  - "The stuff that makes rainy days less annoying."
+  Avoid generic lines like "Curated Finds for Better Living." or "Upgrade Your Everyday."
 - Do NOT add hashtags inside the caption. Keep it personal and useful.
 - No emojis. Factual, practical, no hype.
 - Vary the chosen products and hook across different generations.`;

@@ -2,7 +2,7 @@ import "dotenv/config";
 import { store } from "./db.mjs";
 import { generatePost } from "./services/openrouter.js";
 import { productPageUrl } from "./services/links.js";
-import { HOOK_POOL, OUTRO_POOL, tipPoolFor } from "./services/copybook.js";
+import { OUTRO_POOL, tipPoolFor, hookPoolFor } from "./services/copybook.js";
 import { renderCarouselToOutput } from "./services/renderer.mjs";
 import { getChannels, createCarouselPost } from "./services/buffer.js";
 
@@ -42,7 +42,7 @@ export async function nextSlot() {
   return { account };
 }
 
-export async function runPipeline({ postId } = {}) {
+export async function runPipeline({ postId, useAI } = {}) {
   if (postId) {
     return runManualRetry(postId);
   }
@@ -58,7 +58,7 @@ export async function runPipeline({ postId } = {}) {
 
   let result;
   try {
-    result = await generateAndPost(post, { account });
+    result = await generateAndPost(post, { account, useAI });
 
     // Advance rotation only after a successful slot
     const rotation = await store.getSettingJSON("rotation", null);
@@ -189,7 +189,7 @@ export function generateLocalPost(categories, siteBase = "viliv.store") {
     };
   });
 
-  const hooks = HOOK_POOL.map((h) => h.replace(/\{n\}/g, String(slides.length)));
+  const hooks = hookPoolFor(dominantSlug(used, productCat));
   const outroLine = OUTRO_POOL[Math.floor(Math.random() * OUTRO_POOL.length)];
 
   return {
@@ -200,6 +200,25 @@ export function generateLocalPost(categories, siteBase = "viliv.store") {
     caption: `${hooks[0]} Curated by Viliv.`,
     content_json: "",
   };
+}
+
+// The category slug that appears in the most chosen products (drives the cover
+// hook pool so the headline matches what the carousel is actually about).
+function dominantSlug(products, productCat) {
+  const counts = new Map();
+  for (const p of products || []) {
+    const key = (productCat && productCat.get(p.id)) || "";
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  let best = "";
+  let bestCount = 0;
+  for (const [k, c] of counts) {
+    if (c > bestCount) {
+      best = k;
+      bestCount = c;
+    }
+  }
+  return best;
 }
 
 async function uploadWithRetry(post, files) {
