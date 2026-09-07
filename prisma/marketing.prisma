@@ -34,7 +34,8 @@ model posts {
   account_name String    @default("")
   theme        String    @default("")
   hook         String?
-  slides       String? // JSON array of {title, image, link, productId}
+  slides       String? // JSON array of {title, subtitle, product, image, link, productId}
+  outro        String? // JSON array of {line}
   caption      String?
   content_json String?
   images_dir   String? // folder holding rendered slide PNGs

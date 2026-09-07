@@ -2,6 +2,7 @@ import "dotenv/config";
 import { store } from "./db.mjs";
 import { generatePost } from "./services/openrouter.js";
 import { productPageUrl } from "./services/links.js";
+import { HOOK_POOL, OUTRO_POOL, tipPoolFor } from "./services/copybook.js";
 import { renderCarouselToOutput } from "./services/renderer.mjs";
 import { getChannels, createCarouselPost } from "./services/buffer.js";
 
@@ -76,6 +77,7 @@ async function generateAndPost(post, { account, useAI }) {
     theme: gen.category,
     hook: gen.hook,
     slides: JSON.stringify(gen.slides),
+    outro: JSON.stringify(gen.outro ? [gen.outro] : []),
     caption: gen.caption,
     content_json: gen.content_json,
   });
@@ -103,7 +105,7 @@ async function generateAndPost(post, { account, useAI }) {
   }
 
   // Render carousel images with Playwright
-  const rendered = await renderCarouselToOutput({ ...post, slides }, `${Date.now()}`);
+  const rendered = await renderCarouselToOutput({ ...post, slides, outro: gen.outro }, `${Date.now()}`);
   const files = rendered.map((r) => r.name);
   post = await store.updatePost(post.id, {
     images_dir: rendered[0]?.name.split("/")[0] || "",
@@ -113,13 +115,28 @@ async function generateAndPost(post, { account, useAI }) {
   return uploadWithRetry(post, files);
 }
 
-// Build a carousel post locally, without any AI call: pick a category with
-// products and fill the first MAX_SLIDES from the DB catalog (top-up if a
-// category has fewer than MIN_SLIDES).
+// Reservoir-sampling style shuffle (deterministic-ish, no global state).
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(((i + 1) * (Date.now() + i)) % a.length);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Build a carousel post locally, without any AI call. Picks one category,
+// fills 3..MAX_SLIDES products from the DB, assigns each product a lifestyle
+// tip from the copybook (the product is the "answer"), picks a hook + outro.
 export function generateLocalPost(categories, siteBase = "viliv.store") {
   const withProducts = (categories || []).filter((c) => (c.products || []).length);
   const pool = (withProducts[0] && withProducts[0].products) || [];
   const used = pool.slice(0, MAX_SLIDES);
+
+  // Map product id -> category slug so each product gets tips matched to its
+  // own category (products may come from different categories after top-up).
+  const productCat = new Map();
+  for (const c of categories || []) for (const p of c.products || []) productCat.set(p.id, c.slug);
 
   if (used.length < MIN_SLIDES) {
     const all = (categories || []).flatMap((c) => c.products || []);
@@ -133,21 +150,36 @@ export function generateLocalPost(categories, siteBase = "viliv.store") {
   }
 
   const chosen = withProducts[0] || (categories || [])[0] || null;
-  const slides = used.map((p) => ({
-    productId: p.id,
-    title: p.name,
-    image: p.imageUrl || "",
-    link: productPageUrl(p.slug, siteBase),
-    category: chosen ? chosen.name : "",
-  }));
+  const products = used.slice(0, Math.max(MIN_SLIDES, Math.min(MAX_SLIDES, used.length)));
 
-  const hook = chosen ? `Curated picks — ${chosen.name}` : "Curated picks";
+  const usedTips = new Map();
+  const slides = products.map((p, i) => {
+    const tipPool = tipPoolFor(productCat.get(p.id) || (chosen ? chosen.slug : ""));
+    const key = productCat.get(p.id) || (chosen ? chosen.slug : "");
+    const offset = usedTips.get(key) || 0;
+    usedTips.set(key, offset + 1);
+    const tip = tipPool[offset % tipPool.length] || { title: p.name, sub: "", productHint: "" };
+    return {
+      productId: p.id,
+      product: p.name,
+      title: tip.title || p.name,
+      subtitle: tip.sub || "",
+      image: p.imageUrl || "",
+      link: productPageUrl(p.slug, siteBase),
+      category: chosen ? chosen.name : "",
+      index: i + 1,
+    };
+  });
+
+  const hooks = HOOK_POOL.map((h) => h.replace(/\{n\}/g, String(slides.length)));
+  const outroLine = OUTRO_POOL[Math.floor(Math.random() * OUTRO_POOL.length)];
 
   return {
     category: chosen ? chosen.name : "",
-    hook,
+    hook: hooks[Math.floor(Math.random() * hooks.length)],
     slides,
-    caption: `Fresh picks curated for you #viliv`,
+    outro: { line: outroLine },
+    caption: `${hooks[0]} Curated by Viliv.`,
     content_json: "",
   };
 }

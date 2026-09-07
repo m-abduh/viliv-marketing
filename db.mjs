@@ -77,6 +77,7 @@ const store = {
         hook: data.hook ?? null,
         slides: data.slides ?? null,
         caption: data.caption ?? null,
+        outro: data.outro ?? null,
         content_json: data.content_json ?? null,
         images_dir: data.images_dir ?? null,
         image_files: data.image_files ?? null,
@@ -86,7 +87,7 @@ const store = {
     }),
   async updatePost(id, patch) {
     const data = {};
-    const allowed = ["theme", "hook", "slides", "caption", "content_json", "images_dir", "image_files", "status", "attempts", "last_error", "posted_at"];
+    const allowed = ["theme", "hook", "slides", "caption", "outro", "content_json", "images_dir", "image_files", "status", "attempts", "last_error", "posted_at"];
     for (const k of allowed) if (k in patch) data[k] = patch[k];
     return mkt.posts.update({ where: { id }, data });
   },

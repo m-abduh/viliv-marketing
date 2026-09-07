@@ -12,13 +12,17 @@
   .topbar{display:flex;align-items:center;gap:12px;padding:44px 70px 0}
   .word{font-size:26px;font-weight:900;letter-spacing:3px;color:var(--ink);text-transform:uppercase}
   .index{margin-left:auto;font-size:22px;font-weight:700;letter-spacing:3px;color:var(--muted)}
-  .imghold{position:relative;margin:34px 70px 0;height:620px;border-radius:32px;overflow:hidden;background:#f2f2f4;flex-shrink:0}
+  .imghold{position:relative;margin:34px 70px 0;height:590px;border-radius:32px;overflow:hidden;background:#f2f2f4;flex-shrink:0}
   .img{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
   .body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:38px 70px 34px}
-  .title{font-size:64px;font-weight:900;line-height:1.12;letter-spacing:-1px;color:var(--ink);max-width:940px}
-  .link{margin-top:30px;display:inline-flex;align-items:center;gap:14px;color:var(--accent);font-size:26px;font-weight:700}
+  .kicker{font-size:21px;font-weight:700;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:20px}
+  .title{font-size:62px;font-weight:900;line-height:1.1;letter-spacing:-1px;color:var(--ink);max-width:940px}
+  .subtitle{margin-top:22px;font-size:28px;font-weight:400;line-height:1.4;letter-spacing:0.2px;color:var(--muted);max-width:880px}
+  .product{margin-top:30px;display:flex;align-items:center;gap:20px}
+  .product .label{font-size:24px;font-weight:700;color:var(--ink)}
+  .link{display:inline-flex;align-items:center;gap:14px;color:var(--accent);font-size:26px;font-weight:700}
   .link .underline{width:54px;height:4px;border-radius:99px;background:var(--accent)}
-  .footer{display:flex;align-items:center;padding:26px 70px 56px}
+  .footer{display:flex;align-items:center;padding:22px 70px 40px}
   .dots{display:flex;gap:10px}
   .dots span{width:12px;height:12px;border-radius:50%;background:#e3e0d5}
   .dots span.on{background:var(--accent)}
@@ -27,14 +31,19 @@
 <body>
 <div id="root">
   <div class="topbar">
-    <span class="word">viliv</span><span class="index">/ {{index}}</span>
+    <span class="word">viliv</span>
   </div>
   <div class="imghold">
     <div class="img" style="background-image:{{img}}"></div>
   </div>
   <div class="body">
+    <div class="kicker">{{index}}</div>
     <div class="title">{{title}}</div>
-    <div class="link"><span class="underline"></span><span>{{link}}</span></div>
+    <div class="subtitle">{{subtitle}}</div>
+    <div class="product">
+      <span class="label">{{product}}</span>
+      <span class="link"><span class="underline"></span><span>{{link}}</span></span>
+    </div>
   </div>
   <div class="footer">
     <div class="dots"><span class="on"></span><span></span><span></span></div>

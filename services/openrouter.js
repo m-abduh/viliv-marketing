@@ -9,17 +9,25 @@ Your job:
 2. Pick 3 to 6 products from that category that fit the story best (use their EXACT names from the catalog — never invent). Pick at least 3, no more than 6.
 3. Write a short, punchy carousel post around them.
 
+IMPORTANT: VILIV is NOT a "best products" affiliate account. It is a curator with taste. Frame each product as the ANSWER to a lifestyle tip, not as an item to buy. The social caption leads with the lifestyle outcome, not a sales pitch.
+
 Return ONLY valid JSON matching EXACTLY this shape:
 {
   "category": "exact category name chosen from the catalog",
   "products": ["exact product names you picked from that category (use the names as listed)"],
-  "hook": "a 7-14 word lifestyle headline that frames the problem/outcome (e.g. \\"7 Things That Make a Small Apartment Feel Bigger\\")",
-  "caption": "one short personal paragraph for the social post caption (no hashtags, no @ mentions)"
+  "hook": "a short lifestyle headline that frames the problem or curiosity (e.g. \\"Your Desk Is Making Work Harder\\" or \\"Make Your Small Space Feel Bigger\\"), NOT a product list",
+  "tips": [
+    { "title": "short tip header (e.g. \\"Raise your monitor\\")",
+      "subtitle": "one short supportive line (e.g. \\"Eye level, fewer aches.\\")" }
+  ],
+  "outro": "a short closing line for the last slide (e.g. \\"Work better. Feel better.\\" or \\"Small changes. Better space.\\")",
+  "caption": "one short personal paragraph for the social post caption (no hashtags, no @ mentions, no sales pitch)"
 }
 
 Rules:
-- Choose exactly ONE category. Products MUST be real names from that category in the catalog.
-- The hook leads with the lifestyle outcome, not a brand/product name.
+- "tips" must have the SAME length and ORDER as "products": tips[i] describes product i's lifestyle tip.
+- Each "tips[i].title" is the tip headline on the slide; the product is shown below it as the answer.
+- The hook leads with the lifestyle outcome, never a brand/product name.
 - Do NOT add hashtags inside the caption. Keep it personal and useful.
 - No emojis. Factual, practical, no hype.`;
 
@@ -148,17 +156,26 @@ ${DEFAULT_PROMPT}`;
     }
   }
 
-  const slides = used.map((p) => ({
-    productId: p.id,
-    title: p.name,
-    image: p.imageUrl || "",
-    link: productPageUrl(p.slug, siteBase),
-    category: chosen ? chosen.name : "",
-  }));
+  const tips = Array.isArray(parsed.tips) ? parsed.tips : [];
+
+  const slides = used.map((p, i) => {
+    const t = tips[i] || {};
+    return {
+      productId: p.id,
+      product: p.name,
+      title: String(t.title || p.name),
+      subtitle: String(t.subtitle || ""),
+      image: p.imageUrl || "",
+      link: productPageUrl(p.slug, siteBase),
+      category: chosen ? chosen.name : "",
+      index: i + 1,
+    };
+  });
 
   return {
     hook: String(parsed.hook || parsed.title || ""),
     slides,
+    outro: { line: String(parsed.outro || "Better living, one find at a time.") },
     caption: String(parsed.caption || "").trim() + " #viliv",
     content_json: JSON.stringify(parsed),
     category: chosen ? chosen.name : "",

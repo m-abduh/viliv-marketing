@@ -100,17 +100,18 @@ async function bgCSS(image, index) {
 
 /**
  * Render a carousel to PNG images with Playwright.
- * @param {object} post - { hook, slides: [{title,image,link}], theme, account }
+ * @param {object} post - { hook, slides: [{product,title,subtitle,image,link}], outro, theme, account }
  * @param {string} outDir - absolute directory to write slide images into
  * @returns {Promise<string[]>} relative paths of rendered PNGs (slide 1..N)
  */
-export async function renderCarousel({ hook, slides, theme, account }, outDir) {
+export async function renderCarousel({ hook, slides, outro, theme, account }, outDir) {
   mkdirSync(outDir, { recursive: true });
   const coverTpl = readFileSync(join(BUILDER, "cover.html"), "utf-8");
   const slideTpl = readFileSync(join(BUILDER, "slide.html"), "utf-8");
+  const outroTpl = readFileSync(join(BUILDER, "outro.html"), "utf-8");
 
   const list = slides && slides.length ? slides : [];
-  const total = list.length + 1; // +1 cover slide
+  const total = list.length + 2; // +1 cover slide, +1 outro
 
   const browser = await chromium.launch({ channel: "chromium" });
   const page = await browser.newPage({
@@ -134,17 +135,25 @@ export async function renderCarousel({ hook, slides, theme, account }, outDir) {
     });
     htmls.push(coverHtml);
 
-    // Slides 2+: content
+    // Slides 2..N: content (each product = one tip; the product is the answer)
     for (const [i, s] of list.entries()) {
       const idx = i + 1;
       let h = renderTemplate(slideTpl, {
         img: await bgCSS(s.image, idx),
-        index: `${idx}`,
+        index: `${idx}`.padStart(2, "0"),
         title: escapeAttr(s.title || ""),
-        link: escapeAttr(s.link || "Shop now"),
+        subtitle: escapeAttr(s.subtitle || ""),
+        product: escapeAttr(s.product || s.title || ""),
+        link: escapeAttr(s.link || "See it"),
       });
       htmls.push(h);
     }
+
+    // Last slide: outro/closing (no product)
+    const outroLine = (outro && outro.line) || "Better living, one find at a time.";
+    htmls.push(renderTemplate(outroTpl, {
+      line: escapeAttr(outroLine),
+    }));
 
     for (let i = 0; i < htmls.length; i++) {
       const file = `${i + 1}.png`;
@@ -173,6 +182,7 @@ export async function renderCarouselToOutput(post, outputFolderName) {
     {
       hook: post.hook,
       slides: post.slides,
+      outro: post.outro,
       theme: post.theme || "",
       account: accountName,
     },

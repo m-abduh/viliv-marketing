@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{font-family:'Satoshi';src:url('./fonts/Satoshi-Variable.ttf')format('truetype');font-weight:300 900}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px;overflow:hidden}
+  :root{--ink:#ffffff;--accent:#f5d67b;--muted:rgba(255,255,255,.6)}
+  body{font-family:'Satoshi','Segoe UI',system-ui,-apple-system,sans-serif;background:linear-gradient(160deg,#17171a 0%,#26262c 55%,#0f0f11 100%)}
+  #root{position:relative;width:1080px;height:1350px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 90px;text-align:center}
+  .line{font-size:64px;font-weight:900;line-height:1.15;letter-spacing:-1px;color:var(--ink);max-width:900px}
+  .rule{width:84px;height:5px;border-radius:99px;background:var(--accent);margin-top:44px}
+  .brand{display:flex;align-items:center;gap:14px;margin-top:40px}
+  .word{font-size:36px;font-weight:900;letter-spacing:4px;color:var(--ink)}
+  .dot{width:11px;height:11px;border-radius:50%;background:var(--accent)}
+  .tag{margin-top:16px;font-size:22px;font-weight:700;letter-spacing:5px;color:var(--muted);text-transform:uppercase}
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="line">{{line}}</div>
+  <div class="rule"></div>
+  <div class="brand"><span class="word">viliv</span><span class="dot"></span></div>
+  <div class="tag">Curated by Viliv</div>
+</div>
+</body>
+</html>
