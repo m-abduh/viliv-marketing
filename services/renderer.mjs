@@ -122,12 +122,12 @@ export async function renderCarousel({ hook, slides, theme, account }, outDir) {
   try {
     const htmls = [];
 
-    // Slide 1: cover
-    const coverBg = (list[0] && list[0].image) || "";
+    // Slide 1: cover — brand gradient background, NO product image so it never
+    // duplicates the first slide's urlImage.
     let coverHtml = renderTemplate(coverTpl, {
       kicker: theme || "Curated by",
       hook: escapeAttr(hook || ""),
-      bg: await bgCSS(coverBg, 0),
+      bg: "",
     });
     htmls.push(coverHtml);
 
