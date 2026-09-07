@@ -1,3 +1,5 @@
+import { productPageUrl } from "./links.js";
+
 const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-super-120b-a12b:free";
 
 const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a lifestyle brand and sharp curator. Below is a curated catalog of products grouped by lifestyle category — these are the SOLUTIONS to a lifestyle problem.
@@ -99,7 +101,7 @@ function extractJSON(text) {
  * @param {Array}  opts.categories  [{id, name, slug, products:[{id,name,imageUrl,affiliateUrl}]}]
  * @returns {{hook, slides, caption, content_json, category}}
  */
-export async function generatePost({ accountName, categories }) {
+export async function generatePost({ accountName, categories, siteBase = "viliv.store" }) {
   const catalog = (categories || []).map((c) => `${c.name}:\n` +
     (c.products || []).map((p) => `  - ${p.name}`).join("\n")).join("\n\n");
 
@@ -150,7 +152,7 @@ ${DEFAULT_PROMPT}`;
     productId: p.id,
     title: p.name,
     image: p.imageUrl || "",
-    link: p.affiliateUrl || "",
+    link: productPageUrl(p.slug, siteBase),
     category: chosen ? chosen.name : "",
   }));
 

@@ -1,8 +1,12 @@
 import "dotenv/config";
 import { store } from "./db.mjs";
 import { generatePost } from "./services/openrouter.js";
+import { productPageUrl } from "./services/links.js";
 import { renderCarouselToOutput } from "./services/renderer.mjs";
 import { getChannels, createCarouselPost } from "./services/buffer.js";
+
+const MIN_SLIDES = 3;
+const MAX_SLIDES = 6;
 
 const MAX_ATTEMPTS = Number(process.env.RETRY_ATTEMPTS || 3);
 const RETRY_DELAY_MS = Number(process.env.RETRY_DELAY_MS || 5000);
@@ -48,7 +52,7 @@ export async function runPipeline({ postId } = {}) {
   return { result, post: (await store.getPost(post.id)) || post };
 }
 
-async function generateAndPost(post, { account }) {
+async function generateAndPost(post, { account, useAI }) {
   // Build the full catalog: each category with its active products (from DB).
   const categories = await store.listCategories();
   if (!categories.length) throw new Error("No categories seeded — run seed first");
@@ -59,7 +63,14 @@ async function generateAndPost(post, { account }) {
   }
   if (!catalog.length) throw new Error("No active products with images in any category — run seed first");
 
-  const gen = await generatePost({ accountName: account.name, categories: catalog });
+  // Product page base (configurable in site settings); links become <base>/<product-slug>
+  const siteBase = String(await store.getSetting("site_url", "viliv.store"))
+    .trim()
+    .replace(/\/+$/, "");
+
+  const gen = useAI
+    ? await generatePost({ accountName: account.name, categories: catalog, siteBase })
+    : generateLocalPost(catalog, siteBase);
 
   post = await store.updatePost(post.id, {
     theme: gen.category,
@@ -100,6 +111,45 @@ async function generateAndPost(post, { account }) {
   });
 
   return uploadWithRetry(post, files);
+}
+
+// Build a carousel post locally, without any AI call: pick a category with
+// products and fill the first MAX_SLIDES from the DB catalog (top-up if a
+// category has fewer than MIN_SLIDES).
+export function generateLocalPost(categories, siteBase = "viliv.store") {
+  const withProducts = (categories || []).filter((c) => (c.products || []).length);
+  const pool = (withProducts[0] && withProducts[0].products) || [];
+  const used = pool.slice(0, MAX_SLIDES);
+
+  if (used.length < MIN_SLIDES) {
+    const all = (categories || []).flatMap((c) => c.products || []);
+    const seen = new Set(used.map((p) => p.id));
+    for (const p of all) {
+      if (used.length >= MIN_SLIDES) break;
+      if (seen.has(p.id)) continue;
+      used.push(p);
+      seen.add(p.id);
+    }
+  }
+
+  const chosen = withProducts[0] || (categories || [])[0] || null;
+  const slides = used.map((p) => ({
+    productId: p.id,
+    title: p.name,
+    image: p.imageUrl || "",
+    link: productPageUrl(p.slug, siteBase),
+    category: chosen ? chosen.name : "",
+  }));
+
+  const hook = chosen ? `Curated picks — ${chosen.name}` : "Curated picks";
+
+  return {
+    category: chosen ? chosen.name : "",
+    hook,
+    slides,
+    caption: `Fresh picks curated for you #viliv`,
+    content_json: "",
+  };
 }
 
 async function uploadWithRetry(post, files) {

@@ -124,8 +124,10 @@ app.delete("/api/posts/:id", ah(async (req, res) => {
 }));
 
 // Manually run the next rotation slot now (generate -> render -> post to Buffer)
+// ?no_ai=1 builds the carousel locally from DB products without calling OpenRouter.
 app.post("/api/generate", ah(async (req, res) => {
-  const result = await runPipeline();
+  const useAI = req.query.no_ai !== "1";
+  const result = await runPipeline({ useAI });
   res.json(result);
 }));
 
