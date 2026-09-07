@@ -20,6 +20,11 @@
   .kicker{font-size:23px;font-weight:700;letter-spacing:5px;color:var(--accent);text-transform:uppercase;margin-bottom:26px}
   .title{font-size:72px;font-weight:900;line-height:1.1;letter-spacing:-1.5px;color:var(--ink);max-width:930px}
   .rule{width:84px;height:5px;border-radius:99px;background:var(--accent);margin-top:40px}
+  .scroll{display:flex;align-items:center;gap:14px;margin-top:30px;color:var(--muted,#a9a9b2)}
+  .scroll .label{font-size:22px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+  .scroll .chev{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .scroll .chev i{display:block;width:14px;height:14px;border-right:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(45deg)}
+  .scroll .chev i:last-child{margin-top:-8px;opacity:.4}
 </style>
 </head>
 <body>
@@ -31,6 +36,10 @@
     <div class="kicker">{{kicker}}</div>
     <div class="title">{{hook}}</div>
     <div class="rule"></div>
+    <div class="scroll">
+      <span class="chev"><i></i><i></i></span>
+      <span class="label">Swipe to explore</span>
+    </div>
   </div>
 </div>
 </body>
