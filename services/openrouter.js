@@ -110,15 +110,19 @@ function extractJSON(text) {
  * @param {Array}  opts.categories  [{id, name, slug, products:[{id,name,imageUrl,affiliateUrl}]}]
  * @returns {{hook, slides, caption, content_json, category}}
  */
-export async function generatePost({ accountName, categories, siteBase = "viliv.store" }) {
+export async function generatePost({ accountName, categories, siteBase = "viliv.store", forceTheme = null }) {
   const catalog = (categories || []).map((c) => `${c.name}:\n` +
     (c.products || []).map((p) => `  - ${p.name}`).join("\n")).join("\n\n");
+
+  const themeLine = forceTheme
+    ? `\nTHEME FOR THIS POST: "${forceTheme}". Build the lifestyle story around this theme. You may still pull products from other categories if they support it, but the hook, tips and caption must clearly reflect the "${forceTheme}" theme.\n`
+    : "";
 
   const userPrompt = `Brand channel: ${accountName}
 
 Here is the full curated catalog by lifestyle category:
 ${catalog || "- (none)"}
-
+${themeLine}
 ${DEFAULT_PROMPT}`;
 
   const text = await askAI(userPrompt);
@@ -137,11 +141,11 @@ ${DEFAULT_PROMPT}`;
     })
   );
 
-  // Resolve a "chosen" category for the footer/metadata (best effort from AI,
-  // else the first category that has products).
-  const chunkName = parsed.category || parsed.category_name;
+  // Resolve the theme category. If a forceTheme is set, it overrides whatever
+  // the AI picked so posts rotate through every category.
+  const themeName = forceTheme || parsed.category || parsed.category_name;
   let chosen =
-    (categories || []).find((c) => c.name === chunkName || c.slug === chunkName) ||
+    (categories || []).find((c) => c.name === themeName || c.slug === themeName) ||
     (categories || []).find((c) => (c.products || []).length) ||
     (categories || [])[0] ||
     null;

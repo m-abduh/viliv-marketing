@@ -12,6 +12,26 @@ const MAX_SLIDES = 6;
 const MAX_ATTEMPTS = Number(process.env.RETRY_ATTEMPTS || 3);
 const RETRY_DELAY_MS = Number(process.env.RETRY_DELAY_MS || 5000);
 
+// Round-robin theme rotation across catalog categories, persisted so posts
+// cycle through every category instead of the AI always picking one.
+// Stores the last theme SLUG (stable even if a category's display name changes)
+// so the rotation stays meaningful when categories are renamed/reordered.
+async function nextTheme(catalog) {
+  const rotation = await store.getSettingJSON("theme_rotation", null);
+  const cats = catalog || [];
+  if (!cats.length) return null;
+
+  const lastSlug = rotation && typeof rotation.themeSlug === "string" ? rotation.themeSlug : null;
+  // Rotate to the category after the last used slug; if it's gone, restart top.
+  const startIdx = lastSlug ? cats.findIndex((c) => c.slug === lastSlug) + 1 : 0;
+  const idx = startIdx < cats.length ? startIdx : 0;
+
+  const theme = cats[idx];
+  await store.setSettingJSON("theme_rotation", { themeSlug: theme.slug });
+  return theme.name;
+}
+export { nextTheme };
+
 export async function nextSlot() {
   const accounts = await store.listAccounts();
   if (!accounts.length) return null;
@@ -69,8 +89,12 @@ async function generateAndPost(post, { account, useAI }) {
     .trim()
     .replace(/\/+$/, "");
 
+  // Rotate the theme across categories so generated posts are not monotonous
+  // (the AI tends to always pick its favorite category. We lock a rotating
+  // theme but still let the AI choose products freely across the catalog).
+  const theme = useAI ? await nextTheme(catalog) : null;
   const gen = useAI
-    ? await generatePost({ accountName: account.name, categories: catalog, siteBase })
+    ? await generatePost({ accountName: account.name, categories: catalog, siteBase, forceTheme: theme })
     : generateLocalPost(catalog, siteBase);
 
   post = await store.updatePost(post.id, {
