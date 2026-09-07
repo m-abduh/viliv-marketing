@@ -6,29 +6,31 @@
   @font-face{font-family:'Satoshi';src:url('./fonts/Satoshi-Variable.ttf')format('truetype');font-weight:300 900}
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{width:1080px;height:1350px;overflow:hidden}
-  :root{--ink:#ffffff;--accent:#f5d67b;--brand:#f5d67b}
-  body{font-family:'Satoshi','Segoe UI',system-ui,-apple-system,sans-serif;background:#000}
+  :root{--ink:#ffffff;--accent:#f5d67b;--brand:#ffffff}
+  body{font-family:'Satoshi','Segoe UI',system-ui,-apple-system,sans-serif;background:#0e0e10}
   #root{position:relative;width:1080px;height:1350px;overflow:hidden}
   .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;background:linear-gradient(160deg,#17171a 0%,#26262c 55%,#0f0f11 100%)}
-  .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.12) 35%,rgba(0,0,0,.78) 100%)}
-  .content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:70px 64px 92px}
-  .kicker{font-size:26px;font-weight:700;letter-spacing:5px;color:var(--accent);text-transform:uppercase;margin-bottom:24px}
-  .title{font-size:74px;font-weight:900;line-height:1.08;letter-spacing:-1px;color:var(--ink);text-shadow:0 3px 24px rgba(0,0,0,.45);max-width:920px}
-  .spacer{flex:1}
-  .brand{display:flex;align-items:center;gap:14px;padding-top:30px;border-top:2px solid rgba(255,255,255,.35)}
-  .brand .word{font-size:42px;font-weight:900;letter-spacing:2px;color:var(--ink)}
-  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  .shade{position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(10,10,12,0) 0%,rgba(10,10,12,.55) 55%,rgba(10,10,12,.92) 100%),
+    linear-gradient(90deg,rgba(10,10,12,.38) 0%,rgba(10,10,12,0) 60%)}
+  .top{position:absolute;top:70px;left:64px;display:flex;align-items:center;gap:14px}
+  .word{font-size:34px;font-weight:900;letter-spacing:4px;color:var(--ink)}
+  .dot{width:11px;height:11px;border-radius:50%;background:var(--accent)}
+  .content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 84px}
+  .kicker{font-size:23px;font-weight:700;letter-spacing:5px;color:var(--accent);text-transform:uppercase;margin-bottom:26px}
+  .title{font-size:72px;font-weight:900;line-height:1.1;letter-spacing:-1.5px;color:var(--ink);max-width:930px}
+  .rule{width:84px;height:5px;border-radius:99px;background:var(--accent);margin-top:40px}
 </style>
 </head>
 <body>
 <div id="root">
   <div class="bgimg" style="background-image:{{bg}}"></div>
   <div class="shade"></div>
+  <div class="top"><span class="word">viliv</span><span class="dot"></span></div>
   <div class="content">
     <div class="kicker">{{kicker}}</div>
-    <div class="spacer"></div>
     <div class="title">{{hook}}</div>
-    <div class="brand"><span class="word">viliv</span><span class="dot"></span></div>
+    <div class="rule"></div>
   </div>
 </div>
 </body>
