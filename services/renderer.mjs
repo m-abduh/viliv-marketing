@@ -136,7 +136,6 @@ export async function renderCarousel({ hook, slides, theme, account }, outDir) {
       const idx = i + 1;
       let h = renderTemplate(slideTpl, {
         img: await bgCSS(s.image, idx),
-        badge: idx === 1 ? "Viliv Pick" : "",
         index: `${idx}`,
         title: escapeAttr(s.title || ""),
         link: escapeAttr(s.link || "Shop now"),

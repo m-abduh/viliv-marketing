@@ -1,0 +1,50 @@
+// Prisma schema for viliv-marketing — OWN local data (SQLite)
+// Stores the marketing-side tables (settings, accounts, posts).
+// This database is project-local and never touches the viliv catalog DB.
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/marketing"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL_LOCAL")
+}
+
+model settings {
+  key   String @id
+  value String
+}
+
+model accounts {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  buffer_token String
+  position     Int      @default(0)
+  created_at   DateTime @default(now())
+  posts        posts[]
+
+  @@map("accounts")
+}
+
+model posts {
+  id           Int       @id @default(autoincrement())
+  account_id   Int
+  account_name String    @default("")
+  theme        String    @default("")
+  hook         String?
+  slides       String? // JSON array of {title, image, link, productId}
+  caption      String?
+  content_json String?
+  images_dir   String? // folder holding rendered slide PNGs
+  image_files  String? // JSON array of relative slide file names
+  status       String    @default("pending") // pending | success | failed
+  attempts     Int       @default(0)
+  last_error   String?
+  created_at   DateTime  @default(now())
+  posted_at    DateTime?
+  account      accounts  @relation(fields: [account_id], references: [id], onDelete: Cascade)
+
+  @@map("posts")
+}

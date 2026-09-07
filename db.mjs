@@ -1,14 +1,19 @@
 import "dotenv/config";
 import { PrismaClient } from "@prisma/client";
+import { PrismaClient as MarketingClient } from "./prisma/generated/marketing/index.js";
 
+// Catalog client — shared viliv Postgres DB (READ-ONLY, managed by viliv).
 export const prisma = new PrismaClient();
 
+// Marketing client — local SQLite DB for this project (settings/accounts/posts).
+const mkt = new MarketingClient();
+
 const store = {
-  // ---- Settings ----
+  // ---- Settings (local SQLite) ----
   getSetting: (key, fallback = "") =>
-    prisma.settings.findUnique({ where: { key } }).then((r) => (r ? r.value : fallback)),
+    mkt.settings.findUnique({ where: { key } }).then((r) => (r ? r.value : fallback)),
   async setSetting(key, value) {
-    await prisma.settings.upsert({
+    await mkt.settings.upsert({
       where: { key },
       update: { value: String(value) },
       create: { key, value: String(value) },
@@ -20,23 +25,23 @@ const store = {
   },
   setSettingJSON: (key, value) => store.setSetting(key, JSON.stringify(value)),
 
-  // ---- Accounts ----
+  // ---- Accounts (local SQLite) ----
   listAccounts: () =>
-    prisma.accounts.findMany({ orderBy: [{ position: "asc" }, { id: "asc" }] }),
-  getAccount: (id) => prisma.accounts.findUnique({ where: { id } }),
+    mkt.accounts.findMany({ orderBy: [{ position: "asc" }, { id: "asc" }] }),
+  getAccount: (id) => mkt.accounts.findUnique({ where: { id } }),
   async createAccount({ name, buffer_token }) {
-    const max = await prisma.accounts.aggregate({ _max: { position: true } });
+    const max = await mkt.accounts.aggregate({ _max: { position: true } });
     const pos = (max._max.position ?? -1) + 1;
-    return prisma.accounts.create({ data: { name, buffer_token, position: pos } });
+    return mkt.accounts.create({ data: { name, buffer_token, position: pos } });
   },
   updateAccount: (id, { name, buffer_token }) =>
-    prisma.accounts.update({ where: { id }, data: { name, buffer_token } }),
+    mkt.accounts.update({ where: { id }, data: { name, buffer_token } }),
   async deleteAccount(id) {
-    await prisma.accounts.delete({ where: { id } });
+    await mkt.accounts.delete({ where: { id } });
   },
   async reorderAccounts(ids) {
-    await prisma.$transaction(
-      ids.map((id, i) => prisma.accounts.update({ where: { id }, data: { position: i } }))
+    await mkt.$transaction(
+      ids.map((id, i) => mkt.accounts.update({ where: { id }, data: { position: i } }))
     );
   },
 
@@ -57,14 +62,14 @@ const store = {
       orderBy: { createdAt: "asc" },
     }),
 
-  // ---- Posts (carousels) ----
+  // ---- Posts (carousels, local SQLite) ----
   listPosts: ({ accountId } = {}) =>
     accountId
-      ? prisma.posts.findMany({ where: { account_id: accountId }, orderBy: { id: "desc" } })
-      : prisma.posts.findMany({ orderBy: { id: "desc" } }),
-  getPost: (id) => prisma.posts.findUnique({ where: { id } }),
+      ? mkt.posts.findMany({ where: { account_id: accountId }, orderBy: { id: "desc" } })
+      : mkt.posts.findMany({ orderBy: { id: "desc" } }),
+  getPost: (id) => mkt.posts.findUnique({ where: { id } }),
   createPost: (account, data) =>
-    prisma.posts.create({
+    mkt.posts.create({
       data: {
         account_id: account?.id ?? null,
         account_name: account?.name ?? "",
@@ -83,14 +88,14 @@ const store = {
     const data = {};
     const allowed = ["theme", "hook", "slides", "caption", "content_json", "images_dir", "image_files", "status", "attempts", "last_error", "posted_at"];
     for (const k of allowed) if (k in patch) data[k] = patch[k];
-    return prisma.posts.update({ where: { id }, data });
+    return mkt.posts.update({ where: { id }, data });
   },
   async deletePost(id) {
-    await prisma.posts.delete({ where: { id } });
+    await mkt.posts.delete({ where: { id } });
   },
   incrementAttempts: (id) =>
-    prisma.posts.update({ where: { id }, data: { attempts: { increment: 1 } } }),
-  countFailed: () => prisma.posts.count({ where: { status: "failed" } }),
+    mkt.posts.update({ where: { id }, data: { attempts: { increment: 1 } } }),
+  countFailed: () => mkt.posts.count({ where: { status: "failed" } }),
 };
 
 export { store };

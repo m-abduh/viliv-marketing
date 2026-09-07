@@ -1,5 +1,7 @@
 node_modules/
 db.sqlite*
+prisma/*.db*
+prisma/generated/
 output/
 builder/_cover.html
 builder/_slide_*.html

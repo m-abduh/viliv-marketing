@@ -172,9 +172,13 @@ function renderProducts() {
   el.innerHTML = state.products.length ? '' : '<div class="empty">No products</div>';
   state.products.slice(0, 30).forEach(p => {
     const d = document.createElement('div');
-    d.className = 'acc';
+    d.className = 'pitem';
     const catName = p.category ? p.category.name : '—';
-    d.innerHTML = `<div class="name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(p.name)} <span class="muted" style="font-weight:400">· ${escapeHtml(catName)}</span></div>`;
+    d.innerHTML = `
+      <div class="meta">
+        <div class="t" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(p.name)} <span class="muted" style="font-weight:400">· ${escapeHtml(catName)}</span></div>
+      </div>
+      ${p.imageUrl ? `<div class="thumbs"><img src="${escapeHtml(p.imageUrl)}" loading="lazy" onerror="this.parentElement.innerHTML=''"></div>` : ''}`;
     el.appendChild(d);
   });
 }

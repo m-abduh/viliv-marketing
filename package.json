@@ -8,8 +8,9 @@
     "dev": "nodemon server.js",
     "start": "NODE_ENV=production node server.js",
     "seed": "node -e \"import('./db.mjs').then(m=>{console.log('categories:', m.store.listCategories().length)})\"",
-    "prisma:generate": "prisma generate",
-    "prisma:push": "prisma db push"
+    "prisma:generate": "prisma generate && prisma generate --schema prisma/marketing.prisma",
+    "prisma:push": "prisma db push && prisma db push --schema prisma/marketing.prisma",
+    "prisma:push:marketing": "prisma db push --schema prisma/marketing.prisma"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",
