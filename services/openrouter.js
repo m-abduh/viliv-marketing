@@ -121,7 +121,7 @@ export async function generatePost({ accountName, categories, siteBase = "viliv.
     (c.products || []).map((p) => `  - ${p.name}`).join("\n")).join("\n\n");
 
   const themeLine = forceTheme
-    ? `\nTHEME FOR THIS POST: "${forceTheme}". Build the lifestyle story around this theme. You may still pull products from other categories if they support it, but the hook, tips and caption must clearly reflect the "${forceTheme}" theme.\n`
+    ? `\nTHEME FOR THIS POST: "${forceTheme}". Build the lifestyle story around this theme. Pick 3 to 6 products from the "${forceTheme}" category FIRST. Only if that category has fewer than 3 products may you take products from other categories. The hook, tips and caption must clearly reflect the "${forceTheme}" theme.\n`
     : "";
 
   const userPrompt = `Brand channel: ${accountName}

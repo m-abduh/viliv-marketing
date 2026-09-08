@@ -92,10 +92,10 @@ async function generateAndPost(post, { account, useAI }) {
   // Rotate the theme across categories so generated posts are not monotonous
   // (the AI tends to always pick its favorite category. We lock a rotating
   // theme but still let the AI choose products freely across the catalog).
-  const theme = useAI ? await nextTheme(catalog) : null;
+  const theme = await nextTheme(catalog);
   const gen = useAI
     ? await generatePost({ accountName: account.name, categories: catalog, siteBase, forceTheme: theme })
-    : generateLocalPost(catalog, siteBase);
+    : generateLocalPost(catalog, theme, siteBase);
 
   post = await store.updatePost(post.id, {
     theme: gen.category,
@@ -149,34 +149,39 @@ function shuffle(arr) {
   return a;
 }
 
-// Build a carousel post locally, without any AI call. Pulls products from the
-// ENTIRE catalog (all categories), shuffles them, picks 3..MAX_SLIDES, and
-// assigns each product a lifestyle tip from the copybook (the product is the
-// "answer"). Hook + outro are drawn from pools so output varies per generate.
-export function generateLocalPost(categories, siteBase = "viliv.store") {
-  // Map product id -> category slug so each product gets tips matched to its
-  // own category (products may come from different categories after top-up).
-  const productCat = new Map();
-  const all = [];
-  for (const c of categories || []) {
-    for (const p of c.products || []) {
-      productCat.set(p.id, c.slug);
-      all.push(p);
+// Build a carousel post locally, without any AI call. Pulls products from ONE
+// category only — the rotating theme — so each carousel is focused on a single
+// lifestyle story instead of a random mix across the catalog. Each category
+// carries enough products to fill a carousel. If the theme category somehow
+// has fewer than MIN_SLIDES products, extras are topped up from other
+// categories so rendering never breaks.
+export function generateLocalPost(categories, theme, siteBase = "viliv.store") {
+  const chosen =
+    (categories || []).find((c) => c.name === theme || c.slug === theme) ||
+    (categories || []).find((c) => (c.products || []).length) ||
+    (categories || [])[0] ||
+    null;
+  const themeSlug = chosen ? chosen.slug : "";
+
+  const catProducts = (chosen && chosen.products) || [];
+  const used = shuffle(catProducts).slice(0, Math.min(MAX_SLIDES, catProducts.length));
+
+  if (used.length < MIN_SLIDES) {
+    const seen = new Set(used.map((p) => p.id));
+    const rest = (categories || []).flatMap((c) => c.products || []);
+    for (const p of rest) {
+      if (used.length >= MIN_SLIDES) break;
+      if (seen.has(p.id)) continue;
+      used.push(p);
+      seen.add(p.id);
     }
   }
 
-  const used = shuffle(all).slice(0, Math.min(MAX_SLIDES, all.length));
+  const tipPool = tipPoolFor(themeSlug);
+  const tipOffset = Math.floor(Math.random() * tipPool.length);
 
-  const chosen = (categories || []).find((c) => (c.products || []).length) || (categories || [])[0] || null;
-  const products = used.slice(0, Math.max(MIN_SLIDES, Math.min(MAX_SLIDES, used.length)));
-
-  const usedTips = new Map();
-  const slides = products.map((p, i) => {
-    const key = productCat.get(p.id) || (chosen ? chosen.slug : "");
-    const tipPool = tipPoolFor(key);
-    const offset = usedTips.get(key) || 0;
-    usedTips.set(key, offset + 1);
-    const tip = tipPool[offset % tipPool.length] || { title: p.name, sub: "", productHint: "" };
+  const slides = used.map((p, i) => {
+    const tip = tipPool[(tipOffset + i) % tipPool.length] || { title: p.name, sub: "", productHint: "" };
     return {
       productId: p.id,
       product: p.name,
@@ -184,12 +189,12 @@ export function generateLocalPost(categories, siteBase = "viliv.store") {
       subtitle: tip.sub || "",
       image: p.imageUrl || "",
       link: productPageUrl(p.slug, siteBase),
-      category: (categories || []).find((c) => c.slug === key)?.name || "",
+      category: chosen ? chosen.name : "",
       index: i + 1,
     };
   });
 
-  const hooks = hookPoolFor(dominantSlug(used, productCat));
+  const hooks = hookPoolFor(themeSlug);
   const outroLine = OUTRO_POOL[Math.floor(Math.random() * OUTRO_POOL.length)];
 
   return {
@@ -200,25 +205,6 @@ export function generateLocalPost(categories, siteBase = "viliv.store") {
     caption: `${hooks[0]} Curated by Viliv.`,
     content_json: "",
   };
-}
-
-// The category slug that appears in the most chosen products (drives the cover
-// hook pool so the headline matches what the carousel is actually about).
-function dominantSlug(products, productCat) {
-  const counts = new Map();
-  for (const p of products || []) {
-    const key = (productCat && productCat.get(p.id)) || "";
-    counts.set(key, (counts.get(key) || 0) + 1);
-  }
-  let best = "";
-  let bestCount = 0;
-  for (const [k, c] of counts) {
-    if (c > bestCount) {
-      best = k;
-      bestCount = c;
-    }
-  }
-  return best;
 }
 
 async function uploadWithRetry(post, files) {
