@@ -116,7 +116,9 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
   const browser = await chromium.launch({ channel: "chromium" });
   const page = await browser.newPage({
     viewport: { width: 1080, height: 1350 },
-    deviceScaleFactor: 2,
+    // 1x → 1080x1350 PNG (1,458,000 px) fits Buffer's TikTok pixel cap
+    // (2,073,600) while staying exactly at Instagram's recommended feed size.
+    deviceScaleFactor: 1,
   });
 
   const files = [];

@@ -230,7 +230,19 @@ async function uploadWithRetry(post, files) {
         for (const ch of channels) {
           // YouTube is skipped: Buffer does not support carousels there.
           if (ch.service === "youtube") continue;
-          await createCarouselPost(token, ch.id, post.caption, imageUrls, ch.service);
+
+          const opts = {};
+          if (ch.service === "tiktok") {
+            // TikTok photo (carousel) posts need the title set via metadata.
+            opts.tiktokTitle = (post.hook || post.caption || post.theme || "").slice(0, 100);
+          }
+
+          const created = await createCarouselPost(token, ch.id, post.caption, imageUrls, ch.service, opts);
+          // Buffer returns a resolved MutationError shape on some failures (e.g.
+          // invalid assets) — surface it instead of silently marking the post ok.
+          if (!created?.createPost?.post) {
+            throw new Error(`Buffer rejected post for ${ch.name} (${ch.service}): ${created?.createPost?.message || "unknown"}`);
+          }
           results.push({ channel: ch.name, service: ch.service, ok: true });
           console.log(`[pipeline] Posted carousel to ${ch.name} (${ch.service})`);
         }

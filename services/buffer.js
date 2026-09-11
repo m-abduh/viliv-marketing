@@ -22,9 +22,10 @@ export async function getChannels(token) {
  * @param {string} channelId
  * @param {string} text caption
  * @param {string[]} imageUrls ordered slide image URLs
- * @param {string} service (instagram | twitter | facebook | linkedin | ...) — no youtube
+ * @param {string} service (instagram | tiktok | twitter | facebook | linkedin | ...) — no youtube
+ * @param {object} opts Channel-specific: { tiktokTitle }
  */
-export async function createCarouselPost(token, channelId, text, imageUrls, service) {
+export async function createCarouselPost(token, channelId, text, imageUrls, service, opts = {}) {
   const assets = (imageUrls || [])
     .filter(Boolean)
     .map((url) => ({ image: { url } }));
@@ -37,7 +38,7 @@ export async function createCarouselPost(token, channelId, text, imageUrls, serv
     assets,
   };
 
-  const metadata = buildMetadata(service);
+  const metadata = buildMetadata(service, opts);
   if (metadata) input.metadata = metadata;
 
   const query = `mutation CreatePost($input: CreatePostInput!) {
@@ -52,10 +53,16 @@ export async function createCarouselPost(token, channelId, text, imageUrls, serv
   return graphql(token, query, { input });
 }
 
-function buildMetadata(service) {
+function buildMetadata(service, { tiktokTitle } = {}) {
   switch ((service || "").toLowerCase()) {
     case "instagram":
       return { instagram: { type: "post", shouldShareToFeed: true } };
+    case "tiktok": {
+      // TikTok photo (carousel) posts use the meta title field.
+      const tm = { tiktok: {} };
+      if (tiktokTitle) tm.tiktok.title = tiktokTitle;
+      return tm;
+    }
     default:
       return null;
   }
