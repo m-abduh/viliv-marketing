@@ -15,15 +15,14 @@
     linear-gradient(90deg,rgba(10,10,12,.38) 0%,rgba(10,10,12,0) 60%)}
   .top{position:absolute;top:70px;left:64px;display:flex;align-items:center;gap:14px}
   .word{font-size:34px;font-weight:900;letter-spacing:4px;color:var(--ink)}
-  .content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 84px}
-  .kicker{font-size:23px;font-weight:700;letter-spacing:5px;color:var(--accent);text-transform:uppercase;margin-bottom:26px}
-  .title{font-size:72px;font-weight:900;line-height:1.1;letter-spacing:-1.5px;color:var(--ink);max-width:930px}
-  .rule{width:84px;height:5px;border-radius:99px;background:var(--accent);margin-top:40px}
-  .scroll{display:flex;align-items:center;gap:14px;margin-top:30px;color:var(--muted,#a9a9b2)}
-  .scroll .label{font-size:22px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+  .content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 88px}
+  .kicker{font-size:21px;font-weight:700;letter-spacing:5px;color:var(--accent);text-transform:uppercase;margin-bottom:22px}
+  .title{font-size:74px;font-weight:900;line-height:1.08;letter-spacing:-1.5px;color:var(--ink);max-width:920px}
+  .scroll{display:flex;align-items:center;gap:16px;margin-top:54px;color:rgba(255,255,255,.5)}
+  .scroll .label{font-size:19px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase}
   .scroll .chev{display:flex;align-items:center;gap:6px}
-  .scroll .chev i{display:block;width:14px;height:14px;border-top:3px solid var(--accent);border-right:3px solid var(--accent);transform:rotate(45deg)}
-  .scroll .chev i:last-child{margin-left:-8px;opacity:.4}
+  .scroll .chev i{display:block;width:13px;height:13px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:rotate(45deg)}
+  .scroll .chev i:last-child{margin-left:-7px;opacity:.35}
 </style>
 </head>
 <body>
@@ -34,7 +33,6 @@
   <div class="content">
     <div class="kicker">{{kicker}}</div>
     <div class="title">{{hook}}</div>
-    <div class="rule"></div>
     <div class="scroll">
       <span class="chev"><i></i><i></i></span>
       <span class="label">Swipe to explore</span>
