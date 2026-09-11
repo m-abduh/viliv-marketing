@@ -147,15 +147,15 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
     });
     htmls.push(coverHtml);
 
-    // Slides 2..N: content. Clean layout — headline above the wide image,
-    // product name + id badge below, then the short link (viliv.store/id).
+    // Slides 2..N: content. Clean layout — headline above the square image,
+    // number + product name + shop link (viliv.store/id) below.
     for (const [i, s] of list.entries()) {
       const idx = i + 1;
       let h = renderTemplate(slideTpl, {
         img: await bgCSS(s.image, idx),
         title: escapeAttr(s.title || ""),
         product: escapeAttr(s.product || s.title || ""),
-        badge: String(idx).padStart(2, "0"),
+        num: String(idx).padStart(2, "0"),
         link: linkLabel(s.link),
       });
       htmls.push(h);
