@@ -8,49 +8,32 @@
   html,body{width:1080px;height:1350px;overflow:hidden}
   :root{--ink:#111114;--accent:#c9a227;--muted:#8a8a92}
   body{font-family:'Satoshi','Segoe UI',system-ui,-apple-system,sans-serif;background:#fff}
-  #root{position:relative;width:1080px;height:1350px;overflow:hidden;display:flex;flex-direction:column;padding:0 84px}
-  .topbar{display:flex;align-items:center;gap:12px;padding:38px 0 0}
-  .word{font-size:26px;font-weight:900;letter-spacing:3px;color:var(--ink);text-transform:uppercase}
-  .index{margin-left:auto;font-size:22px;font-weight:700;letter-spacing:3px;color:var(--muted)}
-  .imagewrap{display:flex;justify-content:center;padding-top:32px}
-  .imghold{position:relative;width:620px;height:620px;border-radius:32px;overflow:hidden;background:#f2f2f4}
+  #root{position:relative;width:1080px;height:1350px;overflow:hidden;display:flex;flex-direction:column;padding:0 70px}
+  .topbar{display:flex;align-items:center;padding:44px 0 0}
+  .word{font-size:42px;font-weight:900;letter-spacing:3px;color:var(--ink);text-transform:uppercase}
+  .title{margin-top:30px;font-size:50px;font-weight:900;line-height:1.14;letter-spacing:-.5px;color:var(--ink);max-width:940px}
+  .imghold{position:relative;margin-top:26px;width:100%;height:560px;border-radius:32px;overflow:hidden;background:#f2f2f4}
   .img{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
-  .body{display:flex;flex-direction:column;justify-content:center;padding-top:26px;flex:1}
-  .kicker{font-size:19px;font-weight:700;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
-  .title{font-size:46px;font-weight:900;line-height:1.12;letter-spacing:-.5px;color:var(--ink);max-width:860px}
-  .product{margin-top:24px;display:flex;align-items:baseline;gap:14px;max-width:900px}
-  .product .label{font-size:26px;font-weight:700;color:var(--ink)}
-  .link{color:var(--accent);font-size:23px;font-weight:700;white-space:nowrap}
-  .etalase{--ts:118px;display:flex;justify-content:center;gap:18px;padding:26px 0 44px}
-  .et{width:var(--ts);text-align:center}
-  .et .thumb{position:relative;width:var(--ts);height:var(--ts);border-radius:20px;overflow:hidden;background:#f2f2f4;border:3px solid transparent}
-  .et .thumb .timg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
-  .et em{display:block;margin-top:4px;font-style:normal;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted)}
-  .et .tname{display:block;margin-top:8px;font-size:14px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .et.on .thumb{border-color:var(--accent)}
-  .et.on em,.et.on .tname{color:var(--ink)}
+  .meta{display:flex;align-items:center;gap:16px;margin-top:34px}
+  .product{font-size:30px;font-weight:800;color:var(--ink)}
+  .badge{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;padding:0 12px;border:2px solid var(--accent);border-radius:999px;font-size:20px;font-weight:800;letter-spacing:1px;color:var(--accent)}
+  .link{margin-top:10px;font-size:24px;font-weight:700;color:var(--accent);overflow-wrap:anywhere}
 </style>
 </head>
 <body>
 <div id="root">
   <div class="topbar">
     <span class="word">viliv</span>
-    <span class="index">{{index}}</span>
   </div>
-  <div class="imagewrap">
-    <div class="imghold">
-      <div class="img" style="background-image:{{img}}"></div>
-    </div>
+  <div class="title">{{title}}</div>
+  <div class="imghold">
+    <div class="img" style="background-image:{{img}}"></div>
   </div>
-  <div class="body">
-    <div class="kicker">{{kicker}}</div>
-    <div class="title">{{title}}</div>
-    <div class="product">
-      <span class="label">{{product}}</span>
-      <span class="link">{{link}}</span>
-    </div>
+  <div class="meta">
+    <span class="product">{{product}}</span>
+    <span class="badge">{{badge}}</span>
   </div>
-  <div class="etalase" style="{{etalaseStyle}}">{{etalase}}</div>
+  <div class="link">{{link}}</div>
 </div>
 </body>
 </html>
