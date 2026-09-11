@@ -17,6 +17,18 @@ const IMAGE_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, lik
 // Playwright never waits on / fails to load cross-origin images in file:// pages.
 // Family 4 is forced: IPv6 Happy-Eyeballs resolution fails on this host.
 const imageCache = new Map();
+// Downscaled etalase thumbnails (small square PNG data URIs), keyed by URL.
+const thumbCache = new Map();
+
+// Friendly link label for product slides: strip protocol/path, e.g.
+// "https://viliv.store/gym-roller" -> "on viliv.store →".
+function linkLabel(url) {
+  const s = String(url || "")
+    .replace(/^https?:\/\//i, "")
+    .replace(/\/+$/, "")
+    .replace(/\/.*$/, "");
+  return s ? `on ${s} \u2192` : "";
+}
 function dataUriFor(url) {
   if (!url || !url.trim()) return Promise.resolve("");
   return new Promise((resolve) => {
@@ -120,6 +132,32 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
     // (2,073,600) while staying exactly at Instagram's recommended feed size.
     deviceScaleFactor: 1,
   });
+  // Small page used to downscale product images into lightweight etalase
+  // thumbnails so slides stay small instead of embedding full-res images.
+  const thumbPage = await browser.newPage({ viewport: { width: 120, height: 120 }, deviceScaleFactor: 1 });
+
+  async function thumbDataUri(url) {
+    if (!url || !url.trim()) return "";
+    if (thumbCache.has(url)) return thumbCache.get(url);
+    const big = await dataUriFor(url);
+    if (!big) {
+      thumbCache.set(url, "");
+      return "";
+    }
+    try {
+      await thumbPage.setContent(
+        `<body style="margin:0;background:#f2f2f4"><div style="width:120px;height:120px;background-image:url(${big});background-size:cover;background-position:center"></div></body>`
+      );
+      await thumbPage.waitForTimeout(60);
+      const shot = await thumbPage.screenshot({ clip: { x: 0, y: 0, width: 120, height: 120 } });
+      const small = `data:image/png;base64,${shot.toString("base64")}`;
+      thumbCache.set(url, small);
+      return small;
+    } catch {
+      thumbCache.set(url, big); // fallback: still works, just heavier
+      return big;
+    }
+  }
 
   const files = [];
   try {
@@ -139,16 +177,30 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
     });
     htmls.push(coverHtml);
 
-    // Slides 2..N: content (each product = one tip; the product is the answer)
+    // Slides 2..N: content (each product = one tip; the product is the answer).
+    // Etalase strip: every product of this carousel (from the slides) with the
+    // current one highlighted — product thumbnails are downscaled to stay light.
+    const etalaseTile = Math.min(118, Math.floor((1080 - 84 * 2 - (list.length - 1) * 18) / Math.max(1, list.length)));
+    const etThumbs = list.length ? await Promise.all(list.map((s) => thumbDataUri(s.image))) : [];
+
     for (const [i, s] of list.entries()) {
       const idx = i + 1;
+      const etalase = list
+        .map((s2, j) => {
+          const on = j === i ? " on" : "";
+          const img = etThumbs[j] ? `<i class="timg" style="background-image:url(&quot;${etThumbs[j]}&quot;)"></i>` : "";
+          return `<span class="et${on}"><span class="thumb">${img}</span><em>${String(j + 1).padStart(2, "0")}</em><span class="tname">${escapeAttr(s2.product || s2.title || "")}</span></span>`;
+        })
+        .join("");
       let h = renderTemplate(slideTpl, {
         img: await bgCSS(s.image, idx),
-        index: `${idx}`.padStart(2, "0"),
+        index: `${String(idx).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
+        kicker: escapeAttr(s.category || s.categoryName || ""),
         title: escapeAttr(s.title || ""),
-        subtitle: escapeAttr(s.subtitle || ""),
         product: escapeAttr(s.product || s.title || ""),
-        link: escapeAttr(s.link || "See it"),
+        link: linkLabel(s.link),
+        etalaseStyle: `--ts:${etalaseTile}px`,
+        etalase,
       });
       htmls.push(h);
     }
