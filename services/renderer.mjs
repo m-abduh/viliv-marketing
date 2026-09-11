@@ -130,9 +130,11 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
     // gradient if there are no slides with an image.
     const coverSlide = list.slice().reverse().find((s) => s.image && s.image.trim());
     const coverBg = coverSlide ? coverSlide.image : "";
+    // Cover must never render with an empty title — last-resort fallback.
+    const coverTitle = (hook || "").trim() || "Little upgrades for a better everyday.";
     let coverHtml = renderTemplate(coverTpl, {
       kicker: theme || "Curated by",
-      hook: escapeAttr(hook || ""),
+      hook: escapeAttr(coverTitle),
       bg: await bgCSS(coverBg, 0),
     });
     htmls.push(coverHtml);

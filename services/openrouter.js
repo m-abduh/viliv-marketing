@@ -1,4 +1,5 @@
 import { productPageUrl } from "./links.js";
+import { hookPoolFor, GENERAL_HOOKS } from "./copybook.js";
 
 const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-super-120b-a12b:free";
 
@@ -107,6 +108,19 @@ function extractJSON(text) {
 }
 
 /**
+ * Cover-title fallback. The free model sometimes returns JSON without the
+ * "hook" key, which would leave the first (cover) slide blank. Fall back to a
+ * situation-matched hook from the copybook, else to the first tip title.
+ */
+function fallbackHook(chosen, tips) {
+  const pool = chosen?.slug ? hookPoolFor(chosen.slug) : GENERAL_HOOKS;
+  if (pool?.length) return pool[Math.floor(Math.random() * pool.length)];
+  const firstTip = (tips || []).find((t) => t && t.title);
+  if (firstTip) return String(firstTip.title).slice(0, 100);
+  return "Little upgrades for a better everyday.";
+}
+
+/**
  * Generate a carousel post. The AI picks a lifestyle category from the catalog
  * and chooses a subset of that category's products — all from the DB (the AI
  * never invents products). It then writes the hook + caption for one coherent
@@ -178,6 +192,7 @@ ${DEFAULT_PROMPT}`;
   }
 
   const tips = Array.isArray(parsed.tips) ? parsed.tips : [];
+  const hook = String(parsed.hook || parsed.title || "").trim() || fallbackHook(chosen, tips);
 
   const slides = used.map((p, i) => {
     const t = tips[i] || {};
@@ -195,7 +210,7 @@ ${DEFAULT_PROMPT}`;
   });
 
   return {
-    hook: String(parsed.hook || parsed.title || ""),
+    hook,
     slides,
     outro: { line: String(parsed.outro || "Better living, one find at a time.") },
     caption: String(parsed.caption || "").trim() + " #viliv",
