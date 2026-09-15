@@ -1,12 +1,74 @@
 import "dotenv/config";
+import { setDefaultResultOrder } from "node:dns";
 import { PrismaClient } from "@prisma/client";
 import { PrismaClient as MarketingClient } from "./prisma/generated/marketing/index.js";
+
+setDefaultResultOrder("ipv4first");
 
 // Catalog client — shared viliv Postgres DB (READ-ONLY, managed by viliv).
 export const prisma = new PrismaClient();
 
 // Marketing client — local SQLite DB for this project (settings/accounts/posts).
 const mkt = new MarketingClient();
+
+// Remote catalog DB (Prisma Postgres via pooled.db.prisma.io) is reachable only
+// intermittently, so catalog queries are retried and fall back to last-good data
+// instead of erroring.
+const RETRYABLE_HINTS = [
+  "can't reach database server",
+  "timed out",
+  "etimedout",
+  "econnrefused",
+  "connection refused",
+  "econnreset",
+  "ehostunreach",
+  "connection terminated",
+  "connection closed",
+  "socket hang up",
+  "pool timeout",
+  "failed to connect",
+];
+
+const isRetryable = (err) => {
+  const m = String(err?.message || "").toLowerCase();
+  return RETRYABLE_HINTS.some((hint) => m.includes(hint));
+};
+
+async function withRetry(fn, { retries = 3, baseDelay = 500 } = {}) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastErr = err;
+      if (attempt === retries || !isRetryable(err)) break;
+      await new Promise((r) => setTimeout(r, baseDelay * 2 ** attempt));
+    }
+  }
+  throw lastErr;
+}
+
+const staleCache = new Map();
+
+async function withCache(key, fetchFn, { ttl = 60_000, fallback } = {}) {
+  const hit = staleCache.get(key);
+  if (hit && Date.now() - hit.at < ttl) return hit.data;
+  try {
+    const data = await withRetry(fetchFn);
+    staleCache.set(key, { at: Date.now(), data });
+    return data;
+  } catch (err) {
+    if (hit) {
+      console.warn(`[db] ${key}: catalog DB unreachable, serving stale data:`, err.message.split("\n")[0]);
+      return hit.data;
+    }
+    if (fallback !== undefined) {
+      console.warn(`[db] ${key}: catalog DB unreachable, serving empty fallback:`, err.message.split("\n")[0]);
+      return fallback;
+    }
+    throw err;
+  }
+}
 
 const store = {
   // ---- Settings (local SQLite) ----
@@ -47,20 +109,34 @@ const store = {
 
   // ---- Categories (read-only — data managed via viliv) ----
   listCategories: () =>
-    prisma.category.findMany({ orderBy: { createdAt: "asc" } }),
+    withCache(
+      "categories",
+      () => prisma.category.findMany({ orderBy: { createdAt: "asc" } }),
+      { fallback: [] }
+    ),
 
   // ---- Products (read-only — data managed via viliv) ----
   listProducts: ({ categoryId } = {}) =>
-    prisma.product.findMany({
-      where: { ...(categoryId ? { categoryId } : {}) },
-      include: { category: true },
-      orderBy: [{ isActive: "desc" }, { createdAt: "asc" }],
-    }),
+    withCache(
+      `products:${categoryId || "*"}`,
+      () =>
+        prisma.product.findMany({
+          where: { ...(categoryId ? { categoryId } : {}) },
+          include: { category: true },
+          orderBy: [{ isActive: "desc" }, { createdAt: "asc" }],
+        }),
+      { fallback: [] }
+    ),
   listActiveProductsByCategory: (categoryId) =>
-    prisma.product.findMany({
-      where: { categoryId, isActive: true },
-      orderBy: { createdAt: "asc" },
-    }),
+    withCache(
+      `products:active:${categoryId}`,
+      () =>
+        prisma.product.findMany({
+          where: { categoryId, isActive: true },
+          orderBy: { createdAt: "asc" },
+        }),
+      { fallback: [] }
+    ),
 
   // ---- Posts (carousels, local SQLite) ----
   listPosts: ({ accountId } = {}) =>

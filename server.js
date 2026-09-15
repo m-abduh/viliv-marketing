@@ -181,7 +181,11 @@ app.use((err, _req, res, _next) => {
 });
 
 async function main() {
-  await store.listCategories(); // ensure DB reachable
+  try {
+    await store.listCategories(); // warm catalog cache; tolerate outage
+  } catch (err) {
+    console.warn("[server] catalog DB unreachable at boot — starting anyway:", err.message.split("\n")[0]);
+  }
   app.listen(PORT, () => {
     console.log(`[server] Viliv marketing backend on :${PORT}`);
     if (process.env.DISABLE_SCHEDULER !== "1") {
