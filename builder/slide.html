@@ -12,10 +12,11 @@
   .bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
   .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,14,.55) 0%,rgba(10,10,14,0) 30%,rgba(10,10,14,0) 55%,rgba(10,10,14,.78) 100%)}
   .stage{position:absolute;inset:0;display:flex;flex-direction:column;padding:84px 70px 70px}
-  .top{display:flex;justify-content:center;text-align:center;width:100%}
-  .title{font-size:42px;font-weight:800;line-height:1.22;letter-spacing:-.3px;color:#fff;max-width:880px;margin-top:24px}
+  .top{position:absolute;top:100px;left:0;right:0;display:flex;justify-content:center;align-items:center;flex-direction:column}
+  .word{font-size:40px;font-weight:900;letter-spacing:5px;color:#fff}
+  .title{font-size:74px;font-weight:800;line-height:1.22;letter-spacing:-.3px;color:#fff;max-width:880px;margin-top:14px}
   .bottom{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;flex:1;width:100%;text-align:left}
-  .num{font-size:150px;font-weight:800;line-height:.9;letter-spacing:-2px;color:rgba(255,255,255,.18)}
+  .num{font-size:120px;font-weight:800;line-height:.9;letter-spacing:-2px;color:rgba(255,255,255,.30)}
   .product{margin-top:14px;font-size:38px;font-weight:800;line-height:1.15;color:#fff}
   .shop{display:inline-flex;align-items:center;gap:11px;margin-top:24px;color:var(--accent);font-size:38px;font-weight:400;line-height:1.15;overflow-wrap:anywhere}
   .shop .ic{display:inline-flex;flex-shrink:0}
@@ -28,6 +29,7 @@
   <div class="overlay"></div>
   <div class="stage">
     <div class="top">
+      <span class="word">viliv</span>
       <div class="title">{{title}}</div>
     </div>
     <div class="bottom">
