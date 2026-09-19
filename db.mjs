@@ -163,7 +163,7 @@ const store = {
     }),
   async updatePost(id, patch) {
     const data = {};
-    const allowed = ["theme", "hook", "slides", "caption", "outro", "content_json", "images_dir", "image_files", "status", "attempts", "last_error", "posted_at"];
+    const allowed = ["theme", "hook", "slides", "caption", "outro", "content_json", "upload_log", "images_dir", "image_files", "status", "attempts", "last_error", "posted_at"];
     for (const k of allowed) if (k in patch) data[k] = patch[k];
     return mkt.posts.update({ where: { id }, data });
   },

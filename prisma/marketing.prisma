@@ -38,6 +38,7 @@ model posts {
   outro        String? // JSON array of {line}
   caption      String?
   content_json String?
+  upload_log   String? // JSON: {channels:[{id,name,service}]} — which channels already got this carousel (never re-push to them)
   images_dir   String? // folder holding rendered slide PNGs
   image_files  String? // JSON array of relative slide file names
   status       String    @default("pending") // pending | success | failed

@@ -109,12 +109,15 @@ async function generateAndPost(post, { account, useAI }) {
   const slides = gen.slides;
   const contentChecksum = (gen.hook + "|" + JSON.stringify(slides)).trim();
 
-  // Dedupe: skip if exactly the same content was already posted for this account
+  // Dedupe: skip if exactly the same content was already pushed for this
+  // account. Covers posts that hit Buffer but were marked failed afterwards,
+  // so retries/re-slots never publish the same carousel twice.
   const all = await store.listPosts({ accountId: account.id });
   const dup = all.find((v) => {
     try {
       const s = v.slides ? JSON.parse(v.slides) : [];
-      return v.status === "success" && s && (v.hook + "|" + JSON.stringify(s)) === contentChecksum;
+      const reachedBuffer = v.status === "success" || !!v.posted_at || parseUploadLog(v).length > 0;
+      return reachedBuffer && s && (v.hook + "|" + JSON.stringify(s)) === contentChecksum;
     } catch {
       return false;
     }
@@ -207,12 +210,26 @@ export function generateLocalPost(categories, theme, siteBase = "viliv.store") {
   };
 }
 
+// Channels that already received a carousel for this post. Restored from the
+// persisted upload_log so partial retries only target the channels that are
+// still missing — one carousel never becomes two uploads on a retry.
+function parseUploadLog(post) {
+  try {
+    const log = post?.upload_log ? JSON.parse(post.upload_log) : null;
+    return log && Array.isArray(log.channels) ? log.channels : [];
+  } catch {
+    return [];
+  }
+}
+
 async function uploadWithRetry(post, files) {
   const account = await store.getAccount(post.account_id);
   const token = account.buffer_token;
   const publicUrl = process.env.PUBLIC_URL;
 
   let lastErr = null;
+  const done = new Set(parseUploadLog(post).map((c) => c.id));
+
   try {
     post = await store.incrementAttempts(post.id);
     if (!token || !publicUrl) {
@@ -223,14 +240,23 @@ async function uploadWithRetry(post, files) {
     const imageUrls = files.map((f) => `${publicUrl}/carousel/${f}`);
 
     const { channels } = await getChannels(token);
+    const pending = channels.filter((ch) => ch.service !== "youtube" && !done.has(ch.id));
 
-    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-      try {
-        const results = [];
-        for (const ch of channels) {
-          // YouTube is skipped: Buffer does not support carousels there.
-          if (ch.service === "youtube") continue;
+    // Nothing left to publish — every channel already has this carousel.
+    if (!pending.length) {
+      post = await store.updatePost(post.id, {
+        status: "success",
+        posted_at: post.posted_at || new Date().toISOString(),
+        last_error: null,
+      });
+      return { status: "success", channels: parseUploadLog(post), skipped: true };
+    }
 
+    const log = parseUploadLog(post);
+
+    for (let attempt = 0; attempt < MAX_ATTEMPTS && pending.length; attempt++) {
+      for (const ch of pending.slice()) {
+        try {
           const opts = {};
           if (ch.service === "tiktok") {
             // TikTok photo (carousel) posts need the title set via metadata.
@@ -243,26 +269,56 @@ async function uploadWithRetry(post, files) {
           if (!created?.createPost?.post) {
             throw new Error(`Buffer rejected post for ${ch.name} (${ch.service}): ${created?.createPost?.message || "unknown"}`);
           }
-          results.push({ channel: ch.name, service: ch.service, ok: true });
+
+          // Mark this channel done and persist immediately: if a later channel
+          // fails, retries only fill the gaps, never re-push the ones above.
+          log.push({ id: ch.id, name: ch.name, service: ch.service });
+          pending.splice(pending.indexOf(ch), 1);
+          post = await store.updatePost(post.id, {
+            upload_log: JSON.stringify({ channels: log }),
+            posted_at: post.posted_at || new Date().toISOString(),
+          });
           console.log(`[pipeline] Posted carousel to ${ch.name} (${ch.service})`);
-        }
-        post = await store.updatePost(post.id, { status: "success", posted_at: new Date().toISOString(), last_error: null });
-        return { status: "success", channels: results };
-      } catch (err) {
-        lastErr = err.message;
-        console.error(`[pipeline] upload attempt ${attempt + 1} failed: ${err.message}`);
-        if (attempt < MAX_ATTEMPTS - 1) {
-          await new Promise((r) => setTimeout(r, RETRY_DELAY_MS));
+        } catch (err) {
+          lastErr = err.message;
+          console.error(`[pipeline] upload attempt ${attempt + 1} failed: ${err.message}`);
         }
       }
+      if (pending.length && attempt < MAX_ATTEMPTS - 1) {
+        await new Promise((r) => setTimeout(r, RETRY_DELAY_MS));
+      }
     }
+
+    if (!pending.length) {
+      post = await store.updatePost(post.id, {
+        status: "success",
+        posted_at: post.posted_at || new Date().toISOString(),
+        last_error: null,
+        upload_log: JSON.stringify({ channels: log }),
+      });
+      return { status: "success", channels: log };
+    }
+
+    // Partial failure: persist which channels got the post so a later retry
+    // only targets the missing ones (at-most-once per channel).
+    lastErr = `Partial upload: ${pending.length} channel(s) failed (${lastErr || "unknown"})`;
+    post = await store.updatePost(post.id, {
+      status: "failed",
+      last_error: lastErr,
+      upload_log: JSON.stringify({ channels: log }),
+      posted_at: post.posted_at || (log.length ? new Date().toISOString() : null),
+    });
+    return { status: "failed", error: lastErr, channels: log };
   } catch (err) {
     lastErr = err.message;
     console.error(`[pipeline] upload failed: ${err.message}`);
+    post = await store.updatePost(post.id, {
+      status: "failed",
+      last_error: lastErr,
+      upload_log: JSON.stringify({ channels: parseUploadLog(post) }),
+    });
+    return { status: "failed", error: lastErr };
   }
-
-  post = await store.updatePost(post.id, { status: "failed", last_error: lastErr });
-  return { status: "failed", error: lastErr };
 }
 
 export async function runManualRetry(postId) {
