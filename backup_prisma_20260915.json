@@ -1,0 +1,4046 @@
+{
+  "exported_at": "2026-09-24T04:53:04.344Z",
+  "categories": [
+    {
+      "id": "cmu87x4mh0000i5gjqruhs11p",
+      "name": "Bedding",
+      "slug": "bedding",
+      "createdAt": "2026-09-19T10:01:52.553Z",
+      "updatedAt": "2026-09-19T10:01:52.553Z",
+      "products": [
+        {
+          "id": "cmu5c2yfc0009lki5cqgwy69d",
+          "name": "Bamboo Mattress Protector",
+          "slug": 7,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4y3iYcT",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.392Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmu5c2ygq000alki51ilzmkdy",
+          "name": "Padded Mattress Topper",
+          "slug": 8,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+          "affiliateUrl": "https://amzn.to/4xXLPPR",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.442Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmu5c2yi4000blki5t3cm8giu",
+          "name": "Weighted Sleep Blanket",
+          "slug": 9,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/4cObl1z",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.492Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmu5c2yji000clki59vqq0fxh",
+          "name": "Textured Comforter Set",
+          "slug": 10,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+          "affiliateUrl": "https://amzn.to/3USneNL",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.542Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmu5c2ykw000dlki5549let01",
+          "name": "Soft Bed Sheet Set",
+          "slug": 11,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4ywJcEk",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.592Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmu5c2y8e0004lki5a67pyuow",
+          "name": "Cooling Bed Pillow",
+          "slug": 2,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4Abm3cq",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.142Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmu5c2ydy0008lki5or9gllz8",
+          "name": "Luxury Sleep Mask",
+          "slug": 6,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/46ncklz",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.343Z",
+          "updatedAt": "2026-09-19T10:01:53.248Z"
+        },
+        {
+          "id": "cmucnrm4k000di5jvy6k55476",
+          "name": "Adjustable Orthopedic Bed Pillow",
+          "slug": 106,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212489/viliv/bjsqzetokfl1tm8uoyne.jpg",
+          "affiliateUrl": "https://amzn.to/46AqrnO",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:33.860Z",
+          "updatedAt": "2026-09-24T01:14:58.449Z"
+        },
+        {
+          "id": "cmucnrm1s000bi5jve3m1wdq7",
+          "name": "Decorative Pillow Inserts Set",
+          "slug": 105,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212989/viliv/a4wbkjvfjsrznraemh88.jpg",
+          "affiliateUrl": "https://amzn.to/47925BE",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:33.760Z",
+          "updatedAt": "2026-09-24T01:23:15.874Z"
+        },
+        {
+          "id": "cmucnrlz10009i5jv5prwcfmm",
+          "name": "Cozy Bubble Throw Blanket",
+          "slug": 104,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790213279/viliv/ebfpnswkznmusn5jxeyq.jpg",
+          "affiliateUrl": "https://amzn.to/4iDSABG",
+          "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:33.661Z",
+          "updatedAt": "2026-09-24T01:28:03.952Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4p80001i5gjuxnk4wa3",
+      "name": "Lighting",
+      "slug": "lighting",
+      "createdAt": "2026-09-19T10:01:52.652Z",
+      "updatedAt": "2026-09-19T10:01:52.652Z",
+      "products": [
+        {
+          "id": "cmu828lzz0007i51sgldpxee5",
+          "name": "RGBIC Bedroom Light Strips",
+          "slug": 79,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/clip-on-book-light.jpg",
+          "affiliateUrl": "https://amzn.to/4j94tQ6",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c2y9s0005lki5y0ovdpf4",
+          "name": "Ceramic Bedside Lamp",
+          "slug": 3,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+          "affiliateUrl": "https://amzn.to/4y3de2P",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.192Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c2yck0007lki5j8qcp9wp",
+          "name": "Adjustable Night Light",
+          "slug": 5,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+          "affiliateUrl": "https://amzn.to/4is1ySi",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.293Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c2z8s000ulki5vnhnskp3",
+          "name": "Smart Corner Floor Lighting",
+          "slug": 28,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/floor-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4gYoKGO",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.452Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c2zbj000wlki531bnk5h2",
+          "name": "Clip-On Reading Light",
+          "slug": 30,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/clip-on-book-light.jpg",
+          "affiliateUrl": "https://amzn.to/4y28GK9",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.551Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c2zcy000xlki5cxa3e7o8",
+          "name": "Color Changing Ambient Lighting",
+          "slug": 31,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/smart-bulb-starter-kit.jpg",
+          "affiliateUrl": "https://amzn.to/4rfECIl",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.602Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c30nf001slki51p1fje3m",
+          "name": "Monitor Light Bar",
+          "slug": 62,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/clip-on-book-light.jpg",
+          "affiliateUrl": "https://amzn.to/4cLjhk3",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.275Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c30ou001tlki5av69f9db",
+          "name": "Dimmable LED Desk Lamp",
+          "slug": 63,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/led-desk-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4rfRZs1",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.326Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmu5c31040022lki5vc5pjsdm",
+          "name": "Dimmable LED Desk Lamp",
+          "slug": 72,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/led-desk-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4cQSrXM",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.732Z",
+          "updatedAt": "2026-09-19T10:01:53.428Z"
+        },
+        {
+          "id": "cmucnrmvh000ti5jvz8krw2ef",
+          "name": "Modern Cordless Floor Lamp",
+          "slug": 114,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172579/viliv/owz8bozfbgohqj1qhmwj.jpg",
+          "affiliateUrl": "https://amzn.to/4Ajn7Lv",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.829Z",
+          "updatedAt": "2026-09-23T14:09:43.748Z"
+        },
+        {
+          "id": "cmucnrmze000vi5jvup4l4rg8",
+          "name": "Under Cabinet Wireless Lighting",
+          "slug": 115,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172428/viliv/zxijyzcvso6bb6n0fglu.jpg",
+          "affiliateUrl": "https://amzn.to/4rkAsie",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.970Z",
+          "updatedAt": "2026-09-23T14:07:12.410Z"
+        },
+        {
+          "id": "cmucnrmo0000pi5jv0qukwr8o",
+          "name": "Dimmable Reading Floor Lamp",
+          "slug": 112,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172785/viliv/h4hjjbrwhzmg3mgocqoh.jpg",
+          "affiliateUrl": "https://amzn.to/4xC0gIe",
+          "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.560Z",
+          "updatedAt": "2026-09-23T14:13:10.596Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4qo0002i5gjyed8c5s7",
+      "name": "Smart",
+      "slug": "smart",
+      "createdAt": "2026-09-19T10:01:52.704Z",
+      "updatedAt": "2026-09-19T10:01:52.704Z",
+      "products": [
+        {
+          "id": "cmu828lzz0009i51sje28yduw",
+          "name": "Indoor Temperature Humidity Sensor",
+          "slug": 81,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969512/viliv/skincare-mini-fridge.jpg",
+          "affiliateUrl": "https://amzn.to/4dk9h1m",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-19T14:24:33.038Z"
+        },
+        {
+          "id": "cmu828lzz000ei51sx74qsf20",
+          "name": "Smart Smoke Detector",
+          "slug": 86,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790224408/viliv/wh7nj7cohefirow1wzuo.jpg",
+          "affiliateUrl": "https://amzn.to/3SOpo0k",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:33:33.326Z"
+        },
+        {
+          "id": "cmu828lzz0002i51s71p4f26e",
+          "name": "Smart Power Strip",
+          "slug": 74,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790224462/viliv/hvbmtfsovqxw1tutvzbn.jpg",
+          "affiliateUrl": "https://amzn.to/4xvxby6",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:34:29.467Z"
+        },
+        {
+          "id": "cmu828lzz000bi51sl13hfici",
+          "name": "Wireless Video Doorbell Camera",
+          "slug": 83,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222118/viliv/qunmffbanw4qjrjrjcg0.jpg",
+          "affiliateUrl": "https://amzn.to/4cNh6N0",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T03:55:27.009Z"
+        },
+        {
+          "id": "cmu828lzz000fi51sjgw2m9v2",
+          "name": "Scheduled Smart Power Plug",
+          "slug": 87,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222243/viliv/uexcb29cnrsrz7wo8jyj.jpg",
+          "affiliateUrl": "https://amzn.to/4Alws5a",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T03:57:29.327Z"
+        },
+        {
+          "id": "cmu828lzz0001i51srieghpdp",
+          "name": "Smart Plug With Scheduling",
+          "slug": 73,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/gan-wall-charger.jpg",
+          "affiliateUrl": "https://amzn.to/4j9e0ql",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-19T10:01:53.596Z"
+        },
+        {
+          "id": "cmu828lzz000di51sqtnxyb8h",
+          "name": "Smart Water Leak Sensor",
+          "slug": 85,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790224291/viliv/xovcjipzzdseqrxge4yt.jpg",
+          "affiliateUrl": "https://amzn.to/4ycqy51",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:31:36.517Z"
+        },
+        {
+          "id": "cmu828lzz0004i51sxmhorayc",
+          "name": "Color Changing Smart Lights",
+          "slug": 76,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790223352/viliv/m512xwehx9jtpfgyipmu.jpg",
+          "affiliateUrl": "https://amzn.to/4AhvvLb",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:15:57.758Z"
+        },
+        {
+          "id": "cmu828lzz0008i51sshbemx5k",
+          "name": "Motion Activated Light Switch",
+          "slug": 80,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222949/viliv/z5knt2dxwspwzsud4coz.jpg",
+          "affiliateUrl": "https://amzn.to/4AjuGSi",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:09:15.901Z"
+        },
+        {
+          "id": "cmu828lzz0006i51silhj336e",
+          "name": "Smart Light Switch",
+          "slug": 78,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790223118/viliv/qnxn7jsnmrnja4h81w45.jpg",
+          "affiliateUrl": "https://amzn.to/4cO0Gnx",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:12:04.856Z"
+        },
+        {
+          "id": "cmu828lzz000ci51sylc05lr7",
+          "name": "Fingerprint Smart Door Lock",
+          "slug": 84,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222625/viliv/aelqdlhl7wsnum99b3dh.jpg",
+          "affiliateUrl": "https://amzn.to/4hxsRtw",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T04:03:51.709Z"
+        },
+        {
+          "id": "cmu828lzz000ai51s1rfb14rd",
+          "name": "Indoor Pan Tilt Cameras",
+          "slug": 82,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221855/viliv/aqrlxl8jgfstias7tlif.jpg",
+          "affiliateUrl": "https://amzn.to/4iwca2A",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-19T07:22:50.591Z",
+          "updatedAt": "2026-09-24T03:51:00.954Z"
+        },
+        {
+          "id": "cmu5c2yb60006lki5l3hz73hk",
+          "name": "Digital Alarm Clock",
+          "slug": 4,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/4xRQGln",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.242Z",
+          "updatedAt": "2026-09-19T10:01:53.596Z"
+        },
+        {
+          "id": "cmu5c30wc001zlki5b1zm6jpf",
+          "name": "Streaming Webcam With Microphone",
+          "slug": 69,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969520/viliv/phone-docking-station.jpg",
+          "affiliateUrl": "https://amzn.to/46pbcxV",
+          "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.596Z",
+          "updatedAt": "2026-09-19T14:24:33.038Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4ue0005i5gjf2kwc6e5",
+      "name": "Ambience",
+      "slug": "ambience",
+      "createdAt": "2026-09-19T10:01:52.838Z",
+      "updatedAt": "2026-09-19T10:01:52.838Z",
+      "products": [
+        {
+          "id": "cmu5c2yw0000llki59l8m53b4",
+          "name": "Essential Oil Diffuser",
+          "slug": 19,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/4d6VZW7",
+          "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.992Z",
+          "updatedAt": "2026-09-19T10:01:54.019Z"
+        },
+        {
+          "id": "cmu5c2yxd000mlki59tfdv9xg",
+          "name": "Smart Bedroom Humidifier",
+          "slug": 20,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+          "affiliateUrl": "https://amzn.to/4rylCVP",
+          "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.041Z",
+          "updatedAt": "2026-09-19T10:01:54.019Z"
+        },
+        {
+          "id": "cmu5c2yys000nlki5ec2aylog",
+          "name": "Reed Fragrance Diffuser",
+          "slug": 21,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4ris2YT",
+          "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.092Z",
+          "updatedAt": "2026-09-19T10:01:54.019Z"
+        },
+        {
+          "id": "cmu5c2z0d000olki5jz49sftj",
+          "name": "Quiet Bedroom Tower Fan",
+          "slug": 22,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/3T7O0Rx",
+          "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.149Z",
+          "updatedAt": "2026-09-19T10:01:54.019Z"
+        },
+        {
+          "id": "cmu5c2zik0011lki5b1wjubp3",
+          "name": "Fresh Room Scent Diffuser",
+          "slug": 35,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/4iyjRp2",
+          "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.804Z",
+          "updatedAt": "2026-09-19T10:01:54.019Z"
+        },
+        {
+          "id": "cmu5c30yu0021lki5ypdid95l",
+          "name": "Compact Desktop Air Circulator",
+          "slug": 71,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/gan-wall-charger.jpg",
+          "affiliateUrl": "https://amzn.to/4huwArI",
+          "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.686Z",
+          "updatedAt": "2026-09-19T10:01:54.019Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4vi0006i5gjgstjg9dc",
+      "name": "Candle",
+      "slug": "candle",
+      "createdAt": "2026-09-19T10:01:52.878Z",
+      "updatedAt": "2026-09-19T10:01:52.878Z",
+      "products": [
+        {
+          "id": "cmu5c2zt20018lki5o04bdlxn",
+          "name": "Flameless Ambient Candlelight",
+          "slug": 42,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/floor-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4xYvKt0",
+          "categoryId": "cmu87x4vi0006i5gjgstjg9dc",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.182Z",
+          "updatedAt": "2026-09-19T10:01:54.198Z"
+        },
+        {
+          "id": "cmu5c2zug0019lki5cuw3bc8i",
+          "name": "Flameless Ambient Candlelight",
+          "slug": 43,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/smart-bulb-starter-kit.jpg",
+          "affiliateUrl": "https://amzn.to/4hv9bqa",
+          "categoryId": "cmu87x4vi0006i5gjgstjg9dc",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.232Z",
+          "updatedAt": "2026-09-19T10:01:54.198Z"
+        },
+        {
+          "id": "cmu5c2zvu001alki5ka168cy3",
+          "name": "Candle Warming Lamp",
+          "slug": 44,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/fairy-string-lights.jpg",
+          "affiliateUrl": "https://amzn.to/4j8NRYE",
+          "categoryId": "cmu87x4vi0006i5gjgstjg9dc",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.282Z",
+          "updatedAt": "2026-09-19T10:01:54.198Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4wq0007i5gj96ysv58k",
+      "name": "Charging",
+      "slug": "charging",
+      "createdAt": "2026-09-19T10:01:52.923Z",
+      "updatedAt": "2026-09-19T10:01:52.923Z",
+      "products": [
+        {
+          "id": "cmu5c2z61000slki5nhosbygt",
+          "name": "Bedside Charging Station",
+          "slug": 26,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4xYmd5v",
+          "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.353Z",
+          "updatedAt": "2026-09-19T10:01:54.387Z"
+        },
+        {
+          "id": "cmu5c30dw001nlki55vfh57yd",
+          "name": "Multi Device Charging Station",
+          "slug": 57,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/multi-usb-charging-station.jpg",
+          "affiliateUrl": "https://amzn.to/4izbOZ8",
+          "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.932Z",
+          "updatedAt": "2026-09-19T10:01:54.387Z"
+        },
+        {
+          "id": "cmu5c30fk001olki5cyqlwnh6",
+          "name": "USB C Charging Hub",
+          "slug": 58,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/gan-wall-charger.jpg",
+          "affiliateUrl": "https://amzn.to/4iu3IAU",
+          "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.992Z",
+          "updatedAt": "2026-09-19T10:01:54.387Z"
+        },
+        {
+          "id": "cmu5c30gy001plki5s19qtnbj",
+          "name": "Wireless Charging Stand",
+          "slug": 59,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969520/viliv/wireless-charger-stand.jpg",
+          "affiliateUrl": "https://amzn.to/4dEZkvu",
+          "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.042Z",
+          "updatedAt": "2026-09-19T10:01:54.387Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4y00008i5gj24d6htsq",
+      "name": "Cable",
+      "slug": "cable",
+      "createdAt": "2026-09-19T10:01:52.969Z",
+      "updatedAt": "2026-09-19T10:01:52.969Z",
+      "products": [
+        {
+          "id": "cmu5c2z4m000rlki5lxm9s0tu",
+          "name": "Cable Management Box",
+          "slug": 25,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+          "affiliateUrl": "https://amzn.to/3Tducwj",
+          "categoryId": "cmu87x4y00008i5gj24d6htsq",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.302Z",
+          "updatedAt": "2026-09-19T10:01:54.560Z"
+        },
+        {
+          "id": "cmu5c30b3001llki5b14yegss",
+          "name": "Under Desk Cable Tray",
+          "slug": 55,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969518/viliv/under-desk-tray.jpg",
+          "affiliateUrl": "https://amzn.to/46oQXQZ",
+          "categoryId": "cmu87x4y00008i5gj24d6htsq",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.831Z",
+          "updatedAt": "2026-09-19T10:01:54.560Z"
+        },
+        {
+          "id": "cmu5c30ci001mlki54autncya",
+          "name": "Adjustable Cable Management Clips",
+          "slug": 56,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969518/viliv/cord-clip-set.jpg",
+          "affiliateUrl": "https://amzn.to/4yHGo7A",
+          "categoryId": "cmu87x4y00008i5gj24d6htsq",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.882Z",
+          "updatedAt": "2026-09-19T10:01:54.560Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x4z60009i5gj978ggvkg",
+      "name": "Stand",
+      "slug": "stand",
+      "createdAt": "2026-09-19T10:01:53.011Z",
+      "updatedAt": "2026-09-19T10:01:53.011Z",
+      "products": [
+        {
+          "id": "cmu5c306y001ilki5i4yhlvoy",
+          "name": "Adjustable Monitor Riser",
+          "slug": 52,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/monitor-riser.jpg",
+          "affiliateUrl": "https://amzn.to/4yLAJ0s",
+          "categoryId": "cmu87x4z60009i5gj978ggvkg",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.682Z",
+          "updatedAt": "2026-09-19T10:01:54.697Z"
+        },
+        {
+          "id": "cmu5c302s001flki5v4mmauj0",
+          "name": "Dual Monitor Desk Mount",
+          "slug": 49,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969516/viliv/laptop-stand.jpg",
+          "affiliateUrl": "https://amzn.to/4y5Dsls",
+          "categoryId": "cmu87x4z60009i5gj978ggvkg",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.532Z",
+          "updatedAt": "2026-09-19T10:01:54.697Z"
+        },
+        {
+          "id": "cmu5c3046001glki5l03vao9b",
+          "name": "Adjustable Laptop Stand",
+          "slug": 50,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969516/viliv/laptop-stand.jpg",
+          "affiliateUrl": "https://amzn.to/4rp4S3a",
+          "categoryId": "cmu87x4z60009i5gj978ggvkg",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.583Z",
+          "updatedAt": "2026-09-19T10:01:54.697Z"
+        },
+        {
+          "id": "cmu5c305k001hlki5fqagl0q3",
+          "name": "Monitor Stand With Storage",
+          "slug": 51,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/monitor-riser.jpg",
+          "affiliateUrl": "https://amzn.to/4j2nnrS",
+          "categoryId": "cmu87x4z60009i5gj978ggvkg",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.632Z",
+          "updatedAt": "2026-09-19T10:01:54.697Z"
+        },
+        {
+          "id": "cmu5c30j4001qlki5eu07w1zl",
+          "name": "Adjustable Headphone Stand",
+          "slug": 60,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/keyboard-tray.jpg",
+          "affiliateUrl": "https://amzn.to/4AcX5tj",
+          "categoryId": "cmu87x4z60009i5gj978ggvkg",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.120Z",
+          "updatedAt": "2026-09-19T10:01:54.697Z"
+        },
+        {
+          "id": "cmu5c30q6001ulki5cp9lho50",
+          "name": "Vertical Laptop Stand",
+          "slug": 64,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/laptop-stand.jpg",
+          "affiliateUrl": "https://amzn.to/4yCcfq7",
+          "categoryId": "cmu87x4z60009i5gj978ggvkg",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.374Z",
+          "updatedAt": "2026-09-19T10:01:54.697Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x50b000ai5gj3r3i61mh",
+      "name": "Ergo",
+      "slug": "ergo",
+      "createdAt": "2026-09-19T10:01:53.051Z",
+      "updatedAt": "2026-09-19T10:01:53.051Z",
+      "products": [
+        {
+          "id": "cmu5c308b001jlki55mesfld7",
+          "name": "Large Desk Protector Mat",
+          "slug": 53,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/xl-mouse-pad.jpg",
+          "affiliateUrl": "https://amzn.to/4hxC9FK",
+          "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.731Z",
+          "updatedAt": "2026-09-19T10:01:54.819Z"
+        },
+        {
+          "id": "cmu5c30rf001vlki51k7x4zw4",
+          "name": "Cloud Keyboard Wrist Rest",
+          "slug": 65,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/keyboard-tray.jpg",
+          "affiliateUrl": "https://amzn.to/4rAryxz",
+          "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.419Z",
+          "updatedAt": "2026-09-19T10:01:54.819Z"
+        },
+        {
+          "id": "cmu5c30sn001wlki5r3bpth0e",
+          "name": "Ergonomic Mouse Wrist Rest",
+          "slug": 66,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/xl-mouse-pad.jpg",
+          "affiliateUrl": "https://amzn.to/46oUChH",
+          "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.463Z",
+          "updatedAt": "2026-09-19T10:01:54.819Z"
+        },
+        {
+          "id": "cmu5c30tv001xlki51h410nkn",
+          "name": "Under Desk Foot Rest",
+          "slug": 67,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/monitor-riser.jpg",
+          "affiliateUrl": "https://amzn.to/4hupXpk",
+          "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.507Z",
+          "updatedAt": "2026-09-19T10:01:54.819Z"
+        },
+        {
+          "id": "cmu5c30v4001ylki5rshi979e",
+          "name": "Under Desk Keyboard Tray",
+          "slug": 68,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/keyboard-tray.jpg",
+          "affiliateUrl": "https://amzn.to/4gYLp5P",
+          "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.552Z",
+          "updatedAt": "2026-09-19T10:01:54.819Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x51c000bi5gjnbuv6as5",
+      "name": "Organizer",
+      "slug": "organizer",
+      "createdAt": "2026-09-19T10:01:53.088Z",
+      "updatedAt": "2026-09-19T10:01:53.088Z",
+      "products": [
+        {
+          "id": "cmucnrne40013i5jveazuisnz",
+          "name": "Floating Decorative Wall Shelves",
+          "slug": 119,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790171465/viliv/owxfkh8z82zjowxet4tf.jpg",
+          "affiliateUrl": "https://amzn.to/4yOYrc4",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.500Z",
+          "updatedAt": "2026-09-23T13:51:11.867Z"
+        },
+        {
+          "id": "cmucnrngw0015i5jvxsf78p37",
+          "name": "Kitchen Cabinet Storage Organizer",
+          "slug": 120,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165862/viliv/vhrtwbblvrs0k0ii0rh1.jpg",
+          "affiliateUrl": "https://amzn.to/4rrHQZh",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.600Z",
+          "updatedAt": "2026-09-23T12:17:46.549Z"
+        },
+        {
+          "id": "cmucnrnbd0011i5jv3m5i2393",
+          "name": "Tree Shaped Display Shelf",
+          "slug": 118,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790171594/viliv/xzbfonhqzhtgl4p6uql5.jpg",
+          "affiliateUrl": "https://amzn.to/4ycUiPq",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.402Z",
+          "updatedAt": "2026-09-23T13:53:21.139Z"
+        },
+        {
+          "id": "cmu86alh7000ai52hru7abmpx",
+          "name": "Expandable Silverware Drawer Organizer",
+          "slug": 97,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218577/viliv/eckqcbindmxyi3tteapy.jpg",
+          "affiliateUrl": "https://amzn.to/4xAn0bF",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T02:56:27.600Z"
+        },
+        {
+          "id": "cmu86alh7000bi52hfnxxmigp",
+          "name": "Rustproof Kitchen Sink Organizer",
+          "slug": 98,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218728/viliv/mfybxfqtoq2jueeigfvt.jpg",
+          "affiliateUrl": "https://amzn.to/3UZmMxm",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T02:58:53.597Z"
+        },
+        {
+          "id": "cmu5c309p001klki5zxcfuyc3",
+          "name": "Under Desk Storage Cabinet",
+          "slug": 54,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/desk-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4hgDzDz",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.781Z",
+          "updatedAt": "2026-09-19T10:01:54.993Z"
+        },
+        {
+          "id": "cmu5c2z7d000tlki5eviazvr1",
+          "name": "Adjustable Bed Tray",
+          "slug": 27,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4hu6dSO",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.401Z",
+          "updatedAt": "2026-09-19T10:01:54.993Z"
+        },
+        {
+          "id": "cmu5c2zh40010lki5xyghvgd7",
+          "name": "Floating Wall Storage Shelves",
+          "slug": 34,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969527/viliv/deck-storage-box.jpg",
+          "affiliateUrl": "https://amzn.to/46ueW13",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.752Z",
+          "updatedAt": "2026-09-19T10:01:54.993Z"
+        },
+        {
+          "id": "cmu5c2zx8001blki57zqnpsi1",
+          "name": "Freestanding Display Bookshelf",
+          "slug": 45,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969527/viliv/deck-storage-box.jpg",
+          "affiliateUrl": "https://amzn.to/4xVrTgn",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.333Z",
+          "updatedAt": "2026-09-19T10:01:54.993Z"
+        },
+        {
+          "id": "cmu5c30li001rlki5o0rzms5y",
+          "name": "Seven Tier Desk Organizer",
+          "slug": 61,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/desk-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/3TAVqwX",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.206Z",
+          "updatedAt": "2026-09-19T10:01:54.993Z"
+        },
+        {
+          "id": "cmu5c30xl0020lki58nahzv9i",
+          "name": "Desktop Pegboard Organizer",
+          "slug": 70,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/desk-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4iyEoK8",
+          "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:07.641Z",
+          "updatedAt": "2026-09-19T10:01:54.993Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x52g000ci5gjrvzpnk9k",
+      "name": "Storage",
+      "slug": "storage",
+      "createdAt": "2026-09-19T10:01:53.128Z",
+      "updatedAt": "2026-09-19T10:01:53.128Z",
+      "products": [
+        {
+          "id": "cmucnrnnu0019i5jvr9y222l9",
+          "name": "Adjustable Garment Storage Rack",
+          "slug": 122,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165646/viliv/jihdcoihpnxtngdqe7yg.jpg",
+          "affiliateUrl": "https://amzn.to/3TLMx3I",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.851Z",
+          "updatedAt": "2026-09-23T12:14:11.365Z"
+        },
+        {
+          "id": "cmucnrnl20017i5jvn9q3aa4n",
+          "name": "Foldable Decorative Storage Baskets",
+          "slug": 121,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165770/viliv/lxdcybdzhlyjsbapzqpb.jpg",
+          "affiliateUrl": "https://amzn.to/3THr63N",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.750Z",
+          "updatedAt": "2026-09-23T12:16:16.894Z"
+        },
+        {
+          "id": "cmu5c2yma000elki551tzrbfu",
+          "name": "Bedside Storage Caddy",
+          "slug": 12,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/4reGSPT",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.642Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2yno000flki5d6xhufsj",
+          "name": "Underbed Storage Containers",
+          "slug": 13,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+          "affiliateUrl": "https://amzn.to/4yIMu7O",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.692Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2yp2000glki5ob85e9zs",
+          "name": "Stackable Closet Organizers",
+          "slug": 14,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/4gWlbRt",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.742Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2yqf000hlki55uizfx9z",
+          "name": "Space Saving Hangers",
+          "slug": 15,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+          "affiliateUrl": "https://amzn.to/4j6UGtK",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.791Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2yru000ilki5ga3x9gj8",
+          "name": "Stackable Shoe Organizer",
+          "slug": 16,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4yDI1mC",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.842Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2yul000klki57fo2r8t3",
+          "name": "Laundry Hamper Basket",
+          "slug": 18,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+          "affiliateUrl": "https://amzn.to/46sKCE0",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.941Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2zjw0012lki5v8yahrpq",
+          "name": "Large Blanket Storage Basket",
+          "slug": 36,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+          "affiliateUrl": "https://amzn.to/4hwH7CM",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.852Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2zmo0014lki5ne4q3hbo",
+          "name": "Storage Ottoman Seating",
+          "slug": 38,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/3T8iq6c",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.952Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2zoz0015lki56w7g54d4",
+          "name": "Collapsible Storage Ottoman",
+          "slug": 39,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969512/viliv/skincare-mini-fridge.jpg",
+          "affiliateUrl": "https://amzn.to/4h99a9R",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.035Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        },
+        {
+          "id": "cmu5c2zqa0016lki5p7whfpv5",
+          "name": "Foldable Fabric Storage Cubes",
+          "slug": 40,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969498/viliv/drawer-storage-boxes.jpg",
+          "affiliateUrl": "https://amzn.to/3SO4zlF",
+          "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.082Z",
+          "updatedAt": "2026-09-19T10:01:55.118Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu87x53k000di5gj46jhqjbe",
+      "name": "Decor",
+      "slug": "decor",
+      "createdAt": "2026-09-19T10:01:53.169Z",
+      "updatedAt": "2026-09-19T10:01:53.169Z",
+      "products": [
+        {
+          "id": "cmu5c2yt9000jlki50l8wdb75",
+          "name": "Full Length Floor Mirror",
+          "slug": 17,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+          "affiliateUrl": "https://amzn.to/46WNUQ6",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.893Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2z1t000plki5plv08t42",
+          "name": "Bedroom Area Rug",
+          "slug": 23,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+          "affiliateUrl": "https://amzn.to/4yBs0gZ",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.201Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2z38000qlki54znhi4sp",
+          "name": "Wall Mounted Coat Rack",
+          "slug": 24,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+          "affiliateUrl": "https://amzn.to/46rQOMG",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.252Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2y6x0003lki54j59ly5b",
+          "name": "Blackout Textured Curtains",
+          "slug": 1,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+          "affiliateUrl": "https://amzn.to/4rav5SV",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:04.089Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2zym001clki53vtc473e",
+          "name": "Indoor Plant Display Terrarium",
+          "slug": 46,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969528/viliv/plant-stand.jpg",
+          "affiliateUrl": "https://amzn.to/4yKJyHO",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.382Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2za6000vlki53cfob3s2",
+          "name": "Decorative Living Room Accent",
+          "slug": 29,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/fairy-string-lights.jpg",
+          "affiliateUrl": "https://amzn.to/3Ty2vyo",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.502Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2zeb000ylki5nastep1b",
+          "name": "Decorative Home Accent Piece",
+          "slug": 32,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/cozy-throw-blanket.jpg",
+          "affiliateUrl": "https://amzn.to/4h5ye1C",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.651Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2zfp000zlki5kws1e584",
+          "name": "Decorative Wall Accent",
+          "slug": 33,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/fairy-string-lights.jpg",
+          "affiliateUrl": "https://amzn.to/3TCalaa",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.701Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2zla0013lki5130ybhct",
+          "name": "Decorative Table Runner",
+          "slug": 37,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/cozy-throw-blanket.jpg",
+          "affiliateUrl": "https://amzn.to/4rkbU9h",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:05.902Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c2zrn0017lki5jscb5763",
+          "name": "Absorbent Drink Coasters",
+          "slug": 41,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969494/viliv/utensil-caddy.jpg",
+          "affiliateUrl": "https://amzn.to/4dnzj3L",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.132Z",
+          "updatedAt": "2026-09-19T10:01:55.432Z"
+        },
+        {
+          "id": "cmu5c3000001dlki5rpeibnri",
+          "name": "Tabletop Photo Collage Frame",
+          "slug": 47,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/book-stand-holder.jpg",
+          "affiliateUrl": "https://amzn.to/4xuPV0U",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.432Z",
+          "updatedAt": "2026-09-19T14:24:33.233Z"
+        },
+        {
+          "id": "cmu5c301f001elki5gak5hnh2",
+          "name": "Framed Mountain Wall Artwork",
+          "slug": 48,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/floor-reading-cushion.jpg",
+          "affiliateUrl": "https://amzn.to/4izf4Ud",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-17T09:35:06.483Z",
+          "updatedAt": "2026-09-19T14:24:33.233Z"
+        },
+        {
+          "id": "cmucnrmju000ni5jvll8fepln",
+          "name": "Large Washable Area Rug",
+          "slug": 111,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790173149/viliv/ooknthagsvyrbxm8gvet.jpg",
+          "affiliateUrl": "https://amzn.to/4iAD1ut",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.411Z",
+          "updatedAt": "2026-09-23T14:19:15.544Z"
+        },
+        {
+          "id": "cmucnrmh2000li5jvbllocg4z",
+          "name": "Round Decorative Wall Mirror",
+          "slug": 110,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790173355/viliv/riac905g0shgd0imav0e.jpg",
+          "affiliateUrl": "https://amzn.to/46zGPVE",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.310Z",
+          "updatedAt": "2026-09-23T14:22:40.424Z"
+        },
+        {
+          "id": "cmucnrmbi000hi5jvm3f98jlk",
+          "name": "Rechargeable Magnifying Vanity Mirror",
+          "slug": 108,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790173730/viliv/inkzlzn6zpmkti5rgd6m.jpg",
+          "affiliateUrl": "https://amzn.to/4AoQmfQ",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.110Z",
+          "updatedAt": "2026-09-23T14:28:57.790Z"
+        },
+        {
+          "id": "cmucnrme9000ji5jvna7cyv86",
+          "name": "Indoor Ceramic Plant Pots",
+          "slug": 109,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212113/viliv/ooxikj7ajpiidfbwwioc.jpg",
+          "affiliateUrl": "https://amzn.to/4yIOP2s",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.210Z",
+          "updatedAt": "2026-09-24T01:08:38.523Z"
+        },
+        {
+          "id": "cmucnrm8w000fi5jv7eqmfylc",
+          "name": "Thermal Blackout Window Curtains",
+          "slug": 107,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212340/viliv/ry3onqpotortehrzatve.jpg",
+          "affiliateUrl": "https://amzn.to/4y5Lbj9",
+          "categoryId": "cmu87x53k000di5gj46jhqjbe",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:34.016Z",
+          "updatedAt": "2026-09-24T01:12:24.668Z"
+        }
+      ]
+    },
+    {
+      "id": "cmu86alew0000i52hpsp4uah3",
+      "name": "Kitchen",
+      "slug": "kitchen",
+      "createdAt": "2026-09-19T09:16:21.608Z",
+      "updatedAt": "2026-09-19T09:16:21.608Z",
+      "products": [
+        {
+          "id": "cmu86alh70001i52hyd1eyb4x",
+          "name": "Instant Read Meat Thermometer",
+          "slug": 88,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218822/viliv/etr2g1colrh3rmop4qok.jpg",
+          "affiliateUrl": "https://amzn.to/4h3b6SD",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:00:26.802Z"
+        },
+        {
+          "id": "cmu86alh70002i52hjx1wgca8",
+          "name": "Digital Kitchen Food Scale",
+          "slug": 89,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221027/viliv/lbvkuyaksidejhehknwm.jpg",
+          "affiliateUrl": "https://amzn.to/4jc6tqH",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:37:12.138Z"
+        },
+        {
+          "id": "cmu86alh70003i52hych6nfbj",
+          "name": "Multi Function Vegetable Chopper",
+          "slug": 90,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221166/viliv/zxr9yjumpq7iuxsqli7s.jpg",
+          "affiliateUrl": "https://amzn.to/3TCxEAM",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:39:30.644Z"
+        },
+        {
+          "id": "cmu86alh70004i52hd19o1yyx",
+          "name": "Glass Oil Spray Dispenser",
+          "slug": 91,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221485/viliv/gbhetoy9hlms5rpircws.jpg",
+          "affiliateUrl": "https://amzn.to/4AdIYUm",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:44:50.622Z"
+        },
+        {
+          "id": "cmu86alh70005i52hprvii9im",
+          "name": "Multipurpose Kitchen Scissors",
+          "slug": 92,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221626/viliv/tzbhufixqlvqf1gxfitx.jpg",
+          "affiliateUrl": "https://amzn.to/3URKBXR",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:47:10.687Z"
+        },
+        {
+          "id": "cmu86alh70006i52hamzkotfp",
+          "name": "Multifunction Kitchen Can Opener",
+          "slug": 93,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218247/viliv/ks5gzs8hvo7ek8x3sixk.jpg",
+          "affiliateUrl": "https://amzn.to/3TirxRQ",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T02:50:55.916Z"
+        },
+        {
+          "id": "cmu86alh70008i52hsjmq1imk",
+          "name": "Airtight Food Storage Containers",
+          "slug": 95,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790220954/viliv/m7d52qhxclkfkciojg4l.jpg",
+          "affiliateUrl": "https://amzn.to/4766oxw",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:36:05.925Z"
+        },
+        {
+          "id": "cmu86alh70007i52hh7sjhcig",
+          "name": "Clip On Pot Strainer",
+          "slug": 94,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218505/viliv/c28qm1rxs9z9zf1zzpov.jpg",
+          "affiliateUrl": "https://amzn.to/4xzH11Y",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T02:55:16.127Z"
+        },
+        {
+          "id": "cmucnrn76000zi5jvuoqztm0x",
+          "name": "Magnetic Kitchen Knife Holder",
+          "slug": 117,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790171654/viliv/gxxpdpmilcll90r5lvkj.jpg",
+          "affiliateUrl": "https://amzn.to/4hgz9MR",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.250Z",
+          "updatedAt": "2026-09-23T13:54:19.010Z"
+        },
+        {
+          "id": "cmu86alh7000ci52hmm6r4qkf",
+          "name": "Cordless Immersion Hand Blender",
+          "slug": 99,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221563/viliv/nnqnyuqzd2pkhpwsswro.jpg",
+          "affiliateUrl": "https://amzn.to/4hdrizH",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T03:46:08.444Z"
+        },
+        {
+          "id": "cmu86alh70009i52h4dgtd1br",
+          "name": "Fresh Produce Storage Containers",
+          "slug": 96,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218018/viliv/rsyqrcd3pe35i7y2ko20.jpg",
+          "affiliateUrl": "https://amzn.to/4AnepeX",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-19T09:16:21.691Z",
+          "updatedAt": "2026-09-24T02:47:07.957Z"
+        },
+        {
+          "id": "cmucnrn4d000xi5jvfnd6x0bz",
+          "name": "Silicone Cooking Utensil Set",
+          "slug": 116,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172091/viliv/drlubqebqqc89nesq3rc.jpg",
+          "affiliateUrl": "https://amzn.to/4jfFGKd",
+          "categoryId": "cmu86alew0000i52hpsp4uah3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.150Z",
+          "updatedAt": "2026-09-23T14:01:36.323Z"
+        }
+      ]
+    },
+    {
+      "id": "cmucnr2qh0000i5eecs76o8c3",
+      "name": "Gaming",
+      "slug": "gaming",
+      "createdAt": "2026-09-22T12:36:08.729Z",
+      "updatedAt": "2026-09-22T12:36:08.729Z",
+      "products": [
+        {
+          "id": "cmucnrluu0007i5jvwep9lts9",
+          "name": "Console Controller Charging Stand",
+          "slug": 103,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790214383/viliv/rp212bqx2h3lbn8pyyiz.jpg",
+          "affiliateUrl": "https://amzn.to/4xFs2DP",
+          "categoryId": "cmucnr2qh0000i5eecs76o8c3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:33.510Z",
+          "updatedAt": "2026-09-24T01:46:30.375Z"
+        },
+        {
+          "id": "cmucnrlpa0003i5jvsn9jzczu",
+          "name": "Dual Monitor Gaming Arm",
+          "slug": 101,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790215209/viliv/k3ducayndqxwgzo2dgf9.jpg",
+          "affiliateUrl": "https://amzn.to/3T8Iv5l",
+          "categoryId": "cmucnr2qh0000i5eecs76o8c3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:33.310Z",
+          "updatedAt": "2026-09-24T02:00:17.011Z"
+        },
+        {
+          "id": "cmucnrll50001i5jv1017fejn",
+          "name": "Ambient Gaming Light Bars",
+          "slug": 100,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790217348/viliv/zdj4d3yeyb6sfdc5ho7f.jpg",
+          "affiliateUrl": "https://amzn.to/4dd1jHx",
+          "categoryId": "cmucnr2qh0000i5eecs76o8c3",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:33.162Z",
+          "updatedAt": "2026-09-24T02:46:26.499Z"
+        }
+      ]
+    },
+    {
+      "id": "cmucnr30z0001i5ee0sod0t27",
+      "name": "Bathroom",
+      "slug": "bathroom",
+      "createdAt": "2026-09-22T12:36:09.108Z",
+      "updatedAt": "2026-09-22T12:36:09.108Z",
+      "products": [
+        {
+          "id": "cmucnro7j001ni5jvtfqhfxuh",
+          "name": "Self Adhesive Paper Towel Holder",
+          "slug": 129,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167827/viliv/fvjg0545z4gshiqx3itd.jpg",
+          "affiliateUrl": "https://amzn.to/4y5yAwl",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.560Z",
+          "updatedAt": "2026-09-23T12:50:33.041Z"
+        },
+        {
+          "id": "cmucnro4s001li5jvqacbf6hx",
+          "name": "Wall Mounted Towel Rack",
+          "slug": 128,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790164266/viliv/yk2mew8cqksxhyumhdgd.jpg",
+          "affiliateUrl": "https://amzn.to/4ycUZbu",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.460Z",
+          "updatedAt": "2026-09-23T11:51:16.269Z"
+        },
+        {
+          "id": "cmucnro21001ji5jvtlnty11g",
+          "name": "Wall Mounted Toothbrush Dispenser",
+          "slug": 127,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790168537/viliv/rwdlea2ymwj2bfvp37s0.jpg",
+          "affiliateUrl": "https://amzn.to/3VH0EYA",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.361Z",
+          "updatedAt": "2026-09-23T13:02:21.743Z"
+        },
+        {
+          "id": "cmucnrnz8001hi5jvr90p1anp",
+          "name": "Waterproof Shower Curtain Liner",
+          "slug": 126,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165355/viliv/oprrkphrnlber8wgxkuz.jpg",
+          "affiliateUrl": "https://amzn.to/4iADjBz",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.260Z",
+          "updatedAt": "2026-09-23T12:09:20.587Z"
+        },
+        {
+          "id": "cmucnrnwf001fi5jvpq9v6dbc",
+          "name": "Over Toilet Storage Organizer",
+          "slug": 125,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165456/viliv/evhldmbuvafjpdnd3zqs.jpg",
+          "affiliateUrl": "https://amzn.to/4ySc4HC",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.160Z",
+          "updatedAt": "2026-09-23T12:11:05.592Z"
+        },
+        {
+          "id": "cmucnrntn001di5jvinzlr4n3",
+          "name": "Adhesive Shower Storage Organizer",
+          "slug": 124,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165512/viliv/evvyhz5npskgaccnm1gb.jpg",
+          "affiliateUrl": "https://amzn.to/4h6oJkc",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.060Z",
+          "updatedAt": "2026-09-23T12:11:56.185Z"
+        },
+        {
+          "id": "cmucnrnqm001bi5jvf5rwcs0i",
+          "name": "Soft Absorbent Bath Mat",
+          "slug": 123,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165585/viliv/uztlzn2oxsms0vr4zhkp.jpg",
+          "affiliateUrl": "https://amzn.to/4h2o5Ed",
+          "categoryId": "cmucnr30z0001i5ee0sod0t27",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:35.950Z",
+          "updatedAt": "2026-09-23T12:13:10.203Z"
+        }
+      ]
+    },
+    {
+      "id": "cmucnr3370002i5eew0vei6ut",
+      "name": "Dining",
+      "slug": "dining",
+      "createdAt": "2026-09-22T12:36:09.187Z",
+      "updatedAt": "2026-09-22T12:36:09.187Z",
+      "products": [
+        {
+          "id": "cmucnrofv001ti5jvbzpsbgvd",
+          "name": "Wooden Coffee Table Serving Tray",
+          "slug": 132,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167212/viliv/lemgmrpvjbm6gtm58pkb.jpg",
+          "affiliateUrl": "https://amzn.to/3V4AaAa",
+          "categoryId": "cmucnr3370002i5eew0vei6ut",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.860Z",
+          "updatedAt": "2026-09-23T12:40:17.377Z"
+        },
+        {
+          "id": "cmucnrod3001ri5jvsy0z12pc",
+          "name": "Porcelain Serving Platter Set",
+          "slug": 131,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167305/viliv/usxb7fd9rtvbblwijbeg.jpg",
+          "affiliateUrl": "https://amzn.to/4xFhB34",
+          "categoryId": "cmucnr3370002i5eew0vei6ut",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.760Z",
+          "updatedAt": "2026-09-23T12:41:50.090Z"
+        },
+        {
+          "id": "cmucnroab001pi5jvbgaw8hf5",
+          "name": "Reusable Cotton Dinner Napkins",
+          "slug": 130,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790168230/viliv/i1xvqiacf9ulwycxl377.jpg",
+          "affiliateUrl": "https://amzn.to/4AqbmCT",
+          "categoryId": "cmucnr3370002i5eew0vei6ut",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.660Z",
+          "updatedAt": "2026-09-23T12:57:17.319Z"
+        },
+        {
+          "id": "cmucnroin001vi5jveev1jsdz",
+          "name": "Non Slip Rotating Serving Tray",
+          "slug": 133,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167045/viliv/bowybpvufkogoddjfzuc.jpg",
+          "affiliateUrl": "https://amzn.to/3TLKlcu",
+          "categoryId": "cmucnr3370002i5eew0vei6ut",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:36.960Z",
+          "updatedAt": "2026-09-23T12:37:30.108Z"
+        },
+        {
+          "id": "cmucnroo8001zi5jvqzdmtowu",
+          "name": "Washable Woven Table Placemats",
+          "slug": 135,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166261/viliv/wtx2efpfbwakkc3rrc3b.jpg",
+          "affiliateUrl": "https://amzn.to/4AprHHV",
+          "categoryId": "cmucnr3370002i5eew0vei6ut",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:37.160Z",
+          "updatedAt": "2026-09-23T12:24:25.742Z"
+        },
+        {
+          "id": "cmucnrolf001xi5jvm2kk0bxt",
+          "name": "Stainless Salt Pepper Grinders",
+          "slug": 134,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166860/viliv/njg0cufaoygbki0xwjoh.jpg",
+          "affiliateUrl": "https://amzn.to/4xFk25J",
+          "categoryId": "cmucnr3370002i5eew0vei6ut",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:37.060Z",
+          "updatedAt": "2026-09-23T12:34:24.857Z"
+        }
+      ]
+    },
+    {
+      "id": "cmucnr35f0003i5eed824rmia",
+      "name": "Coffee",
+      "slug": "coffee",
+      "createdAt": "2026-09-22T12:36:09.267Z",
+      "updatedAt": "2026-09-22T12:36:09.267Z",
+      "products": [
+        {
+          "id": "cmucnrowk0025i5jvm731zhcb",
+          "name": "Airtight Coffee Storage Canister",
+          "slug": 138,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165925/viliv/bv8tqjabypn4biov5awo.jpg",
+          "affiliateUrl": "https://amzn.to/47bApfp",
+          "categoryId": "cmucnr35f0003i5eed824rmia",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:37.460Z",
+          "updatedAt": "2026-09-23T12:18:50.455Z"
+        },
+        {
+          "id": "cmucnrotr0023i5jv5br24ngj",
+          "name": "Electric Coffee Bean Grinder",
+          "slug": 137,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166071/viliv/fri0akz4fiyl3pa82g2y.jpg",
+          "affiliateUrl": "https://amzn.to/4y8srQ9",
+          "categoryId": "cmucnr35f0003i5eed824rmia",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:37.360Z",
+          "updatedAt": "2026-09-23T12:21:16.620Z"
+        },
+        {
+          "id": "cmucnror00021i5jve7vb7u2d",
+          "name": "Programmable Coffee Maker",
+          "slug": 136,
+          "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166174/viliv/ni24sop4j99a0bzxql8y.jpg",
+          "affiliateUrl": "https://amzn.to/4iISV5Z",
+          "categoryId": "cmucnr35f0003i5eed824rmia",
+          "isActive": true,
+          "createdAt": "2026-09-22T12:36:37.261Z",
+          "updatedAt": "2026-09-23T12:22:59.364Z"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "cmu828lzz0009i51sje28yduw",
+      "name": "Indoor Temperature Humidity Sensor",
+      "slug": 81,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969512/viliv/skincare-mini-fridge.jpg",
+      "affiliateUrl": "https://amzn.to/4dk9h1m",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-19T14:24:33.038Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz000ei51sx74qsf20",
+      "name": "Smart Smoke Detector",
+      "slug": 86,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790224408/viliv/wh7nj7cohefirow1wzuo.jpg",
+      "affiliateUrl": "https://amzn.to/3SOpo0k",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:33:33.326Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz0002i51s71p4f26e",
+      "name": "Smart Power Strip",
+      "slug": 74,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790224462/viliv/hvbmtfsovqxw1tutvzbn.jpg",
+      "affiliateUrl": "https://amzn.to/4xvxby6",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:34:29.467Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz000bi51sl13hfici",
+      "name": "Wireless Video Doorbell Camera",
+      "slug": 83,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222118/viliv/qunmffbanw4qjrjrjcg0.jpg",
+      "affiliateUrl": "https://amzn.to/4cNh6N0",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T03:55:27.009Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz000fi51sjgw2m9v2",
+      "name": "Scheduled Smart Power Plug",
+      "slug": 87,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222243/viliv/uexcb29cnrsrz7wo8jyj.jpg",
+      "affiliateUrl": "https://amzn.to/4Alws5a",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T03:57:29.327Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz0007i51sgldpxee5",
+      "name": "RGBIC Bedroom Light Strips",
+      "slug": 79,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/clip-on-book-light.jpg",
+      "affiliateUrl": "https://amzn.to/4j94tQ6",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu828lzz0001i51srieghpdp",
+      "name": "Smart Plug With Scheduling",
+      "slug": 73,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/gan-wall-charger.jpg",
+      "affiliateUrl": "https://amzn.to/4j9e0ql",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-19T10:01:53.596Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz000di51sqtnxyb8h",
+      "name": "Smart Water Leak Sensor",
+      "slug": 85,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790224291/viliv/xovcjipzzdseqrxge4yt.jpg",
+      "affiliateUrl": "https://amzn.to/4ycqy51",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:31:36.517Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz0004i51sxmhorayc",
+      "name": "Color Changing Smart Lights",
+      "slug": 76,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790223352/viliv/m512xwehx9jtpfgyipmu.jpg",
+      "affiliateUrl": "https://amzn.to/4AhvvLb",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:15:57.758Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz0008i51sshbemx5k",
+      "name": "Motion Activated Light Switch",
+      "slug": 80,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222949/viliv/z5knt2dxwspwzsud4coz.jpg",
+      "affiliateUrl": "https://amzn.to/4AjuGSi",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:09:15.901Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz0006i51silhj336e",
+      "name": "Smart Light Switch",
+      "slug": 78,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790223118/viliv/qnxn7jsnmrnja4h81w45.jpg",
+      "affiliateUrl": "https://amzn.to/4cO0Gnx",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:12:04.856Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu828lzz000ci51sylc05lr7",
+      "name": "Fingerprint Smart Door Lock",
+      "slug": 84,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790222625/viliv/aelqdlhl7wsnum99b3dh.jpg",
+      "affiliateUrl": "https://amzn.to/4hxsRtw",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T04:03:51.709Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmucnrofv001ti5jvbzpsbgvd",
+      "name": "Wooden Coffee Table Serving Tray",
+      "slug": 132,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167212/viliv/lemgmrpvjbm6gtm58pkb.jpg",
+      "affiliateUrl": "https://amzn.to/3V4AaAa",
+      "categoryId": "cmucnr3370002i5eew0vei6ut",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.860Z",
+      "updatedAt": "2026-09-23T12:40:17.377Z",
+      "category": {
+        "id": "cmucnr3370002i5eew0vei6ut",
+        "name": "Dining",
+        "slug": "dining",
+        "createdAt": "2026-09-22T12:36:09.187Z",
+        "updatedAt": "2026-09-22T12:36:09.187Z"
+      }
+    },
+    {
+      "id": "cmucnrod3001ri5jvsy0z12pc",
+      "name": "Porcelain Serving Platter Set",
+      "slug": 131,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167305/viliv/usxb7fd9rtvbblwijbeg.jpg",
+      "affiliateUrl": "https://amzn.to/4xFhB34",
+      "categoryId": "cmucnr3370002i5eew0vei6ut",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.760Z",
+      "updatedAt": "2026-09-23T12:41:50.090Z",
+      "category": {
+        "id": "cmucnr3370002i5eew0vei6ut",
+        "name": "Dining",
+        "slug": "dining",
+        "createdAt": "2026-09-22T12:36:09.187Z",
+        "updatedAt": "2026-09-22T12:36:09.187Z"
+      }
+    },
+    {
+      "id": "cmucnro7j001ni5jvtfqhfxuh",
+      "name": "Self Adhesive Paper Towel Holder",
+      "slug": 129,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167827/viliv/fvjg0545z4gshiqx3itd.jpg",
+      "affiliateUrl": "https://amzn.to/4y5yAwl",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.560Z",
+      "updatedAt": "2026-09-23T12:50:33.041Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnrne40013i5jveazuisnz",
+      "name": "Floating Decorative Wall Shelves",
+      "slug": 119,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790171465/viliv/owxfkh8z82zjowxet4tf.jpg",
+      "affiliateUrl": "https://amzn.to/4yOYrc4",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.500Z",
+      "updatedAt": "2026-09-23T13:51:11.867Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmucnroab001pi5jvbgaw8hf5",
+      "name": "Reusable Cotton Dinner Napkins",
+      "slug": 130,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790168230/viliv/i1xvqiacf9ulwycxl377.jpg",
+      "affiliateUrl": "https://amzn.to/4AqbmCT",
+      "categoryId": "cmucnr3370002i5eew0vei6ut",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.660Z",
+      "updatedAt": "2026-09-23T12:57:17.319Z",
+      "category": {
+        "id": "cmucnr3370002i5eew0vei6ut",
+        "name": "Dining",
+        "slug": "dining",
+        "createdAt": "2026-09-22T12:36:09.187Z",
+        "updatedAt": "2026-09-22T12:36:09.187Z"
+      }
+    },
+    {
+      "id": "cmucnro4s001li5jvqacbf6hx",
+      "name": "Wall Mounted Towel Rack",
+      "slug": 128,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790164266/viliv/yk2mew8cqksxhyumhdgd.jpg",
+      "affiliateUrl": "https://amzn.to/4ycUZbu",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.460Z",
+      "updatedAt": "2026-09-23T11:51:16.269Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnro21001ji5jvtlnty11g",
+      "name": "Wall Mounted Toothbrush Dispenser",
+      "slug": 127,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790168537/viliv/rwdlea2ymwj2bfvp37s0.jpg",
+      "affiliateUrl": "https://amzn.to/3VH0EYA",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.361Z",
+      "updatedAt": "2026-09-23T13:02:21.743Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnrnz8001hi5jvr90p1anp",
+      "name": "Waterproof Shower Curtain Liner",
+      "slug": 126,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165355/viliv/oprrkphrnlber8wgxkuz.jpg",
+      "affiliateUrl": "https://amzn.to/4iADjBz",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.260Z",
+      "updatedAt": "2026-09-23T12:09:20.587Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnrnwf001fi5jvpq9v6dbc",
+      "name": "Over Toilet Storage Organizer",
+      "slug": 125,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165456/viliv/evhldmbuvafjpdnd3zqs.jpg",
+      "affiliateUrl": "https://amzn.to/4ySc4HC",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.160Z",
+      "updatedAt": "2026-09-23T12:11:05.592Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnrntn001di5jvinzlr4n3",
+      "name": "Adhesive Shower Storage Organizer",
+      "slug": 124,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165512/viliv/evvyhz5npskgaccnm1gb.jpg",
+      "affiliateUrl": "https://amzn.to/4h6oJkc",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.060Z",
+      "updatedAt": "2026-09-23T12:11:56.185Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnrnqm001bi5jvf5rwcs0i",
+      "name": "Soft Absorbent Bath Mat",
+      "slug": 123,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165585/viliv/uztlzn2oxsms0vr4zhkp.jpg",
+      "affiliateUrl": "https://amzn.to/4h2o5Ed",
+      "categoryId": "cmucnr30z0001i5ee0sod0t27",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.950Z",
+      "updatedAt": "2026-09-23T12:13:10.203Z",
+      "category": {
+        "id": "cmucnr30z0001i5ee0sod0t27",
+        "name": "Bathroom",
+        "slug": "bathroom",
+        "createdAt": "2026-09-22T12:36:09.108Z",
+        "updatedAt": "2026-09-22T12:36:09.108Z"
+      }
+    },
+    {
+      "id": "cmucnrnnu0019i5jvr9y222l9",
+      "name": "Adjustable Garment Storage Rack",
+      "slug": 122,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165646/viliv/jihdcoihpnxtngdqe7yg.jpg",
+      "affiliateUrl": "https://amzn.to/3TLMx3I",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.851Z",
+      "updatedAt": "2026-09-23T12:14:11.365Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmucnrnl20017i5jvn9q3aa4n",
+      "name": "Foldable Decorative Storage Baskets",
+      "slug": 121,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165770/viliv/lxdcybdzhlyjsbapzqpb.jpg",
+      "affiliateUrl": "https://amzn.to/3THr63N",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.750Z",
+      "updatedAt": "2026-09-23T12:16:16.894Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmucnrngw0015i5jvxsf78p37",
+      "name": "Kitchen Cabinet Storage Organizer",
+      "slug": 120,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165862/viliv/vhrtwbblvrs0k0ii0rh1.jpg",
+      "affiliateUrl": "https://amzn.to/4rrHQZh",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.600Z",
+      "updatedAt": "2026-09-23T12:17:46.549Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmucnroin001vi5jveev1jsdz",
+      "name": "Non Slip Rotating Serving Tray",
+      "slug": 133,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790167045/viliv/bowybpvufkogoddjfzuc.jpg",
+      "affiliateUrl": "https://amzn.to/3TLKlcu",
+      "categoryId": "cmucnr3370002i5eew0vei6ut",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:36.960Z",
+      "updatedAt": "2026-09-23T12:37:30.108Z",
+      "category": {
+        "id": "cmucnr3370002i5eew0vei6ut",
+        "name": "Dining",
+        "slug": "dining",
+        "createdAt": "2026-09-22T12:36:09.187Z",
+        "updatedAt": "2026-09-22T12:36:09.187Z"
+      }
+    },
+    {
+      "id": "cmucnrnbd0011i5jv3m5i2393",
+      "name": "Tree Shaped Display Shelf",
+      "slug": 118,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790171594/viliv/xzbfonhqzhtgl4p6uql5.jpg",
+      "affiliateUrl": "https://amzn.to/4ycUiPq",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.402Z",
+      "updatedAt": "2026-09-23T13:53:21.139Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu828lzz000ai51s1rfb14rd",
+      "name": "Indoor Pan Tilt Cameras",
+      "slug": 82,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221855/viliv/aqrlxl8jgfstias7tlif.jpg",
+      "affiliateUrl": "https://amzn.to/4iwca2A",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-19T07:22:50.591Z",
+      "updatedAt": "2026-09-24T03:51:00.954Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu5c2yfc0009lki5cqgwy69d",
+      "name": "Bamboo Mattress Protector",
+      "slug": 7,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4y3iYcT",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.392Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2ygq000alki51ilzmkdy",
+      "name": "Padded Mattress Topper",
+      "slug": 8,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+      "affiliateUrl": "https://amzn.to/4xXLPPR",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.442Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2yi4000blki5t3cm8giu",
+      "name": "Weighted Sleep Blanket",
+      "slug": 9,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/4cObl1z",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.492Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2yw0000llki59l8m53b4",
+      "name": "Essential Oil Diffuser",
+      "slug": 19,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/4d6VZW7",
+      "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.992Z",
+      "updatedAt": "2026-09-19T10:01:54.019Z",
+      "category": {
+        "id": "cmu87x4ue0005i5gjf2kwc6e5",
+        "name": "Ambience",
+        "slug": "ambience",
+        "createdAt": "2026-09-19T10:01:52.838Z",
+        "updatedAt": "2026-09-19T10:01:52.838Z"
+      }
+    },
+    {
+      "id": "cmu5c2yxd000mlki59tfdv9xg",
+      "name": "Smart Bedroom Humidifier",
+      "slug": 20,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+      "affiliateUrl": "https://amzn.to/4rylCVP",
+      "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.041Z",
+      "updatedAt": "2026-09-19T10:01:54.019Z",
+      "category": {
+        "id": "cmu87x4ue0005i5gjf2kwc6e5",
+        "name": "Ambience",
+        "slug": "ambience",
+        "createdAt": "2026-09-19T10:01:52.838Z",
+        "updatedAt": "2026-09-19T10:01:52.838Z"
+      }
+    },
+    {
+      "id": "cmu5c2yys000nlki5ec2aylog",
+      "name": "Reed Fragrance Diffuser",
+      "slug": 21,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4ris2YT",
+      "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.092Z",
+      "updatedAt": "2026-09-19T10:01:54.019Z",
+      "category": {
+        "id": "cmu87x4ue0005i5gjf2kwc6e5",
+        "name": "Ambience",
+        "slug": "ambience",
+        "createdAt": "2026-09-19T10:01:52.838Z",
+        "updatedAt": "2026-09-19T10:01:52.838Z"
+      }
+    },
+    {
+      "id": "cmu5c2z0d000olki5jz49sftj",
+      "name": "Quiet Bedroom Tower Fan",
+      "slug": 22,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/3T7O0Rx",
+      "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.149Z",
+      "updatedAt": "2026-09-19T10:01:54.019Z",
+      "category": {
+        "id": "cmu87x4ue0005i5gjf2kwc6e5",
+        "name": "Ambience",
+        "slug": "ambience",
+        "createdAt": "2026-09-19T10:01:52.838Z",
+        "updatedAt": "2026-09-19T10:01:52.838Z"
+      }
+    },
+    {
+      "id": "cmu86alh70001i52hyd1eyb4x",
+      "name": "Instant Read Meat Thermometer",
+      "slug": 88,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218822/viliv/etr2g1colrh3rmop4qok.jpg",
+      "affiliateUrl": "https://amzn.to/4h3b6SD",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:00:26.802Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu86alh70002i52hjx1wgca8",
+      "name": "Digital Kitchen Food Scale",
+      "slug": 89,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221027/viliv/lbvkuyaksidejhehknwm.jpg",
+      "affiliateUrl": "https://amzn.to/4jc6tqH",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:37:12.138Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu5c2yma000elki551tzrbfu",
+      "name": "Bedside Storage Caddy",
+      "slug": 12,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4reGSPT",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.642Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2yno000flki5d6xhufsj",
+      "name": "Underbed Storage Containers",
+      "slug": 13,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+      "affiliateUrl": "https://amzn.to/4yIMu7O",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.692Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2yp2000glki5ob85e9zs",
+      "name": "Stackable Closet Organizers",
+      "slug": 14,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/4gWlbRt",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.742Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu86alh70003i52hych6nfbj",
+      "name": "Multi Function Vegetable Chopper",
+      "slug": 90,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221166/viliv/zxr9yjumpq7iuxsqli7s.jpg",
+      "affiliateUrl": "https://amzn.to/3TCxEAM",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:39:30.644Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu86alh70004i52hd19o1yyx",
+      "name": "Glass Oil Spray Dispenser",
+      "slug": 91,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221485/viliv/gbhetoy9hlms5rpircws.jpg",
+      "affiliateUrl": "https://amzn.to/4AdIYUm",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:44:50.622Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu86alh7000ai52hru7abmpx",
+      "name": "Expandable Silverware Drawer Organizer",
+      "slug": 97,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218577/viliv/eckqcbindmxyi3tteapy.jpg",
+      "affiliateUrl": "https://amzn.to/4xAn0bF",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T02:56:27.600Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu86alh7000bi52hfnxxmigp",
+      "name": "Rustproof Kitchen Sink Organizer",
+      "slug": 98,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218728/viliv/mfybxfqtoq2jueeigfvt.jpg",
+      "affiliateUrl": "https://amzn.to/3UZmMxm",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T02:58:53.597Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu86alh70005i52hprvii9im",
+      "name": "Multipurpose Kitchen Scissors",
+      "slug": 92,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221626/viliv/tzbhufixqlvqf1gxfitx.jpg",
+      "affiliateUrl": "https://amzn.to/3URKBXR",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:47:10.687Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu5c2yt9000jlki50l8wdb75",
+      "name": "Full Length Floor Mirror",
+      "slug": 17,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/46WNUQ6",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.893Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2z1t000plki5plv08t42",
+      "name": "Bedroom Area Rug",
+      "slug": 23,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+      "affiliateUrl": "https://amzn.to/4yBs0gZ",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.201Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2z38000qlki54znhi4sp",
+      "name": "Wall Mounted Coat Rack",
+      "slug": 24,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/46rQOMG",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.252Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu86alh70006i52hamzkotfp",
+      "name": "Multifunction Kitchen Can Opener",
+      "slug": 93,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218247/viliv/ks5gzs8hvo7ek8x3sixk.jpg",
+      "affiliateUrl": "https://amzn.to/3TirxRQ",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T02:50:55.916Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu86alh70008i52hsjmq1imk",
+      "name": "Airtight Food Storage Containers",
+      "slug": 95,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790220954/viliv/m7d52qhxclkfkciojg4l.jpg",
+      "affiliateUrl": "https://amzn.to/4766oxw",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:36:05.925Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu86alh70007i52hh7sjhcig",
+      "name": "Clip On Pot Strainer",
+      "slug": 94,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218505/viliv/c28qm1rxs9z9zf1zzpov.jpg",
+      "affiliateUrl": "https://amzn.to/4xzH11Y",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T02:55:16.127Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmucnrowk0025i5jvm731zhcb",
+      "name": "Airtight Coffee Storage Canister",
+      "slug": 138,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790165925/viliv/bv8tqjabypn4biov5awo.jpg",
+      "affiliateUrl": "https://amzn.to/47bApfp",
+      "categoryId": "cmucnr35f0003i5eed824rmia",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:37.460Z",
+      "updatedAt": "2026-09-23T12:18:50.455Z",
+      "category": {
+        "id": "cmucnr35f0003i5eed824rmia",
+        "name": "Coffee",
+        "slug": "coffee",
+        "createdAt": "2026-09-22T12:36:09.267Z",
+        "updatedAt": "2026-09-22T12:36:09.267Z"
+      }
+    },
+    {
+      "id": "cmucnrotr0023i5jv5br24ngj",
+      "name": "Electric Coffee Bean Grinder",
+      "slug": 137,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166071/viliv/fri0akz4fiyl3pa82g2y.jpg",
+      "affiliateUrl": "https://amzn.to/4y8srQ9",
+      "categoryId": "cmucnr35f0003i5eed824rmia",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:37.360Z",
+      "updatedAt": "2026-09-23T12:21:16.620Z",
+      "category": {
+        "id": "cmucnr35f0003i5eed824rmia",
+        "name": "Coffee",
+        "slug": "coffee",
+        "createdAt": "2026-09-22T12:36:09.267Z",
+        "updatedAt": "2026-09-22T12:36:09.267Z"
+      }
+    },
+    {
+      "id": "cmucnror00021i5jve7vb7u2d",
+      "name": "Programmable Coffee Maker",
+      "slug": 136,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166174/viliv/ni24sop4j99a0bzxql8y.jpg",
+      "affiliateUrl": "https://amzn.to/4iISV5Z",
+      "categoryId": "cmucnr35f0003i5eed824rmia",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:37.261Z",
+      "updatedAt": "2026-09-23T12:22:59.364Z",
+      "category": {
+        "id": "cmucnr35f0003i5eed824rmia",
+        "name": "Coffee",
+        "slug": "coffee",
+        "createdAt": "2026-09-22T12:36:09.267Z",
+        "updatedAt": "2026-09-22T12:36:09.267Z"
+      }
+    },
+    {
+      "id": "cmucnrn76000zi5jvuoqztm0x",
+      "name": "Magnetic Kitchen Knife Holder",
+      "slug": 117,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790171654/viliv/gxxpdpmilcll90r5lvkj.jpg",
+      "affiliateUrl": "https://amzn.to/4hgz9MR",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.250Z",
+      "updatedAt": "2026-09-23T13:54:19.010Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu5c2yji000clki59vqq0fxh",
+      "name": "Textured Comforter Set",
+      "slug": 10,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+      "affiliateUrl": "https://amzn.to/3USneNL",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.542Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2ykw000dlki5549let01",
+      "name": "Soft Bed Sheet Set",
+      "slug": 11,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4ywJcEk",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.592Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2y8e0004lki5a67pyuow",
+      "name": "Cooling Bed Pillow",
+      "slug": 2,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4Abm3cq",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.142Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2ydy0008lki5or9gllz8",
+      "name": "Luxury Sleep Mask",
+      "slug": 6,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/46ncklz",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.343Z",
+      "updatedAt": "2026-09-19T10:01:53.248Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmu5c2y9s0005lki5y0ovdpf4",
+      "name": "Ceramic Bedside Lamp",
+      "slug": 3,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+      "affiliateUrl": "https://amzn.to/4y3de2P",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.192Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c2yck0007lki5j8qcp9wp",
+      "name": "Adjustable Night Light",
+      "slug": 5,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+      "affiliateUrl": "https://amzn.to/4is1ySi",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.293Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c2z8s000ulki5vnhnskp3",
+      "name": "Smart Corner Floor Lighting",
+      "slug": 28,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/floor-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4gYoKGO",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.452Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c2zbj000wlki531bnk5h2",
+      "name": "Clip-On Reading Light",
+      "slug": 30,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/clip-on-book-light.jpg",
+      "affiliateUrl": "https://amzn.to/4y28GK9",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.551Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c2zcy000xlki5cxa3e7o8",
+      "name": "Color Changing Ambient Lighting",
+      "slug": 31,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/smart-bulb-starter-kit.jpg",
+      "affiliateUrl": "https://amzn.to/4rfECIl",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.602Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c2yb60006lki5l3hz73hk",
+      "name": "Digital Alarm Clock",
+      "slug": 4,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/4xRQGln",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.242Z",
+      "updatedAt": "2026-09-19T10:01:53.596Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmu5c306y001ilki5i4yhlvoy",
+      "name": "Adjustable Monitor Riser",
+      "slug": 52,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/monitor-riser.jpg",
+      "affiliateUrl": "https://amzn.to/4yLAJ0s",
+      "categoryId": "cmu87x4z60009i5gj978ggvkg",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.682Z",
+      "updatedAt": "2026-09-19T10:01:54.697Z",
+      "category": {
+        "id": "cmu87x4z60009i5gj978ggvkg",
+        "name": "Stand",
+        "slug": "stand",
+        "createdAt": "2026-09-19T10:01:53.011Z",
+        "updatedAt": "2026-09-19T10:01:53.011Z"
+      }
+    },
+    {
+      "id": "cmu5c309p001klki5zxcfuyc3",
+      "name": "Under Desk Storage Cabinet",
+      "slug": 54,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/desk-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4hgDzDz",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.781Z",
+      "updatedAt": "2026-09-19T10:01:54.993Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu5c2yqf000hlki55uizfx9z",
+      "name": "Space Saving Hangers",
+      "slug": 15,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+      "affiliateUrl": "https://amzn.to/4j6UGtK",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.791Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2yru000ilki5ga3x9gj8",
+      "name": "Stackable Shoe Organizer",
+      "slug": 16,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4yDI1mC",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.842Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2yul000klki57fo2r8t3",
+      "name": "Laundry Hamper Basket",
+      "slug": 18,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+      "affiliateUrl": "https://amzn.to/46sKCE0",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.941Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2y6x0003lki54j59ly5b",
+      "name": "Blackout Textured Curtains",
+      "slug": 1,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4rav5SV",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:04.089Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2zym001clki53vtc473e",
+      "name": "Indoor Plant Display Terrarium",
+      "slug": 46,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969528/viliv/plant-stand.jpg",
+      "affiliateUrl": "https://amzn.to/4yKJyHO",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.382Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmucnroo8001zi5jvqzdmtowu",
+      "name": "Washable Woven Table Placemats",
+      "slug": 135,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166261/viliv/wtx2efpfbwakkc3rrc3b.jpg",
+      "affiliateUrl": "https://amzn.to/4AprHHV",
+      "categoryId": "cmucnr3370002i5eew0vei6ut",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:37.160Z",
+      "updatedAt": "2026-09-23T12:24:25.742Z",
+      "category": {
+        "id": "cmucnr3370002i5eew0vei6ut",
+        "name": "Dining",
+        "slug": "dining",
+        "createdAt": "2026-09-22T12:36:09.187Z",
+        "updatedAt": "2026-09-22T12:36:09.187Z"
+      }
+    },
+    {
+      "id": "cmu86alh7000ci52hmm6r4qkf",
+      "name": "Cordless Immersion Hand Blender",
+      "slug": 99,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790221563/viliv/nnqnyuqzd2pkhpwsswro.jpg",
+      "affiliateUrl": "https://amzn.to/4hdrizH",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T03:46:08.444Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmucnrolf001xi5jvm2kk0bxt",
+      "name": "Stainless Salt Pepper Grinders",
+      "slug": 134,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790166860/viliv/njg0cufaoygbki0xwjoh.jpg",
+      "affiliateUrl": "https://amzn.to/4xFk25J",
+      "categoryId": "cmucnr3370002i5eew0vei6ut",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:37.060Z",
+      "updatedAt": "2026-09-23T12:34:24.857Z",
+      "category": {
+        "id": "cmucnr3370002i5eew0vei6ut",
+        "name": "Dining",
+        "slug": "dining",
+        "createdAt": "2026-09-22T12:36:09.187Z",
+        "updatedAt": "2026-09-22T12:36:09.187Z"
+      }
+    },
+    {
+      "id": "cmu86alh70009i52h4dgtd1br",
+      "name": "Fresh Produce Storage Containers",
+      "slug": 96,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790218018/viliv/rsyqrcd3pe35i7y2ko20.jpg",
+      "affiliateUrl": "https://amzn.to/4AnepeX",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-19T09:16:21.691Z",
+      "updatedAt": "2026-09-24T02:47:07.957Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmu5c2zik0011lki5b1wjubp3",
+      "name": "Fresh Room Scent Diffuser",
+      "slug": 35,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/4iyjRp2",
+      "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.804Z",
+      "updatedAt": "2026-09-19T10:01:54.019Z",
+      "category": {
+        "id": "cmu87x4ue0005i5gjf2kwc6e5",
+        "name": "Ambience",
+        "slug": "ambience",
+        "createdAt": "2026-09-19T10:01:52.838Z",
+        "updatedAt": "2026-09-19T10:01:52.838Z"
+      }
+    },
+    {
+      "id": "cmu5c2zt20018lki5o04bdlxn",
+      "name": "Flameless Ambient Candlelight",
+      "slug": 42,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/floor-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4xYvKt0",
+      "categoryId": "cmu87x4vi0006i5gjgstjg9dc",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.182Z",
+      "updatedAt": "2026-09-19T10:01:54.198Z",
+      "category": {
+        "id": "cmu87x4vi0006i5gjgstjg9dc",
+        "name": "Candle",
+        "slug": "candle",
+        "createdAt": "2026-09-19T10:01:52.878Z",
+        "updatedAt": "2026-09-19T10:01:52.878Z"
+      }
+    },
+    {
+      "id": "cmu5c2zug0019lki5cuw3bc8i",
+      "name": "Flameless Ambient Candlelight",
+      "slug": 43,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/smart-bulb-starter-kit.jpg",
+      "affiliateUrl": "https://amzn.to/4hv9bqa",
+      "categoryId": "cmu87x4vi0006i5gjgstjg9dc",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.232Z",
+      "updatedAt": "2026-09-19T10:01:54.198Z",
+      "category": {
+        "id": "cmu87x4vi0006i5gjgstjg9dc",
+        "name": "Candle",
+        "slug": "candle",
+        "createdAt": "2026-09-19T10:01:52.878Z",
+        "updatedAt": "2026-09-19T10:01:52.878Z"
+      }
+    },
+    {
+      "id": "cmu5c2zvu001alki5ka168cy3",
+      "name": "Candle Warming Lamp",
+      "slug": 44,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/fairy-string-lights.jpg",
+      "affiliateUrl": "https://amzn.to/4j8NRYE",
+      "categoryId": "cmu87x4vi0006i5gjgstjg9dc",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.282Z",
+      "updatedAt": "2026-09-19T10:01:54.198Z",
+      "category": {
+        "id": "cmu87x4vi0006i5gjgstjg9dc",
+        "name": "Candle",
+        "slug": "candle",
+        "createdAt": "2026-09-19T10:01:52.878Z",
+        "updatedAt": "2026-09-19T10:01:52.878Z"
+      }
+    },
+    {
+      "id": "cmu5c2z61000slki5nhosbygt",
+      "name": "Bedside Charging Station",
+      "slug": 26,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-table-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4xYmd5v",
+      "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.353Z",
+      "updatedAt": "2026-09-19T10:01:54.387Z",
+      "category": {
+        "id": "cmu87x4wq0007i5gj96ysv58k",
+        "name": "Charging",
+        "slug": "charging",
+        "createdAt": "2026-09-19T10:01:52.923Z",
+        "updatedAt": "2026-09-19T10:01:52.923Z"
+      }
+    },
+    {
+      "id": "cmu5c30dw001nlki55vfh57yd",
+      "name": "Multi Device Charging Station",
+      "slug": 57,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/multi-usb-charging-station.jpg",
+      "affiliateUrl": "https://amzn.to/4izbOZ8",
+      "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.932Z",
+      "updatedAt": "2026-09-19T10:01:54.387Z",
+      "category": {
+        "id": "cmu87x4wq0007i5gj96ysv58k",
+        "name": "Charging",
+        "slug": "charging",
+        "createdAt": "2026-09-19T10:01:52.923Z",
+        "updatedAt": "2026-09-19T10:01:52.923Z"
+      }
+    },
+    {
+      "id": "cmu5c2z4m000rlki5lxm9s0tu",
+      "name": "Cable Management Box",
+      "slug": 25,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969508/viliv/under-bed-storage-bag.jpg",
+      "affiliateUrl": "https://amzn.to/3Tducwj",
+      "categoryId": "cmu87x4y00008i5gj24d6htsq",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.302Z",
+      "updatedAt": "2026-09-19T10:01:54.560Z",
+      "category": {
+        "id": "cmu87x4y00008i5gj24d6htsq",
+        "name": "Cable",
+        "slug": "cable",
+        "createdAt": "2026-09-19T10:01:52.969Z",
+        "updatedAt": "2026-09-19T10:01:52.969Z"
+      }
+    },
+    {
+      "id": "cmu5c30b3001llki5b14yegss",
+      "name": "Under Desk Cable Tray",
+      "slug": 55,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969518/viliv/under-desk-tray.jpg",
+      "affiliateUrl": "https://amzn.to/46oQXQZ",
+      "categoryId": "cmu87x4y00008i5gj24d6htsq",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.831Z",
+      "updatedAt": "2026-09-19T10:01:54.560Z",
+      "category": {
+        "id": "cmu87x4y00008i5gj24d6htsq",
+        "name": "Cable",
+        "slug": "cable",
+        "createdAt": "2026-09-19T10:01:52.969Z",
+        "updatedAt": "2026-09-19T10:01:52.969Z"
+      }
+    },
+    {
+      "id": "cmu5c30ci001mlki54autncya",
+      "name": "Adjustable Cable Management Clips",
+      "slug": 56,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969518/viliv/cord-clip-set.jpg",
+      "affiliateUrl": "https://amzn.to/4yHGo7A",
+      "categoryId": "cmu87x4y00008i5gj24d6htsq",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.882Z",
+      "updatedAt": "2026-09-19T10:01:54.560Z",
+      "category": {
+        "id": "cmu87x4y00008i5gj24d6htsq",
+        "name": "Cable",
+        "slug": "cable",
+        "createdAt": "2026-09-19T10:01:52.969Z",
+        "updatedAt": "2026-09-19T10:01:52.969Z"
+      }
+    },
+    {
+      "id": "cmu5c302s001flki5v4mmauj0",
+      "name": "Dual Monitor Desk Mount",
+      "slug": 49,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969516/viliv/laptop-stand.jpg",
+      "affiliateUrl": "https://amzn.to/4y5Dsls",
+      "categoryId": "cmu87x4z60009i5gj978ggvkg",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.532Z",
+      "updatedAt": "2026-09-19T10:01:54.697Z",
+      "category": {
+        "id": "cmu87x4z60009i5gj978ggvkg",
+        "name": "Stand",
+        "slug": "stand",
+        "createdAt": "2026-09-19T10:01:53.011Z",
+        "updatedAt": "2026-09-19T10:01:53.011Z"
+      }
+    },
+    {
+      "id": "cmu5c3046001glki5l03vao9b",
+      "name": "Adjustable Laptop Stand",
+      "slug": 50,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969516/viliv/laptop-stand.jpg",
+      "affiliateUrl": "https://amzn.to/4rp4S3a",
+      "categoryId": "cmu87x4z60009i5gj978ggvkg",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.583Z",
+      "updatedAt": "2026-09-19T10:01:54.697Z",
+      "category": {
+        "id": "cmu87x4z60009i5gj978ggvkg",
+        "name": "Stand",
+        "slug": "stand",
+        "createdAt": "2026-09-19T10:01:53.011Z",
+        "updatedAt": "2026-09-19T10:01:53.011Z"
+      }
+    },
+    {
+      "id": "cmu5c305k001hlki5fqagl0q3",
+      "name": "Monitor Stand With Storage",
+      "slug": 51,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/monitor-riser.jpg",
+      "affiliateUrl": "https://amzn.to/4j2nnrS",
+      "categoryId": "cmu87x4z60009i5gj978ggvkg",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.632Z",
+      "updatedAt": "2026-09-19T10:01:54.697Z",
+      "category": {
+        "id": "cmu87x4z60009i5gj978ggvkg",
+        "name": "Stand",
+        "slug": "stand",
+        "createdAt": "2026-09-19T10:01:53.011Z",
+        "updatedAt": "2026-09-19T10:01:53.011Z"
+      }
+    },
+    {
+      "id": "cmu5c308b001jlki55mesfld7",
+      "name": "Large Desk Protector Mat",
+      "slug": 53,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/xl-mouse-pad.jpg",
+      "affiliateUrl": "https://amzn.to/4hxC9FK",
+      "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.731Z",
+      "updatedAt": "2026-09-19T10:01:54.819Z",
+      "category": {
+        "id": "cmu87x50b000ai5gj3r3i61mh",
+        "name": "Ergo",
+        "slug": "ergo",
+        "createdAt": "2026-09-19T10:01:53.051Z",
+        "updatedAt": "2026-09-19T10:01:53.051Z"
+      }
+    },
+    {
+      "id": "cmu5c2z7d000tlki5eviazvr1",
+      "name": "Adjustable Bed Tray",
+      "slug": 27,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/bedside-reading-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4hu6dSO",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.401Z",
+      "updatedAt": "2026-09-19T10:01:54.993Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu5c2zh40010lki5xyghvgd7",
+      "name": "Floating Wall Storage Shelves",
+      "slug": 34,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969527/viliv/deck-storage-box.jpg",
+      "affiliateUrl": "https://amzn.to/46ueW13",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.752Z",
+      "updatedAt": "2026-09-19T10:01:54.993Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu5c2zx8001blki57zqnpsi1",
+      "name": "Freestanding Display Bookshelf",
+      "slug": 45,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969527/viliv/deck-storage-box.jpg",
+      "affiliateUrl": "https://amzn.to/4xVrTgn",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.333Z",
+      "updatedAt": "2026-09-19T10:01:54.993Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu5c2zjw0012lki5v8yahrpq",
+      "name": "Large Blanket Storage Basket",
+      "slug": 36,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/jewelry-box.jpg",
+      "affiliateUrl": "https://amzn.to/4hwH7CM",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.852Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2zmo0014lki5ne4q3hbo",
+      "name": "Storage Ottoman Seating",
+      "slug": 38,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969509/viliv/storage-ottoman.jpg",
+      "affiliateUrl": "https://amzn.to/3T8iq6c",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.952Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2zoz0015lki56w7g54d4",
+      "name": "Collapsible Storage Ottoman",
+      "slug": 39,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969512/viliv/skincare-mini-fridge.jpg",
+      "affiliateUrl": "https://amzn.to/4h99a9R",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.035Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2zqa0016lki5p7whfpv5",
+      "name": "Foldable Fabric Storage Cubes",
+      "slug": 40,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969498/viliv/drawer-storage-boxes.jpg",
+      "affiliateUrl": "https://amzn.to/3SO4zlF",
+      "categoryId": "cmu87x52g000ci5gjrvzpnk9k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.082Z",
+      "updatedAt": "2026-09-19T10:01:55.118Z",
+      "category": {
+        "id": "cmu87x52g000ci5gjrvzpnk9k",
+        "name": "Storage",
+        "slug": "storage",
+        "createdAt": "2026-09-19T10:01:53.128Z",
+        "updatedAt": "2026-09-19T10:01:53.128Z"
+      }
+    },
+    {
+      "id": "cmu5c2za6000vlki53cfob3s2",
+      "name": "Decorative Living Room Accent",
+      "slug": 29,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/fairy-string-lights.jpg",
+      "affiliateUrl": "https://amzn.to/3Ty2vyo",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.502Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2zeb000ylki5nastep1b",
+      "name": "Decorative Home Accent Piece",
+      "slug": 32,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/cozy-throw-blanket.jpg",
+      "affiliateUrl": "https://amzn.to/4h5ye1C",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.651Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2zfp000zlki5kws1e584",
+      "name": "Decorative Wall Accent",
+      "slug": 33,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/fairy-string-lights.jpg",
+      "affiliateUrl": "https://amzn.to/3TCalaa",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.701Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2zla0013lki5130ybhct",
+      "name": "Decorative Table Runner",
+      "slug": 37,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/cozy-throw-blanket.jpg",
+      "affiliateUrl": "https://amzn.to/4rkbU9h",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:05.902Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c2zrn0017lki5jscb5763",
+      "name": "Absorbent Drink Coasters",
+      "slug": 41,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969494/viliv/utensil-caddy.jpg",
+      "affiliateUrl": "https://amzn.to/4dnzj3L",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.132Z",
+      "updatedAt": "2026-09-19T10:01:55.432Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c3000001dlki5rpeibnri",
+      "name": "Tabletop Photo Collage Frame",
+      "slug": 47,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/book-stand-holder.jpg",
+      "affiliateUrl": "https://amzn.to/4xuPV0U",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.432Z",
+      "updatedAt": "2026-09-19T14:24:33.233Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c301f001elki5gak5hnh2",
+      "name": "Framed Mountain Wall Artwork",
+      "slug": 48,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/floor-reading-cushion.jpg",
+      "affiliateUrl": "https://amzn.to/4izf4Ud",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.483Z",
+      "updatedAt": "2026-09-19T14:24:33.233Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmu5c30nf001slki51p1fje3m",
+      "name": "Monitor Light Bar",
+      "slug": 62,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969515/viliv/clip-on-book-light.jpg",
+      "affiliateUrl": "https://amzn.to/4cLjhk3",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.275Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c30ou001tlki5av69f9db",
+      "name": "Dimmable LED Desk Lamp",
+      "slug": 63,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/led-desk-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4rfRZs1",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.326Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c31040022lki5vc5pjsdm",
+      "name": "Dimmable LED Desk Lamp",
+      "slug": 72,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969513/viliv/led-desk-lamp.jpg",
+      "affiliateUrl": "https://amzn.to/4cQSrXM",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.732Z",
+      "updatedAt": "2026-09-19T10:01:53.428Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmu5c30yu0021lki5ypdid95l",
+      "name": "Compact Desktop Air Circulator",
+      "slug": 71,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/gan-wall-charger.jpg",
+      "affiliateUrl": "https://amzn.to/4huwArI",
+      "categoryId": "cmu87x4ue0005i5gjf2kwc6e5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.686Z",
+      "updatedAt": "2026-09-19T10:01:54.019Z",
+      "category": {
+        "id": "cmu87x4ue0005i5gjf2kwc6e5",
+        "name": "Ambience",
+        "slug": "ambience",
+        "createdAt": "2026-09-19T10:01:52.838Z",
+        "updatedAt": "2026-09-19T10:01:52.838Z"
+      }
+    },
+    {
+      "id": "cmu5c30fk001olki5cyqlwnh6",
+      "name": "USB C Charging Hub",
+      "slug": 58,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969519/viliv/gan-wall-charger.jpg",
+      "affiliateUrl": "https://amzn.to/4iu3IAU",
+      "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:06.992Z",
+      "updatedAt": "2026-09-19T10:01:54.387Z",
+      "category": {
+        "id": "cmu87x4wq0007i5gj96ysv58k",
+        "name": "Charging",
+        "slug": "charging",
+        "createdAt": "2026-09-19T10:01:52.923Z",
+        "updatedAt": "2026-09-19T10:01:52.923Z"
+      }
+    },
+    {
+      "id": "cmu5c30gy001plki5s19qtnbj",
+      "name": "Wireless Charging Stand",
+      "slug": 59,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969520/viliv/wireless-charger-stand.jpg",
+      "affiliateUrl": "https://amzn.to/4dEZkvu",
+      "categoryId": "cmu87x4wq0007i5gj96ysv58k",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.042Z",
+      "updatedAt": "2026-09-19T10:01:54.387Z",
+      "category": {
+        "id": "cmu87x4wq0007i5gj96ysv58k",
+        "name": "Charging",
+        "slug": "charging",
+        "createdAt": "2026-09-19T10:01:52.923Z",
+        "updatedAt": "2026-09-19T10:01:52.923Z"
+      }
+    },
+    {
+      "id": "cmu5c30j4001qlki5eu07w1zl",
+      "name": "Adjustable Headphone Stand",
+      "slug": 60,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/keyboard-tray.jpg",
+      "affiliateUrl": "https://amzn.to/4AcX5tj",
+      "categoryId": "cmu87x4z60009i5gj978ggvkg",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.120Z",
+      "updatedAt": "2026-09-19T10:01:54.697Z",
+      "category": {
+        "id": "cmu87x4z60009i5gj978ggvkg",
+        "name": "Stand",
+        "slug": "stand",
+        "createdAt": "2026-09-19T10:01:53.011Z",
+        "updatedAt": "2026-09-19T10:01:53.011Z"
+      }
+    },
+    {
+      "id": "cmu5c30q6001ulki5cp9lho50",
+      "name": "Vertical Laptop Stand",
+      "slug": 64,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/laptop-stand.jpg",
+      "affiliateUrl": "https://amzn.to/4yCcfq7",
+      "categoryId": "cmu87x4z60009i5gj978ggvkg",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.374Z",
+      "updatedAt": "2026-09-19T10:01:54.697Z",
+      "category": {
+        "id": "cmu87x4z60009i5gj978ggvkg",
+        "name": "Stand",
+        "slug": "stand",
+        "createdAt": "2026-09-19T10:01:53.011Z",
+        "updatedAt": "2026-09-19T10:01:53.011Z"
+      }
+    },
+    {
+      "id": "cmu5c30rf001vlki51k7x4zw4",
+      "name": "Cloud Keyboard Wrist Rest",
+      "slug": 65,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/keyboard-tray.jpg",
+      "affiliateUrl": "https://amzn.to/4rAryxz",
+      "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.419Z",
+      "updatedAt": "2026-09-19T10:01:54.819Z",
+      "category": {
+        "id": "cmu87x50b000ai5gj3r3i61mh",
+        "name": "Ergo",
+        "slug": "ergo",
+        "createdAt": "2026-09-19T10:01:53.051Z",
+        "updatedAt": "2026-09-19T10:01:53.051Z"
+      }
+    },
+    {
+      "id": "cmu5c30sn001wlki5r3bpth0e",
+      "name": "Ergonomic Mouse Wrist Rest",
+      "slug": 66,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/xl-mouse-pad.jpg",
+      "affiliateUrl": "https://amzn.to/46oUChH",
+      "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.463Z",
+      "updatedAt": "2026-09-19T10:01:54.819Z",
+      "category": {
+        "id": "cmu87x50b000ai5gj3r3i61mh",
+        "name": "Ergo",
+        "slug": "ergo",
+        "createdAt": "2026-09-19T10:01:53.051Z",
+        "updatedAt": "2026-09-19T10:01:53.051Z"
+      }
+    },
+    {
+      "id": "cmu5c30tv001xlki51h410nkn",
+      "name": "Under Desk Foot Rest",
+      "slug": 67,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/monitor-riser.jpg",
+      "affiliateUrl": "https://amzn.to/4hupXpk",
+      "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.507Z",
+      "updatedAt": "2026-09-19T10:01:54.819Z",
+      "category": {
+        "id": "cmu87x50b000ai5gj3r3i61mh",
+        "name": "Ergo",
+        "slug": "ergo",
+        "createdAt": "2026-09-19T10:01:53.051Z",
+        "updatedAt": "2026-09-19T10:01:53.051Z"
+      }
+    },
+    {
+      "id": "cmu5c30v4001ylki5rshi979e",
+      "name": "Under Desk Keyboard Tray",
+      "slug": 68,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/keyboard-tray.jpg",
+      "affiliateUrl": "https://amzn.to/4gYLp5P",
+      "categoryId": "cmu87x50b000ai5gj3r3i61mh",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.552Z",
+      "updatedAt": "2026-09-19T10:01:54.819Z",
+      "category": {
+        "id": "cmu87x50b000ai5gj3r3i61mh",
+        "name": "Ergo",
+        "slug": "ergo",
+        "createdAt": "2026-09-19T10:01:53.051Z",
+        "updatedAt": "2026-09-19T10:01:53.051Z"
+      }
+    },
+    {
+      "id": "cmu5c30li001rlki5o0rzms5y",
+      "name": "Seven Tier Desk Organizer",
+      "slug": 61,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/desk-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/3TAVqwX",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.206Z",
+      "updatedAt": "2026-09-19T10:01:54.993Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu5c30xl0020lki58nahzv9i",
+      "name": "Desktop Pegboard Organizer",
+      "slug": 70,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969517/viliv/desk-organizer.jpg",
+      "affiliateUrl": "https://amzn.to/4iyEoK8",
+      "categoryId": "cmu87x51c000bi5gjnbuv6as5",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.641Z",
+      "updatedAt": "2026-09-19T10:01:54.993Z",
+      "category": {
+        "id": "cmu87x51c000bi5gjnbuv6as5",
+        "name": "Organizer",
+        "slug": "organizer",
+        "createdAt": "2026-09-19T10:01:53.088Z",
+        "updatedAt": "2026-09-19T10:01:53.088Z"
+      }
+    },
+    {
+      "id": "cmu5c30wc001zlki5b1zm6jpf",
+      "name": "Streaming Webcam With Microphone",
+      "slug": 69,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1788969520/viliv/phone-docking-station.jpg",
+      "affiliateUrl": "https://amzn.to/46pbcxV",
+      "categoryId": "cmu87x4qo0002i5gjyed8c5s7",
+      "isActive": true,
+      "createdAt": "2026-09-17T09:35:07.596Z",
+      "updatedAt": "2026-09-19T14:24:33.038Z",
+      "category": {
+        "id": "cmu87x4qo0002i5gjyed8c5s7",
+        "name": "Smart",
+        "slug": "smart",
+        "createdAt": "2026-09-19T10:01:52.704Z",
+        "updatedAt": "2026-09-19T10:01:52.704Z"
+      }
+    },
+    {
+      "id": "cmucnrmvh000ti5jvz8krw2ef",
+      "name": "Modern Cordless Floor Lamp",
+      "slug": 114,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172579/viliv/owz8bozfbgohqj1qhmwj.jpg",
+      "affiliateUrl": "https://amzn.to/4Ajn7Lv",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.829Z",
+      "updatedAt": "2026-09-23T14:09:43.748Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmucnrn4d000xi5jvfnd6x0bz",
+      "name": "Silicone Cooking Utensil Set",
+      "slug": 116,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172091/viliv/drlubqebqqc89nesq3rc.jpg",
+      "affiliateUrl": "https://amzn.to/4jfFGKd",
+      "categoryId": "cmu86alew0000i52hpsp4uah3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:35.150Z",
+      "updatedAt": "2026-09-23T14:01:36.323Z",
+      "category": {
+        "id": "cmu86alew0000i52hpsp4uah3",
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "createdAt": "2026-09-19T09:16:21.608Z",
+        "updatedAt": "2026-09-19T09:16:21.608Z"
+      }
+    },
+    {
+      "id": "cmucnrmze000vi5jvup4l4rg8",
+      "name": "Under Cabinet Wireless Lighting",
+      "slug": 115,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172428/viliv/zxijyzcvso6bb6n0fglu.jpg",
+      "affiliateUrl": "https://amzn.to/4rkAsie",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.970Z",
+      "updatedAt": "2026-09-23T14:07:12.410Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmucnrmo0000pi5jv0qukwr8o",
+      "name": "Dimmable Reading Floor Lamp",
+      "slug": 112,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790172785/viliv/h4hjjbrwhzmg3mgocqoh.jpg",
+      "affiliateUrl": "https://amzn.to/4xC0gIe",
+      "categoryId": "cmu87x4p80001i5gjuxnk4wa3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.560Z",
+      "updatedAt": "2026-09-23T14:13:10.596Z",
+      "category": {
+        "id": "cmu87x4p80001i5gjuxnk4wa3",
+        "name": "Lighting",
+        "slug": "lighting",
+        "createdAt": "2026-09-19T10:01:52.652Z",
+        "updatedAt": "2026-09-19T10:01:52.652Z"
+      }
+    },
+    {
+      "id": "cmucnrmju000ni5jvll8fepln",
+      "name": "Large Washable Area Rug",
+      "slug": 111,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790173149/viliv/ooknthagsvyrbxm8gvet.jpg",
+      "affiliateUrl": "https://amzn.to/4iAD1ut",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.411Z",
+      "updatedAt": "2026-09-23T14:19:15.544Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmucnrmh2000li5jvbllocg4z",
+      "name": "Round Decorative Wall Mirror",
+      "slug": 110,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790173355/viliv/riac905g0shgd0imav0e.jpg",
+      "affiliateUrl": "https://amzn.to/46zGPVE",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.310Z",
+      "updatedAt": "2026-09-23T14:22:40.424Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmucnrmbi000hi5jvm3f98jlk",
+      "name": "Rechargeable Magnifying Vanity Mirror",
+      "slug": 108,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790173730/viliv/inkzlzn6zpmkti5rgd6m.jpg",
+      "affiliateUrl": "https://amzn.to/4AoQmfQ",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.110Z",
+      "updatedAt": "2026-09-23T14:28:57.790Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmucnrme9000ji5jvna7cyv86",
+      "name": "Indoor Ceramic Plant Pots",
+      "slug": 109,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212113/viliv/ooxikj7ajpiidfbwwioc.jpg",
+      "affiliateUrl": "https://amzn.to/4yIOP2s",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.210Z",
+      "updatedAt": "2026-09-24T01:08:38.523Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmucnrm8w000fi5jv7eqmfylc",
+      "name": "Thermal Blackout Window Curtains",
+      "slug": 107,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212340/viliv/ry3onqpotortehrzatve.jpg",
+      "affiliateUrl": "https://amzn.to/4y5Lbj9",
+      "categoryId": "cmu87x53k000di5gj46jhqjbe",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:34.016Z",
+      "updatedAt": "2026-09-24T01:12:24.668Z",
+      "category": {
+        "id": "cmu87x53k000di5gj46jhqjbe",
+        "name": "Decor",
+        "slug": "decor",
+        "createdAt": "2026-09-19T10:01:53.169Z",
+        "updatedAt": "2026-09-19T10:01:53.169Z"
+      }
+    },
+    {
+      "id": "cmucnrm4k000di5jvy6k55476",
+      "name": "Adjustable Orthopedic Bed Pillow",
+      "slug": 106,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212489/viliv/bjsqzetokfl1tm8uoyne.jpg",
+      "affiliateUrl": "https://amzn.to/46AqrnO",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:33.860Z",
+      "updatedAt": "2026-09-24T01:14:58.449Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmucnrm1s000bi5jve3m1wdq7",
+      "name": "Decorative Pillow Inserts Set",
+      "slug": 105,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790212989/viliv/a4wbkjvfjsrznraemh88.jpg",
+      "affiliateUrl": "https://amzn.to/47925BE",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:33.760Z",
+      "updatedAt": "2026-09-24T01:23:15.874Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmucnrlz10009i5jv5prwcfmm",
+      "name": "Cozy Bubble Throw Blanket",
+      "slug": 104,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790213279/viliv/ebfpnswkznmusn5jxeyq.jpg",
+      "affiliateUrl": "https://amzn.to/4iDSABG",
+      "categoryId": "cmu87x4mh0000i5gjqruhs11p",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:33.661Z",
+      "updatedAt": "2026-09-24T01:28:03.952Z",
+      "category": {
+        "id": "cmu87x4mh0000i5gjqruhs11p",
+        "name": "Bedding",
+        "slug": "bedding",
+        "createdAt": "2026-09-19T10:01:52.553Z",
+        "updatedAt": "2026-09-19T10:01:52.553Z"
+      }
+    },
+    {
+      "id": "cmucnrluu0007i5jvwep9lts9",
+      "name": "Console Controller Charging Stand",
+      "slug": 103,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790214383/viliv/rp212bqx2h3lbn8pyyiz.jpg",
+      "affiliateUrl": "https://amzn.to/4xFs2DP",
+      "categoryId": "cmucnr2qh0000i5eecs76o8c3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:33.510Z",
+      "updatedAt": "2026-09-24T01:46:30.375Z",
+      "category": {
+        "id": "cmucnr2qh0000i5eecs76o8c3",
+        "name": "Gaming",
+        "slug": "gaming",
+        "createdAt": "2026-09-22T12:36:08.729Z",
+        "updatedAt": "2026-09-22T12:36:08.729Z"
+      }
+    },
+    {
+      "id": "cmucnrlpa0003i5jvsn9jzczu",
+      "name": "Dual Monitor Gaming Arm",
+      "slug": 101,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790215209/viliv/k3ducayndqxwgzo2dgf9.jpg",
+      "affiliateUrl": "https://amzn.to/3T8Iv5l",
+      "categoryId": "cmucnr2qh0000i5eecs76o8c3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:33.310Z",
+      "updatedAt": "2026-09-24T02:00:17.011Z",
+      "category": {
+        "id": "cmucnr2qh0000i5eecs76o8c3",
+        "name": "Gaming",
+        "slug": "gaming",
+        "createdAt": "2026-09-22T12:36:08.729Z",
+        "updatedAt": "2026-09-22T12:36:08.729Z"
+      }
+    },
+    {
+      "id": "cmucnrll50001i5jv1017fejn",
+      "name": "Ambient Gaming Light Bars",
+      "slug": 100,
+      "imageUrl": "https://res.cloudinary.com/mabduh/image/upload/v1790217348/viliv/zdj4d3yeyb6sfdc5ho7f.jpg",
+      "affiliateUrl": "https://amzn.to/4dd1jHx",
+      "categoryId": "cmucnr2qh0000i5eecs76o8c3",
+      "isActive": true,
+      "createdAt": "2026-09-22T12:36:33.162Z",
+      "updatedAt": "2026-09-24T02:46:26.499Z",
+      "category": {
+        "id": "cmucnr2qh0000i5eecs76o8c3",
+        "name": "Gaming",
+        "slug": "gaming",
+        "createdAt": "2026-09-22T12:36:08.729Z",
+        "updatedAt": "2026-09-22T12:36:08.729Z"
+      }
+    }
+  ]
+}
