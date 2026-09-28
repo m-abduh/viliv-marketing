@@ -51,19 +51,19 @@ export const HOOKS_BY_SITUATION = {
 };
 
 export const GENERAL_HOOKS = [
-  "Things worth keeping in your car every day.",
-  "If you spend an hour commuting, get these first.",
-  "The little things that make long drives much easier.",
-  "What I'd keep in my bag if I left home all day.",
+  "Things worth keeping close every day at home.",
+  "If your mornings feel like a rush, get these first.",
+  "The little things that make a slow evening at home much easier.",
+  "What I'd put in the one drawer I actually open.",
   "Things that make carrying your stuff around less annoying.",
   "Things that make grocery runs weirdly easier.",
   "The stuff that makes rainy days less annoying.",
-  "What I'd buy for someone who's always on the go.",
+  "What I'd buy for someone who's always tidying up after everyone.",
   "Things that make waiting around surprisingly comfortable.",
   "The small purchases that make busy days easier.",
   "Things that make movie night at home actually better.",
-  "Things worth having for a lazy afternoon outside.",
-  "If you walk everywhere, these little upgrades matter.",
+  "Things worth having for a lazy afternoon in.",
+  "If you spend most evenings on the sofa, these matter.",
 ];
 
 export function hookPoolFor(slug) {

@@ -3,7 +3,21 @@ import { hookPoolFor, GENERAL_HOOKS } from "./copybook.js";
 
 const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-super-120b-a12b:free";
 
-const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a lifestyle brand and sharp curator. Below is the full catalog of products grouped by lifestyle category — these are the SOLUTIONS to a lifestyle problem.
+const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a sharp curator of equipment for INSIDE THE HOME. Below is the full catalog of products grouped by lifestyle category — these are the SOLUTIONS to a lifestyle problem.
+
+CRITICAL BRAND RULE — READ THIS FIRST:
+VILIV sells equipment for the rooms of a home: kitchen, bedroom, bathroom, living room, dining area, home office, closet, balcony.
+The entire catalog above is indoor home equipment. EVERY hook, tip, caption and outro you write MUST describe a situation INSIDE someone's home.
+
+NEVER write about any of these — they are off-brand and will be rejected:
+- cars, driving, dashboards, trunks, road trips, parking
+- commuting, travelling, flights, airports, hotels, luggage, packing, one-bag travel
+- picnics, beaches, camping, hiking, the outdoors
+- gyms, workouts, running, sports, fitness gear
+- school, office cubicles, commuting
+If a moment feels "on the go", rewrite it as a moment in a room at home. A car hook over a candle product is a hard fail.
+
+VILIV is an INDOOR HOME brand. Cars, travel and the outdoors are never the setting.
 
 Your job:
 1. Choose ONE lifestyle story / theme. Pick a primary category name to signal the theme, but you are FREE to pick products from ANY category in the catalog if they support the same story.
@@ -28,13 +42,15 @@ Return ONLY valid JSON matching EXACTLY this shape:
 Rules:
 - "products" lists the exact product names you chose. "tips" must have the SAME length and ORDER as "products": tips[i] describes product i's lifestyle tip.
 - Each "tips[i].title" is the tip headline on the slide; the product is shown below it as the answer.
-- "hooks" lead with a specific, relatable lifestyle situation — NOT a tagline. Write like Viliv understands a particular moment in someone's life. Examples of the RIGHT voice:
-  - "Your kitchen counter is wasting more space than you think."
-  - "What I'd pack for a 7-hour flight."
-  - "If you travel with one bag, make room for these."
-  - "Things that make a picnic way less messy."
-  - "The stuff that makes rainy days less annoying."
+- "hooks" lead with a specific, relatable moment INSIDE someone's home — NOT a tagline, NOT a travel or car situation. Write like Viliv understands a particular room in someone's life. Examples of the RIGHT voice:
+  - "Your kitchen counter is doing three jobs with one tool."
+  - "The 2am wake-up your mattress is causing."
+  - "If you read in bed and light the whole bedroom."
+  - "The 15 minutes you lose every night to dinner prep."
+  - "The 11pm scramble to find a free outlet."
+  - "If your shower caddy is balanced on the tub edge."
   Avoid generic lines like "Curated Finds for Better Living." or "Upgrade Your Everyday."
+  Also avoid: "pack for a trip", "in your car", "commute", "flight", "hotel", "picnic", "camping", "the gym". Those settings are forbidden.
 - Do NOT add hashtags inside the caption. Keep it personal and useful.
 - No emojis. Factual, practical, no hype.
 - Vary the chosen products and hook across different generations.`;
@@ -98,13 +114,57 @@ async function askAI(prompt, retries = 3) {
   }
 }
 
+// Escape raw control characters (raw newlines/tabs the model sometimes emits
+// inside JSON string values) as \n / \t so JSON.parse doesn't throw
+// "Bad control character in string literal" and fail the whole slot.
+function escapeControlCharsInStrings(text) {
+  let out = "";
+  let inString = false;
+  let escaped = false;
+  for (const ch of text) {
+    if (escaped) {
+      out += ch;
+      escaped = false;
+      continue;
+    }
+    if (ch === "\\") {
+      out += ch;
+      if (inString) escaped = true;
+      continue;
+    }
+    if (ch === '"') {
+      inString = !inString;
+      out += ch;
+      continue;
+    }
+    if (inString) {
+      const code = ch.codePointAt(0);
+      if (code < 0x20) {
+        if (ch === "\n") out += "\\n";
+        else if (ch === "\r") out += "\\r";
+        else if (ch === "\t") out += "\\t";
+        else out += "\\u" + code.toString(16).padStart(4, "0");
+        continue;
+      }
+    }
+    out += ch;
+  }
+  return out;
+}
+
 function extractJSON(text) {
   let cleaned = text.trim();
   cleaned = cleaned.replace(/^```json\s*/, "").replace(/\s*```$/, "");
   const start = cleaned.indexOf("{");
   const end = cleaned.lastIndexOf("}");
   if (start === -1 || end === -1) throw new Error("No JSON found in AI response");
-  return JSON.parse(cleaned.slice(start, end + 1));
+  const json = cleaned.slice(start, end + 1);
+  try {
+    return JSON.parse(json);
+  } catch (err) {
+    // Retry once with control characters escaped inside string values.
+    return JSON.parse(escapeControlCharsInStrings(json));
+  }
 }
 
 /**
