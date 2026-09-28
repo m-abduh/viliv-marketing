@@ -1,6 +1,7 @@
 node_modules/
 db.sqlite*
 prisma/*.db*
+backup_*.db
 prisma/generated/
 output/
 builder/_cover.html
