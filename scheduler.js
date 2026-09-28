@@ -48,7 +48,7 @@ export async function startScheduler() {
   for (const expr of schedules) {
     cron.schedule(expr, () => {
       console.log(`[scheduler] Trigger ${expr} at ${new Date().toISOString()}`);
-      runPipeline().catch((err) => console.error("[scheduler] Error:", err.message));
+      runPipeline({ useAI: true }).catch((err) => console.error("[scheduler] Error:", err.message));
     }, { timezone: tz });
   }
   console.log(`[scheduler] Started ${schedules.length} daily job(s) (timezone: ${tz})`);
