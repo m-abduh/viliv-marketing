@@ -25,6 +25,28 @@ function linkLabel(url) {
     .replace(/\/+$/, "")
     .replace(/\/*(\?.*)?$/, "");
 }
+// Ask Cloudinary for a display-sized image (1080px, auto quality) instead of
+// embedding the full-resolution original. Smaller data URIs mean faster page
+// loads and screenshots, and the result is identical at 1080x1350.
+function sizedImageUrl(u) {
+  try {
+    const url = new URL(u);
+    if (
+      url.hostname === "res.cloudinary.com" &&
+      url.pathname.includes("/image/upload/") &&
+      !url.pathname.includes("/image/upload/w_")
+    ) {
+      url.pathname = url.pathname.replace(
+        "/image/upload/",
+        "/image/upload/w_1080,h_1080,c_fill,q_auto/"
+      );
+    }
+    return url.toString();
+  } catch {
+    return u;
+  }
+}
+
 function dataUriFor(url) {
   if (!url || !url.trim()) return Promise.resolve("");
   return new Promise((resolve) => {
@@ -34,7 +56,7 @@ function dataUriFor(url) {
     const download = (u, redirectsLeft) => {
       const isHttps = u.startsWith("https://");
       const get = isHttps ? httpsGet : httpGet;
-      get(u, { family: 4, headers: { "User-Agent": IMAGE_UA } }, (res) => {
+      get(sizedImageUrl(u), { family: 4, headers: { "User-Agent": IMAGE_UA } }, (res) => {
           if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location && redirectsLeft > 0) {
             res.resume();
             const next = new URL(res.headers.location, u).toString();
@@ -121,13 +143,19 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
   const list = slides && slides.length ? slides : [];
   const total = list.length + 2; // +1 cover slide, +1 outro
 
-  const browser = await chromium.launch({ channel: "chromium" });
+  const browser = await chromium.launch({
+    channel: "chromium",
+    // Container-friendly flags: software rendering and /dev/shm fallback make
+    // screenshots much faster and avoid chrome crashes under memory pressure.
+    args: ["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"],
+  });
   const page = await browser.newPage({
     viewport: { width: 1080, height: 1350 },
     // 1x → 1080x1350 PNG (1,458,000 px) fits Buffer's TikTok pixel cap
     // (2,073,600) while staying exactly at Instagram's recommended feed size.
     deviceScaleFactor: 1,
   });
+  page.setDefaultTimeout(60000);
 
   const files = [];
   try {
@@ -173,8 +201,12 @@ export async function renderCarousel({ hook, slides, outro, theme, account }, ou
         ? join(BUILDER, "_cover.html")
         : join(BUILDER, `_slide_${i + 1}.html`);
       writeFileSync(htmlPath, htmls[i], "utf-8");
-      await page.goto("file://" + htmlPath, { waitUntil: "networkidle" });
-      await page.waitForTimeout(250);
+      // The images are already embedded as data URIs, so there is no network
+      // to idle on. "networkidle" can hang forever on a large file:// page;
+      // "load" plus document.fonts.ready is deterministic.
+      await page.goto("file://" + htmlPath, { waitUntil: "load", timeout: 60000 });
+      await page.evaluate(() => document.fonts.ready.then(() => true)).catch(() => {});
+      await page.waitForTimeout(200);
       await page.screenshot({ path: join(outDir, file) });
       files.push(file);
     }

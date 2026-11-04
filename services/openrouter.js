@@ -1,7 +1,24 @@
 import { productPageUrl } from "./links.js";
 import { hookPoolFor, GENERAL_HOOKS, finalizeCaption } from "./copybook.js";
 
-const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-ultra-550b-a55b:free";
+const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free";
+
+// Free OpenRouter models get rate-limited, retired or hang on the provider.
+// Try the configured model first, then a short fallback chain so one bad
+// provider never kills a scheduled slot. Override with a comma-separated
+// OPENROUTER_FALLBACK_MODELS env var.
+const MODEL_CHAIN = [
+  MODEL,
+  ...(process.env.OPENROUTER_FALLBACK_MODELS ||
+    "cohere/north-mini-code:free,nvidia/nemotron-3-ultra-550b-a55b:free")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean),
+].filter((m, i, arr) => m && arr.indexOf(m) === i);
+
+// Per-model timeout. A hung free model should fall through to the next one,
+// not eat the whole 2-minute slot budget.
+const MODEL_TIMEOUT_MS = Number(process.env.OPENROUTER_TIMEOUT_MS || 70000);
 
 const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a curator of quiet comforts for the home. Below is the full catalog of products grouped by lifestyle category.
 
@@ -110,12 +127,21 @@ function isRetryable(e) {
   );
 }
 
-async function askAI(prompt, retries = 3) {
-  const key = process.env.OPENROUTER_KEY;
-  if (!key) throw new Error("OPENROUTER_KEY not set");
+// True when trying the next model in the chain could plausibly help: provider
+// 404/429, a hung request, an empty completion or any transient network error.
+function shouldTryNextModel(e) {
+  const m = String((e && e.message) || "");
+  return (
+    e?.name === "AbortError" ||
+    m.includes("This operation was aborted") ||
+    /^OpenRouter error (404|429)/.test(m) ||
+    isRetryable(e)
+  );
+}
 
+async function askModel(model, prompt, key) {
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 120000);
+  const timeout = setTimeout(() => controller.abort(), MODEL_TIMEOUT_MS);
 
   try {
     const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
@@ -126,7 +152,7 @@ async function askAI(prompt, retries = 3) {
         Authorization: `Bearer ${key}`,
       },
       body: JSON.stringify({
-        model: MODEL,
+        model,
         messages: [{ role: "user", content: prompt }],
         temperature: 0.8,
       }),
@@ -143,17 +169,29 @@ async function askAI(prompt, retries = 3) {
       throw new Error(`OpenRouter returned empty response: ${JSON.stringify(data)}`);
     }
     return content;
-  } catch (e) {
-    if (retries > 0 && isRetryable(e)) {
-      const delay = Math.min(30000, 10000 + (3 - retries) * 10000);
-      console.log(`OpenRouter transient error, retrying in ${delay / 1000}s... (${retries} left)`);
-      await new Promise(r => setTimeout(r, delay));
-      return askAI(prompt, retries - 1);
-    }
-    throw e;
   } finally {
     clearTimeout(timeout);
   }
+}
+
+async function askAI(prompt) {
+  const key = process.env.OPENROUTER_KEY;
+  if (!key) throw new Error("OPENROUTER_KEY not set");
+
+  let lastErr;
+  for (let i = 0; i < MODEL_CHAIN.length; i += 1) {
+    const model = MODEL_CHAIN[i];
+    try {
+      return await askModel(model, prompt, key);
+    } catch (e) {
+      lastErr = e;
+      const last = i === MODEL_CHAIN.length - 1;
+      const reason = String(e.message || e).split("\n")[0].slice(0, 140);
+      if (last || !shouldTryNextModel(e)) throw e;
+      console.warn(`[openrouter] ${model} failed (${reason}); trying next model...`);
+    }
+  }
+  throw lastErr;
 }
 
 // Escape raw control characters (raw newlines/tabs the model sometimes emits
