@@ -1,69 +1,131 @@
-// Content pool for the no-AI path: situational hooks, per-category tips with a
-// supporting sub-line, and closing outros. All copy stays on-brand for VILIV:
-// problem/curiosity -> transformation, never a bare product list.
+// Content pool for the no-AI path: warm hooks, per-category comfort rituals
+// with a supporting sub-line, and closing outros. All copy stays on-brand for
+// VILIV: a calm, comforting home moment first, product second. Never a flaw,
+// warning, scare tactic or guilt trip.
 //
-// Hooks are SITUATION-SPECIFIC (like "Your kitchen counter is wasting more
-// space" or "If you travel with one bag, make room for these") — never generic
-// taglines. The carrier picks the pool that matches the dominant category of
-// the chosen slides so the cover hook relates to what's actually shown.
+// Hooks are story-led and SITUATION-SPECIFIC (like "Sunday mornings deserve an
+// unhurried kitchen") — never generic taglines and never a criticism of the
+// reader's home. The carrier picks the pool that matches the dominant category
+// of the chosen slides so the cover hook relates to what's actually shown.
 
 export const HOOKS_BY_SITUATION = {
-  "home-kitchen": [
-    "Your kitchen counter is wasting more space than you think.",
-    "The things I'd buy for a tiny bathroom.",
-    "If your closet is always full, look at these.",
-    "What actually makes a rental apartment feel better.",
-    "The stuff that makes cleaning a small apartment less annoying.",
-    "Things that make a tiny balcony actually usable.",
-    "What I'd keep beside my bed if I hated getting up at night.",
-    "Things that make hosting dinner less chaotic.",
-    "The little upgrades that make Sunday feel better.",
-    "What makes a backyard hangout feel complete.",
-    "What I'd set up before having friends over.",
+  kitchen: [
+    "Sunday mornings deserve an unhurried kitchen.",
+    "The smell of coffee is its own kind of welcome.",
+    "A calm counter makes cooking feel lighter.",
+    "Dinner is nicer when everything has its place.",
   ],
-  "office-productivity": [
-    "Your desk is making work harder than it needs to be.",
-    "If you work from cafés, you need these.",
-    "If you always eat lunch at your desk, look at these.",
-    "If you're always cold in the office, start here.",
+  bedding: [
+    "A bed that feels like a deep breath at the end of the day.",
+    "The best mornings start slowly, under a softer blanket.",
+    "There is a quiet luxury in making the bed properly.",
+    "Cool sheets and warm light — a small nightly ritual.",
   ],
-  "travel-luggage": [
-    "What I'd pack for a 7-hour flight.",
-    "Things that make hotel rooms feel a little more comfortable.",
-    "The stuff you'll wish you packed on your next trip.",
-    "If you travel with one bag, make room for these.",
-    "Things that make airport days noticeably easier.",
+  lighting: [
+    "Evenings feel longer when the light is warm.",
+    "A lamp in the corner changes the whole mood of a room.",
+    "Soft light makes the ordinary part of the day feel special.",
+    "The right glow turns a room into a place to linger.",
   ],
-  "outdoor-camping": [
-    "What I'd bring to a beach day besides a towel.",
-    "Things that make a picnic way less messy.",
-    "If you spend weekends outside, these are worth having.",
-    "The little things that make camping much more comfortable.",
-    "What makes a long day outdoors actually enjoyable.",
-    "What I'd pack for a day at the beach with no plans.",
-    "What I'd bring to a picnic with no table nearby.",
+  smart: [
+    "Small conveniences leave more room for the good parts of the day.",
+    "The best technology at home is the kind you barely notice.",
+    "A quiet home is a comfortable home.",
+    "Little automations that let the evening run itself.",
   ],
-  "sports-fitness": [
-    "Small upgrades that make your workout less of a chore.",
-    "The little things that make moving daily actually enjoyable.",
-    "What I'd keep ready for a workout you'll actually show up to.",
+  ambience: [
+    "The atmosphere of a room is made of small, quiet details.",
+    "A candle, a soft chair, and nowhere else to be.",
+    "Some corners of the house ask you to slow down.",
+    "A room feels different when it smells like something familiar.",
+  ],
+  candle: [
+    "A candle turns an ordinary evening into a moment.",
+    "There is something calming about a small, steady flame.",
+    "The last hour of the day deserves a softer light.",
+    "A familiar scent can make the whole house feel warmer.",
+  ],
+  charging: [
+    "A tidy charging spot makes the morning feel less rushed.",
+    "Everything ready by the door, without the tangle.",
+    "One small corner for cables keeps the rest of the room calm.",
+    "The quiet convenience of always being charged.",
+  ],
+  cable: [
+    "Less clutter, more room to breathe.",
+    "A tidy desk is a small daily kindness.",
+    "When the cables disappear, the space feels calmer.",
+    "Everything in reach, nothing in the way.",
+  ],
+  stand: [
+    "A desk that meets you at eye level feels like a small relief.",
+    "Comfort at the desk makes the afternoon go gentler.",
+    "The right height changes how the whole day feels.",
+    "Work feels lighter when the setup fits you.",
+  ],
+  ergo: [
+    "Comfort is not a luxury — it is how a good day feels.",
+    "A chair that supports you makes long afternoons easier.",
+    "Small adjustments, a much softer day.",
+    "Your desk can be a place you enjoy sitting.",
+  ],
+  organizer: [
+    "A place for everything, and a calmer morning.",
+    "The drawer that opens without a fight.",
+    "Order at home is a quiet kind of comfort.",
+    "Small containers, a noticeably lighter space.",
+  ],
+  storage: [
+    "Good storage makes a room feel like it can breathe.",
+    "Everything you need, tucked away with care.",
+    "A calm home starts with a place for things.",
+    "Less visible clutter, more room to relax.",
+  ],
+  decor: [
+    "The details are what make a room feel like yours.",
+    "A small object can change the whole feeling of a shelf.",
+    "A home feels warmer when it reflects the people in it.",
+    "Little touches that make a space feel settled.",
+  ],
+  gaming: [
+    "A comfortable corner makes the evening play feel better.",
+    "Warm light, a good chair, and time to yourself.",
+    "The setup that makes staying in feel like a treat.",
+    "Small comforts for long, happy sessions.",
+  ],
+  bathroom: [
+    "A bathroom that feels like a small retreat.",
+    "The first ten minutes of the day can feel calm.",
+    "Warm towels and soft light — a quiet start.",
+    "A tidy counter makes the whole routine gentler.",
+  ],
+  dining: [
+    "The table is where the day slows down.",
+    "A set table makes an ordinary meal feel considered.",
+    "Dinner together is worth a little care.",
+    "Small details make a shared meal feel warmer.",
+  ],
+  coffee: [
+    "The first cup is better when the ritual is slow.",
+    "A quiet kitchen and a warm mug.",
+    "Mornings feel kinder with a good cup in hand.",
+    "The small ritual that starts the day well.",
   ],
 };
 
 export const GENERAL_HOOKS = [
-  "Things worth keeping close every day at home.",
-  "If your mornings feel like a rush, get these first.",
-  "The little things that make a slow evening at home much easier.",
-  "What I'd put in the one drawer I actually open.",
-  "Things that make carrying your stuff around less annoying.",
-  "Things that make grocery runs weirdly easier.",
-  "The stuff that makes rainy days less annoying.",
-  "What I'd buy for someone who's always tidying up after everyone.",
-  "Things that make waiting around surprisingly comfortable.",
-  "The small purchases that make busy days easier.",
-  "Things that make movie night at home actually better.",
-  "Things worth having for a lazy afternoon in.",
-  "If you spend most evenings on the sofa, these matter.",
+  "Small comforts that make staying in feel like a treat.",
+  "A home feels warmer when the little things are taken care of.",
+  "The quiet details that make an ordinary day nicer.",
+  "Slow mornings, soft light, and nowhere to rush.",
+  "The corners of home that ask you to stay a little longer.",
+  "Little rituals that make the everyday feel considered.",
+  "Comfort is made of small, ordinary things.",
+  "A calmer home, one small detail at a time.",
+  "The feeling of a room that is ready for you.",
+  "Simple pleasures worth keeping close at home.",
+  "The softest part of the day, at home.",
+  "Things that make an evening in feel complete.",
 ];
 
 export function hookPoolFor(slug) {
@@ -174,20 +236,20 @@ const COPYBOOK = {
 };
 
 const DEFAULT_TIPS = [
-  { title: "Less, but better", sub: "Only keep what earns its place.", productHint: "" },
-  { title: "Make it easy to start", sub: "Convenience wins every time.", productHint: "" },
-  { title: "Fix the friction point", sub: "Remove the thing that annoys you daily.", productHint: "" },
-  { title: "Upgrade the everyday", sub: "Small swaps, better days.", productHint: "" },
-  { title: "Create a ritual", sub: "Repetition beats motivation.", productHint: "" },
-  { title: "Invest in the basics", sub: "Quality where it counts.", productHint: "" },
+  { title: "Make a small ritual", sub: "A few quiet minutes, just for you.", productHint: "" },
+  { title: "Let the light soften", sub: "Warm light changes how a room feels.", productHint: "" },
+  { title: "Keep it within reach", sub: "Comfort lives in the small conveniences.", productHint: "" },
+  { title: "Choose what feels good", sub: "Quality you notice every day.", productHint: "" },
+  { title: "Leave a little space", sub: "Room to breathe makes a home calmer.", productHint: "" },
+  { title: "Enjoy the ordinary", sub: "Small comforts, better days.", productHint: "" },
 ];
 
 export const OUTRO_POOL = [
-  "Small changes. Better space.",
-  "Better living, one find at a time.",
+  "Small comforts. Better days.",
+  "A calmer home, one detail at a time.",
   "Curated by Viliv.",
-  "Work better. Feel better.",
-  "Upgrade your everyday.",
+  "Slow down. Settle in.",
+  "Make room for the good part of the day.",
 ];
 
 // ---- Bio CTA -------------------------------------------------------------
