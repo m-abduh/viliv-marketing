@@ -1,7 +1,7 @@
 import { productPageUrl } from "./links.js";
-import { hookPoolFor, GENERAL_HOOKS } from "./copybook.js";
+import { hookPoolFor, GENERAL_HOOKS, finalizeCaption } from "./copybook.js";
 
-const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-super-120b-a12b:free";
+const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-ultra-550b-a55b:free";
 
 const DEFAULT_PROMPT = `You are a senior copywriter for VILIV, a sharp curator of equipment for INSIDE THE HOME. Below is the full catalog of products grouped by lifestyle category — these are the SOLUTIONS to a lifestyle problem.
 
@@ -26,6 +26,8 @@ Your job:
 
 IMPORTANT: VILIV is NOT a "best products" affiliate account. It is a curator with taste. Frame each product as the ANSWER to a lifestyle tip, not as an item to buy. The social caption leads with the lifestyle outcome, not a sales pitch.
 
+CLOSE THE CAPTION WITH A BIO POINTER. Instagram and TikTok do not allow clickable links in captions, so the bio link is the only way a viewer reaches a product page. Every caption MUST end with one short line pointing there — "Link in bio to shop." / "Full list in bio." / "Tap the link in bio." Write it as a calm, helpful nudge, never "BUY NOW", never urgency, never all caps.
+
 Return ONLY valid JSON matching EXACTLY this shape:
 {
   "category": "primary theme category name — use an exact category name from the catalog",
@@ -36,7 +38,7 @@ Return ONLY valid JSON matching EXACTLY this shape:
       "subtitle": "one short supportive line (e.g. \\"Eye level, fewer aches.\\")" }
   ],
   "outro": "a short closing line for the last slide (e.g. \\"Work better. Feel better.\\" or \\"Small changes. Better space.\\")",
-  "caption": "one short personal paragraph for the social post caption (no hashtags, no @ mentions, no sales pitch)"
+  "caption": "one short personal paragraph for the social post caption. End it with a soft, low-pressure pointer to the product list, e.g. \\"Link in bio to shop.\\" or \\"Full list in bio.\\" — one short sentence, no hashtags, no @ mentions, no urgency or sales hype"
 }
 
 Rules:
@@ -52,6 +54,8 @@ Rules:
   Avoid generic lines like "Curated Finds for Better Living." or "Upgrade Your Everyday."
   Also avoid: "pack for a trip", "in your car", "commute", "flight", "hotel", "picnic", "camping", "the gym". Those settings are forbidden.
 - Do NOT add hashtags inside the caption. Keep it personal and useful.
+- The caption MUST end with a "link in bio" pointer. This is the only path from post to product, so never end on a bare lifestyle line.
+- Only ONE bio pointer per caption, and it goes last.
 - No emojis. Factual, practical, no hype.
 - Vary the chosen products and hook across different generations.`;
 
@@ -273,7 +277,7 @@ ${DEFAULT_PROMPT}`;
     hook,
     slides,
     outro: { line: String(parsed.outro || "Better living, one find at a time.") },
-    caption: String(parsed.caption || "").trim() + " #viliv",
+    caption: finalizeCaption(parsed.caption),
     content_json: JSON.stringify(parsed),
     category: chosen ? chosen.name : "",
   };

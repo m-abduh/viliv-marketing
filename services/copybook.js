@@ -190,6 +190,47 @@ export const OUTRO_POOL = [
   "Upgrade your everyday.",
 ];
 
+// ---- Bio CTA -------------------------------------------------------------
+// Every caption ends with a soft pointer to the storefront in the profile bio.
+// Instagram/TikTok do not allow clickable links in captions, so "link in bio"
+// is the only route from a post to a product page. Rotated from a pool so the
+// feed does not read like a machine, but always present exactly once.
+export const BIO_CTA_POOL = [
+  "Link in bio to shop.",
+  "Full list in bio.",
+  "Tap the link in bio to see everything.",
+  "Everything in the bio link.",
+  "Link in bio for the full setup.",
+  "Shop the full list in bio.",
+];
+
+// Guard against a second CTA when the AI already wrote one, and against
+// double-append if a caption is passed through twice. Matches the whole pool
+// plus the phrasings the model may produce on its own ("bio link", "in my bio",
+// "in the bio"), so the CTA is never stacked.
+const CTA_PATTERN = /\b(?:link|list|shop|tap|everything)\s+(?:is\s+)?(?:in|on)\s+(?:the\s+|my\s+)?bio\b|\bbio\s+link\b|\bin\s+(?:the\s+|my\s+)?bio\b/i;
+
+function alreadyHasCTA(text) {
+  return CTA_PATTERN.test(text);
+}
+
+/**
+ * Append the bio CTA (and the #viliv tag) to a caption exactly once.
+ * @param {string} caption - AI-written or local caption body
+ * @returns {string} caption ending with a bio CTA and the #viliv hashtag
+ */
+export function finalizeCaption(caption) {
+  const body = String(caption || "").trim().replace(/\s+/g, " ");
+  if (!body) return `Everything curated by Viliv. ${BIO_CTA_POOL[0]} #viliv`;
+
+  if (alreadyHasCTA(body)) {
+    return /#viliv/.test(body) ? body : `${body} #viliv`;
+  }
+
+  const cta = BIO_CTA_POOL[Math.floor(Math.random() * BIO_CTA_POOL.length)];
+  return `${body} ${cta} #viliv`;
+}
+
 export function tipPoolFor(slug) {
   return COPYBOOK[slug]?.tips || DEFAULT_TIPS;
 }

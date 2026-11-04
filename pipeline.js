@@ -2,7 +2,7 @@ import "dotenv/config";
 import { store } from "./db.mjs";
 import { generatePost } from "./services/openrouter.js";
 import { productPageUrl } from "./services/links.js";
-import { OUTRO_POOL, tipPoolFor, hookPoolFor } from "./services/copybook.js";
+import { OUTRO_POOL, tipPoolFor, hookPoolFor, finalizeCaption } from "./services/copybook.js";
 import { renderCarouselToOutput } from "./services/renderer.mjs";
 import { getChannels, createCarouselPost } from "./services/buffer.js";
 
@@ -11,6 +11,52 @@ const MAX_SLIDES = 6;
 
 const MAX_ATTEMPTS = Number(process.env.RETRY_ATTEMPTS || 3);
 const RETRY_DELAY_MS = Number(process.env.RETRY_DELAY_MS || 5000);
+
+// ---- Single-flight queue -------------------------------------------------
+// node-cron fires without any in-process coordination, and the HTTP routes can
+// trigger a run at the same moment a scheduled slot fires. Previously two
+// runPipeline() calls could overlap: two Playwright renders at once (RAM spike)
+// and two concurrent hits on the free OpenRouter model (rate limit). Everything
+// that starts a run now goes through this serial queue — one run at a time,
+// extras wait their turn instead of running in parallel.
+const QUEUE_MAX = Number(process.env.PIPELINE_QUEUE_MAX || 5);
+
+let running = false;
+const waiters = [];
+
+export function pipelineQueueState() {
+  return { running, queued: waiters.length, max: QUEUE_MAX };
+}
+
+async function drain() {
+  if (running) return;
+  const next = waiters.shift();
+  if (!next) {
+    return;
+  }
+  running = true;
+  console.log(`[pipeline] start ${next.label} (${waiters.length} queued behind)`);
+  try {
+    next.resolve(await next.fn());
+  } catch (err) {
+    next.reject(err);
+  } finally {
+    running = false;
+    console.log(`[pipeline] done  ${next.label}`);
+    // Yield to the event loop so a failing run never blocks the queue.
+    setImmediate(drain);
+  }
+}
+
+function enqueue(label, fn) {
+  if (waiters.length >= QUEUE_MAX) {
+    return Promise.reject(new Error(`Pipeline queue full (${QUEUE_MAX})`));
+  }
+  return new Promise((resolve, reject) => {
+    waiters.push({ label, fn, resolve, reject });
+    drain();
+  });
+}
 
 // Round-robin theme rotation across catalog categories, persisted so posts
 // cycle through every category instead of the AI always picking one.
@@ -42,9 +88,10 @@ export async function nextSlot() {
   return { account };
 }
 
-export async function runPipeline({ postId, useAI } = {}) {
+// The actual worker. Never call this from outside the queue module below.
+async function runPipelineSlot({ postId, useAI } = {}) {
   if (postId) {
-    return runManualRetry(postId);
+    return runManualRetrySlot(postId);
   }
 
   const slot = await nextSlot();
@@ -205,7 +252,7 @@ export function generateLocalPost(categories, theme, siteBase = "viliv.store") {
     hook: hooks[Math.floor(Math.random() * hooks.length)],
     slides,
     outro: { line: outroLine },
-    caption: `${hooks[0]} Curated by Viliv.`,
+    caption: finalizeCaption(`${hooks[0]} Curated by Viliv.`),
     content_json: "",
   };
 }
@@ -321,7 +368,13 @@ async function uploadWithRetry(post, files) {
   }
 }
 
-export async function runManualRetry(postId) {
+// Queued entry point. postId present → manual retry, otherwise a new slot.
+export function runPipeline({ postId, useAI } = {}) {
+  const label = postId ? `retry#${postId}` : useAI ? "scheduled slot (AI)" : "manual slot (local)";
+  return enqueue(label, () => runPipelineSlot({ postId, useAI }));
+}
+
+async function runManualRetrySlot(postId) {
   let post = await store.getPost(postId);
   if (!post) return { error: "Post not found" };
   if (post.status === "success") return { status: "already-success" };
@@ -330,8 +383,10 @@ export async function runManualRetry(postId) {
   if (!account) return { error: "Account not found" };
 
   // If images were never rendered, re-run the whole slot content.
+  // Must call the worker directly: we are already inside a queue slot, so
+  // going back through runPipeline() would enqueue and deadlock.
   if (!post.image_files) {
-    return runPipeline({});
+    return runPipelineSlot({});
   }
 
   post = await store.updatePost(post.id, { status: "pending", last_error: null });

@@ -50,6 +50,21 @@ async function withRetry(fn, { retries = 3, baseDelay = 500 } = {}) {
 
 const staleCache = new Map();
 
+// Catalog images live on Cloudinary. The cloud name can change independently of
+// the read-only catalog DB, so rewrite it from CLOUDINARY_CLOUD_NAME at read time.
+const CLOUDINARY_CLOUD = (process.env.CLOUDINARY_CLOUD_NAME || "").trim();
+
+const withCloudName = (p) =>
+  CLOUDINARY_CLOUD && p?.imageUrl
+    ? {
+        ...p,
+        imageUrl: p.imageUrl.replace(
+          /res\.cloudinary\.com\/[^/]+/,
+          `res.cloudinary.com/${CLOUDINARY_CLOUD}`
+        ),
+      }
+    : p;
+
 async function withCache(key, fetchFn, { ttl = 60_000, fallback } = {}) {
   const hit = staleCache.get(key);
   if (hit && Date.now() - hit.at < ttl) return hit.data;
@@ -126,7 +141,7 @@ const store = {
           orderBy: [{ isActive: "desc" }, { createdAt: "asc" }],
         }),
       { fallback: [] }
-    ),
+    ).then((rows) => rows.map(withCloudName)),
   listActiveProductsByCategory: (categoryId) =>
     withCache(
       `products:active:${categoryId}`,
@@ -136,7 +151,7 @@ const store = {
           orderBy: { createdAt: "asc" },
         }),
       { fallback: [] }
-    ),
+    ).then((rows) => rows.map(withCloudName)),
 
   // ---- Posts (carousels, local SQLite) ----
   listPosts: ({ accountId } = {}) =>

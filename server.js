@@ -189,7 +189,9 @@ async function main() {
   app.listen(PORT, () => {
     console.log(`[server] Viliv marketing backend on :${PORT}`);
     if (process.env.DISABLE_SCHEDULER !== "1") {
-      startScheduler();
+      startScheduler().catch((err) =>
+        console.error("[server] scheduler failed to start:", err.message)
+      );
     }
   });
 }
